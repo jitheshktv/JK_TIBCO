@@ -1,0 +1,11 @@
+DEPENDENCIES
+  ems-install
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.9.2)
+  ems-install (0.1.0)
+    java (~> 1.36.0)
+  java (1.36.0)
+    apt (>= 0.0.0)

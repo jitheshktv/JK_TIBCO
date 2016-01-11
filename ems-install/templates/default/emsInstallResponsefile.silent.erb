@@ -1,0 +1,49 @@
+<?xml  version="1.0"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>---Universal Installer Silent Installation Properties---</comment>
+
+<!-- Accept the license agreement -->
+<entry key="acceptLicense">true</entry>
+
+<!-- The root installation directory -->
+<!-- If the product does not support multiple instances and TIBCO_HOME has already been set then -->
+<!-- this value is ignored and the existing TIBCO_HOME is used as the installation root. -->
+<entry key="installationRoot"><%= node['ems-install']['install']['ems_install_dir'] %></entry>
+
+<!-- If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment. -->
+<!-- If creating a new environment then the installationRoot AND environmentName MUST BE UNIQUE and not match a pre-existing environment. -->
+<entry key="environmentName"><%= node['ems-install']['install']['tibco_home_name'] %></entry>
+<!-- This only needs to be used for the macos power platform. -->
+<entry key="environmentDesc">my installation</entry>
+
+<!-- configDirectoryRoot - location of configuration files if it does not already exist -->
+<entry key="configDirectoryRoot"><%= node['ems-install']['install']['ems_install_dir'] %>/ems/8.2/config</entry>
+
+<!-- The following configuration parameters control the download of Hibernate -->
+<!-- LGPLAssemblyLicenseAccepted - true or false to accept the license -->
+<!-- LGPLAssemblyDownload - true or false to download the assembly from the public TIBCO server -->
+<!-- LGPLAssemblyPath - if LGPLAssemblyDownload is false, this is the path where the Hibernate assembly is located on the system -->
+<entry key="LGPLAssemblyLicenseAccepted">true</entry>
+<entry key="LGPLAssemblyDownload">true</entry>
+<entry key="LGPLAssemblyPath"><%= node['ems-install']['install']['tibco_home_dir'] %>/thirdpartyDownload</entry>
+
+<!--Product Feature Settings-->
+<entry key="feature_EMS Server Baseline_ems">true</entry>
+<entry key="feature_Development Kit_ems">true</entry>
+<entry key="feature_EMS Client Baseline_ems">true</entry>
+<entry key="feature_EMS Source_ems">true</entry>
+<entry key="feature_Hibernate (For Database Stores)_ems">false</entry>
+
+<!-- Product-specific properties can be set below using the same 'entry key=' format as above. -->
+<!-- ONLY applicable for Windows platforms: -->
+<!--  manualRB - values can be true or false -->
+<!--  autoRB - values can be true or false -->
+<!--  Only one can be true, the default will be manual. -->
+<entry key="manualRB">true</entry>
+<entry key="autoRB">false</entry>
+<entry key="setUID">false</entry>
+<!-- configFile - values can be the default value or a file that already exists -->
+<!-- If an invalid value is added, the default value will be used -->
+<entry key="configFile"><%= node['ems-install']['config']['ems_conf_tibemsd'] %></entry>
+</properties>
