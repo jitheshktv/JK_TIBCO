@@ -1,0 +1,13 @@
+{
+  "ems-createinstance" : {
+    "config" : {
+      "ems_instance_name" : "TEST_EMS",
+      "ssl_port" : "8243",
+      "tcp_port" : "8222",
+      "tibemsd_conf_path" : "/apps/tibco/config/ems/TEST_EMS/conf",
+      "shared_conf_path" : "/apps/tibco/config/ems/TEST_EMS/conf/shared",
+      "shared_data_store" : "/apps/tibco/config/ems/TEST_EMS/conf/shared/datastore",
+      "ems_instance_logdir" : "/logs/tibco/ems/TEST_EMS"
+    }
+  }
+}
