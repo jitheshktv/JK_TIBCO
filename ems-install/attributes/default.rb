@@ -1,5 +1,5 @@
-default['ems-install']['install']['group'] = 'tibesb'
-default['ems-install']['install']['user'] = 'tibesb'
+default['ems-install']['install']['group'] = 'sgsup'
+default['ems-install']['install']['user'] = 'esbuser'
 
 default['ems-install']['install']['tibco_home_name'] = 'TIBCO_HOME'
 default['ems-install']['install']['tibco_home_dir'] = '/apps/tibco'
