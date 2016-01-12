@@ -17,7 +17,7 @@ ENV['JAVA_HOME'] = '/usr/lib/jvm/java'
 
 # Install ems binary using the response file
 execute 'installems' do
-  command "#{ems_bin} -silent -V responseFile=#{ems_install_responsefile}"
+  command "sudo -su #{user_name} #{ems_bin} -silent -V responseFile=#{ems_install_responsefile}"
   not_if { File.exist? "#{tibemsd}" }
 end
 
