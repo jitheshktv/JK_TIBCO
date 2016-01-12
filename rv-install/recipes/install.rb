@@ -17,7 +17,7 @@ install_group = node['rv-install']['install']['group']
 install_user = node['rv-install']['install']['user']
 
 execute 'install_rv' do
-  command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{rv_install_responsefile}"
+  command "sudo -u #{install_user} #{tibco_universalinstaller_bin} -silent -V responseFile=#{rv_install_responsefile}"
   not_if { File.exist? "#{rvd}" }
 end
 
