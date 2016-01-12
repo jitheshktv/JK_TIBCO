@@ -3,7 +3,7 @@ default['bw-install']['install']['user'] = 'esbuser'
 default['bw-install']['config']['group'] = 'sgsup'
 default['bw-install']['config']['user'] = 'esbuser'
 
-default['bw-install']['install']['tibco_home_name'] = 'TIBCO_EAI_HOME'
+default['bw-install']['install']['tibco_home_name'] = 'TIBCO_HOME'
 default['bw-install']['install']['tibco_home_dir'] = '/apps/tibco'
 default['bw-install']['install']['logs_home_dir'] = '/logs/tibco'
 default['bw-install']['install']['tibco_install_dir'] = '/apps/tibco'

@@ -3,7 +3,7 @@ default['tra-install']['install']['user'] = 'esbuser'
 default['tra-install']['config']['group'] = 'sgsup'
 default['tra-install']['config']['user'] = 'esbuser'
 
-default['tra-install']['install']['tibco_home_name'] = 'TIBCO_EAI_HOME'
+default['tra-install']['install']['tibco_home_name'] = 'TIBCO_HOME'
 default['tra-install']['install']['tibco_home_dir'] = '/apps/tibco'
 default['tra-install']['install']['logs_home_dir'] = '/logs/tibco'
 default['tra-install']['install']['tibco_install_dir'] = '/apps/tibco'
