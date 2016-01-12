@@ -6,10 +6,10 @@
 #
 # Create group.
 #
-install_group = node['rv-install']['install']['group']
-config_group = node['rv-install']['config']['group']
-install_user = node['rv-install']['install']['user']
-config_user = node['rv-install']['config']['user']
+install_group = node['tra-install']['install']['group']
+config_group = node['tra-install']['config']['group']
+install_user = node['tra-install']['install']['user']
+config_user = node['tra-install']['config']['user']
 
 group install_group
 group config_group
