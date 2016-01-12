@@ -18,6 +18,8 @@ install_user = node['bw-install']['install']['user']
 
 execute 'install_bw' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{bw_install_responsefile}"
+  user install_user
+  group install_group
   not_if { File.exist? "#{bwengine}" }
 end
 
