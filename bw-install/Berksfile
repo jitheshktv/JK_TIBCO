@@ -1,0 +1,5 @@
+source 'https://supermarket.chef.io'
+cookbook 'java', '~> 1.36.0'
+cookbook 'rv-install', :git => "https://github.com/jitheshktv/JK_TIBCO.git", rel: 'rv-install'
+cookbook 'tra-install', :git => "https://github.com/jitheshktv/JK_TIBCO.git", rel: 'tra-install'
+metadata
