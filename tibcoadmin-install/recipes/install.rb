@@ -16,7 +16,7 @@ tibco_install_dir = node['tibcoadmin-install']['install']['tibco_install_dir']
 install_group = node['tibcoadmin-install']['install']['group']
 install_user = node['tibcoadmin-install']['install']['user']
 
-execute 'install_rv' do
+execute 'install_tibcoadmin' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{tibcoadmin_install_responsefile}"
   not_if { File.exist? "#{uninstall_admin}" }
 end
