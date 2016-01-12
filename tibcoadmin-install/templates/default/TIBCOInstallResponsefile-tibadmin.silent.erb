@@ -1,0 +1,22 @@
+<?xml  version="1.0"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>---Universal Installer Silent Installation Properties---</comment>
+
+<!--accept the license agreement-->
+<entry key="acceptLicense">true</entry>
+
+<!--the root installation directory-->
+<!--if the product does not support multiple instances and TIBCO_HOME has already been set then-->
+<!--this value is ignored and the existing TIBCO_HOME is used as the installation root-->
+<entry key="installationRoot"><%= node['tibcoadmin-install']['install']['tibco_install_dir'] %></entry>
+
+<!--If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment-->
+<entry key="environmentName"><%= node['tibcoadmin-install']['install']['tibco_home_name'] %></entry>
+
+<!--Product Feature Settings-->
+<entry key="feature_Repository_TIBCOAdmin">true</entry>
+<entry key="feature_Documentation_TIBCOAdmin">true</entry>
+
+<!--Product Specific Properties can be set below using the same 'entry key=' format as above-->
+</properties>
