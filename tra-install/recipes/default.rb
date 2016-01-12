@@ -8,5 +8,6 @@ include_recipe 'tra-install::directories'
 include_recipe 'tra-install::s3download'
 include_recipe 'tra-install::responsefile'
 include_recipe 'java'
-include_recipe 'rv-install::default'
+# Uncomment the below line to run rv install before tra when testing this recipe alone using kitchen
+# include_recipe 'rv-install::default'
 include_recipe 'tra-install::install'
