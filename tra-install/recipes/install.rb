@@ -16,7 +16,7 @@ tibco_install_dir = node['tra-install']['install']['tibco_install_dir']
 install_group = node['tra-install']['install']['group']
 install_user = node['tra-install']['install']['user']
 
-execute 'install_rv' do
+execute 'install_tra' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{tra_install_responsefile}"
   not_if { File.exist? "#{wrap}" }
 end
