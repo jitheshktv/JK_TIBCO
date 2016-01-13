@@ -38,10 +38,12 @@ template "#{ems_conf_templates_dir}/channels.conf" do
   source 'channels.conf.erb'
   mode '0755'
 end
+
 template "#{ems_conf_templates_dir}/durables.conf" do
   source 'durables.conf.erb'
   mode '0755'
 end
+
 template "#{ems_conf_templates_dir}/factories.conf" do
   source 'factories.conf.erb'
   mode '0755'
@@ -98,7 +100,7 @@ directory default_cfgmgmt do
   action :delete
 end
 
-# Change the ownership of the directories
+# Change the ownership of the directories to the runtime user, in case if the ownership are differnt.
 execute 'chown-ems-files' do
   command "chown -R #{user_name}:#{group_name} #{ems_install_dir}"
   user 'root'
