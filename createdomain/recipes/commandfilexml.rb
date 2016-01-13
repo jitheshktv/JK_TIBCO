@@ -8,7 +8,7 @@
 
 config_user = node['createdomain-rv']['config']['user']
 config_group = node['createdomain-rv']['config']['group']
-createdomain_cmdfilexml = node['createdomain-rv']['config']['createdomain_cmdfile']
+createdomain_cmdfile = node['createdomain-rv']['config']['createdomain_cmdfile']
 
 template 'CreateDomain.xml' do
   source 'CreateDomain.xml.erb'
