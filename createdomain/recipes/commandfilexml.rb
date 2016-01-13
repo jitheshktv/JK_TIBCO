@@ -8,10 +8,10 @@
 
 config_user = node['createdomain-rv']['config']['user']
 config_group = node['createdomain-rv']['config']['group']
-createdomain_xml = '/tmp/CreateDomain.xml'
+createdomain_cmdfilexml = node['createdomain-rv']['config']['createdomain_cmdfile']
 
 template 'CreateDomain.xml' do
   source 'CreateDomain.xml.erb'
   mode '0755'
-  path createdomain_xml
+  path createdomain_cmdfile
 end
