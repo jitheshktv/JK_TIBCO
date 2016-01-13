@@ -31,6 +31,7 @@ execute 'create_domain' do
   cwd tra_bin
   user config_user
   group config_group
+  not_if { File.exist? "#{hawkagent}" }
 end
 
 # Start the hawkagent
