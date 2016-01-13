@@ -10,7 +10,7 @@
 config_user = node['createdomain-rv']['config']['user']
 config_group = node['createdomain-rv']['config']['group']
 tra_home_dir = node['createdomain-rv']['config']['tra_home_dir']
-domainutilitycmd = "#{tra_home_dir}/bin/domainutilitycmd"
+tra_bin = "#{tra_home_dir}/bin"
 createdomain_cmdfile = node['createdomain-rv']['config']['createdomain_cmdfile']
 
 domain_name = node['createdomain-rv']['config']['domain_name']
@@ -25,7 +25,8 @@ yum_package 'libstdc++48.i686'
 
 # Execute the domain utility
 execute 'create_domain' do
-  command "#{domainutilitycmd} -cmdFile #{createdomain_cmdfile}"
+  command "./domainutilitycmd -cmdFile #{createdomain_cmdfile}"
+  cwd tra_bin
   user config_user
   group config_group
 end
