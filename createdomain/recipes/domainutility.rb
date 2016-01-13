@@ -25,7 +25,7 @@ yum_package 'libstdc++48.i686'
 
 # Execute the domain utility
 execute 'create_domain' do
-  command "#{domainutilitycmd} --cmdFile #{createdomain_cmdfile}"
+  command "#{domainutilitycmd} -cmdFile #{createdomain_cmdfile}"
   user config_user
   group config_group
 end
