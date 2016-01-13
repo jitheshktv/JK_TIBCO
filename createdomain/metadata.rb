@@ -1,0 +1,7 @@
+name 'createdomain'
+maintainer 'JitheshKumar (JK)'
+maintainer_email 'jiteshkumar.thekkeveettil@citi.com'
+license 'all_rights'
+description 'Creates a TIBCO admin domain with RV transport'
+long_description 'Creates a TIBCO admin domain with RV transport'
+version '0.1.0'
