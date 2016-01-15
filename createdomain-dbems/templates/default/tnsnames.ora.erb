@@ -1,0 +1,5 @@
+<%= node['createdomain-dbems']['config']['db_tnsname'] %> =
+(DESCRIPTION =
+  (ADDRESS = (PROTOCOL = TCP) (HOST = <%= node['createdomain-dbems']['config']['db_hostname'] %>) (PORT = <%= node['createdomain-dbems']['config']['db_port'] %>))
+  (CONNECT_DATA=
+    (SID=<%= node['createdomain-dbems']['config']['db_sid'] %>)))
