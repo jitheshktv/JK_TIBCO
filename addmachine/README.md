@@ -1,4 +1,3 @@
 # addmachine
 
-TODO: Enter the cookbook description here.
-
+Cookbook to Add a machine to RV based domain
