@@ -90,8 +90,20 @@
   type                  = queue
   url                   = ssl://<%= node['fqdn'] %>:SSL_PORT
   ssl_verify_host       = disabled
+  connect_attempt_count    = 10
+  connect_attempt_delay    = 10000
+  connect_attempt_timeout  = 30000
+  reconnect_attempt_count  = 300
+  reconnect_attempt_delay  = 10000
+  reconnect_attempt_timeout= 30000
 
 [<APP>_SSLTopicConnectionFactory]
   type                  = topic
   url                   = ssl://<%= node['fqdn'] %>:SSL_PORT
   ssl_verify_host       = disabled
+  connect_attempt_count    = 10
+  connect_attempt_delay    = 10000
+  connect_attempt_timeout  = 30000
+  reconnect_attempt_count  = 300
+  reconnect_attempt_delay  = 10000
+  reconnect_attempt_timeout= 30000
