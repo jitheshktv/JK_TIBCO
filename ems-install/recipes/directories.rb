@@ -6,49 +6,30 @@
 # recipe to create the directory structure needed for the ems installation
 
 # Create the directories
-directory node['ems-install']['install']['tibco_home_dir'] do
-  owner node['ems-install']['install']['user']
-  group node['ems-install']['install']['group']
-  mode '0755'
-  recursive true
-  action :create
+
+tibco_home_dir = node['ems-install']['install']['tibco_home_dir']
+logs_home_dir = node['ems-install']['install']['logs_home_dir']
+ems_install_dir = node['ems-install']['install']['ems_install_dir']
+ems_log_dir = node['ems-install']['install']['ems_log_dir']
+ems_conf_templates_dir = node['ems-install']['config']['ems_conf_templates_dir']
+ems_conf_tibemsd = node['ems-install']['config']['ems_conf_tibemsd']
+
+user_name = node['ems-install']['install']['user']
+group_name = node['ems-install']['install']['group']
+
+[tibco_home_dir, logs_home_dir, ems_install_dir, ems_log_dir, ems_conf_templates_dir].each do |dir_name|
+  directory dir_name do
+    owner user_name
+    group group_name
+    mode '0755'
+    recursive true
+    action :create
+  end
 end
 
-directory node['ems-install']['install']['logs_home_dir'] do
-  owner node['ems-install']['install']['user']
-  group node['ems-install']['install']['group']
-  mode '0755'
-  recursive true
-  action :create
-end
-
-directory node['ems-install']['install']['ems_install_dir'] do
-  owner node['ems-install']['install']['user']
-  group node['ems-install']['install']['group']
-  mode '0755'
-  recursive true
-  action :create
-end
-
-directory node['ems-install']['install']['ems_log_dir'] do
-  owner node['ems-install']['install']['user']
-  group node['ems-install']['install']['group']
-  mode '0755'
-  recursive true
-  action :create
-end
-
-directory node['ems-install']['config']['ems_conf_templates_dir'] do
-  owner node['ems-install']['install']['user']
-  group node['ems-install']['install']['group']
-  mode '0755'
-  recursive true
-  action :create
-end
-
-file node['ems-install']['config']['ems_conf_tibemsd'] do
-  owner node['ems-install']['install']['user']
-  group node['ems-install']['install']['group']
+file ems_conf_tibemsd do
+  owner user_name
+  group group_name
   mode '0755'
   content 'sample tibesmd.conf file'
 end

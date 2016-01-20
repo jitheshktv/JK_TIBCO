@@ -35,5 +35,6 @@ admin::Administrator
 EMS-SERVER-NAME::Main Server
 
 # Standards users needed for support, monitoring & management.
-<%= node['ems-install']['config']['admin_user'] %>::"admin user for objects creation and making config changes"
-<%= node['ems-install']['config']['monitor_user'] %>::"User for monitoring the ems"
+<%= node['ems-install']['config']['admin_user'] %>:<%= node['ems-install']['config']['admin_user_passwd'] %>:"admin user for objects creation and making config changes"
+<%= node['ems-install']['config']['monitor_user'] %>:<%= node['ems-install']['config']['monitor_user_passwd'] %>:"User for monitoring the ems"
+<%= node['ems-install']['config']['domain_user'] %>:<%= node['ems-install']['config']['domain_user_passwd'] %>:"User for administration domains"
