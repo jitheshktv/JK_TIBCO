@@ -1,0 +1,5 @@
+<%= node['addmachine-dbems']['config']['db_tnsname'] %> =
+(DESCRIPTION =
+  (ADDRESS = (PROTOCOL = TCP) (HOST = <%= node['addmachine-dbems']['config']['db_hostname'] %>) (PORT = <%= node['addmachine-dbems']['config']['db_port'] %>))
+  (CONNECT_DATA=
+    (SID=<%= node['addmachine-dbems']['config']['db_sid'] %>)))
