@@ -19,7 +19,7 @@ db_hostname = node['createdomain-dbems']['config']['db_hostname']
 db_port = node['createdomain-dbems']['config']['db_port']
 db_sid = node['createdomain-dbems']['config']['db_sid']
 
-if db_use_tns
+if "#{db_use_tns}" == 'true'
   case db_driver
   when 'oracle.jdbc.driver.OracleDriver'
     db_connection_url = "jdbc:oracle:thin:@(TNSNamesFile=#{db_tnsfile};TNSServerName=#{db_tnsname})"
