@@ -30,4 +30,4 @@ default['addmachine-dbems']['config']['hawkhma_rv_daemon'] = 'tcp:17474'
 default['addmachine-dbems']['config']['hawkhma_rv_network'] = ';'
 default['addmachine-dbems']['config']['hawkhma_rv_service'] = '17475'
 
-default['addmachine-dbems']['config']['AddMachine_cmdfile'] = '/tmp/AddMachine.xml'
+default['addmachine-dbems']['config']['addmachine_cmdfile'] = '/tmp/AddMachine.xml'
