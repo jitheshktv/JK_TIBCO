@@ -11,7 +11,7 @@ config_group = node['createdomain-dbems']['config']['group']
 createdomain_cmdfile = node['createdomain-dbems']['config']['createdomain_cmdfile']
 
 db_use_tns = node['createdomain-dbems']['config']['db_use_tns']
-db_driver = default['createdomain-dbems']['config']['db_driver']
+db_driver = node['createdomain-dbems']['config']['db_driver']
 
 db_tnsname = node['createdomain-dbems']['config']['db_tnsname']
 db_tnsfile = node['createdomain-dbems']['config']['db_tnsfile']
