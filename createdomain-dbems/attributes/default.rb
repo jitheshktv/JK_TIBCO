@@ -19,11 +19,12 @@ default['createdomain-dbems']['config']['ems_server_url'] = 'tcp://sawgrass-admi
 default['createdomain-dbems']['config']['ems_user_name'] = 'stsadmin'
 default['createdomain-dbems']['config']['ems_user_password'] = 'password'
 
+default['createdomain-dbems']['config']['db_use_tns'] = 'false'
 default['createdomain-dbems']['config']['db_tnsfile'] = '/apps/tibco/tnsnames.ora'
 default['createdomain-dbems']['config']['db_tnsname'] = 'TOOLSDB'
 default['createdomain-dbems']['config']['db_user_name'] = 'jt94174'
 default['createdomain-dbems']['config']['db_user_password'] = 'JKJan2016'
-default['createdomain-dbems']['config']['db_driver'] = 'tibcosoftwareinc.jdbc.oracle.OracleDriver'
+default['createdomain-dbems']['config']['db_driver'] = 'oracle.jdbc.driver.OracleDriver'
 default['createdomain-dbems']['config']['db_min_connections'] = '0'
 default['createdomain-dbems']['config']['db_max_connections'] = '100'
 

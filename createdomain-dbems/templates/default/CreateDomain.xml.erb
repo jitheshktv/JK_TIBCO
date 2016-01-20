@@ -44,7 +44,7 @@
         </TomcatConfiguration>
 
         <DatabaseConfiguration>
-          <DatabaseUrl>jdbc:tibcosoftwareinc:oracle:TNSNamesFile=<%= node['createdomain-dbems']['config']['db_tnsfile'] %>;TNSServerName=<%= node['createdomain-dbems']['config']['db_tnsname'] %></DatabaseUrl>
+          <DatabaseUrl><%= @DatabaseUrl %></DatabaseUrl>
           <DatabaseUsername><%= node['createdomain-dbems']['config']['db_user_name'] %></DatabaseUsername>
           <DatabasePassword><%= node['createdomain-dbems']['config']['db_user_password'] %></DatabasePassword>
           <JdbcDriver><%= node['createdomain-dbems']['config']['db_driver'] %></JdbcDriver>
