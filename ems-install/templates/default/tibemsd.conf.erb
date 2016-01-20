@@ -78,8 +78,12 @@ msg_swapping            = enabled
 # the default host and interface will be used.
 ########################################################################
 
-listen                  = tcp://<%= node['fqdn'] %>:TCP_PORT
-listen                  = ssl://<%= node['fqdn'] %>:SSL_PORT
+# Commenting these and using localhost for the timebeing.
+#listen                  = tcp://<%= node['fqdn'] %>:TCP_PORT
+#listen                  = ssl://<%= node['fqdn'] %>:SSL_PORT
+
+listen                  = tcp://localhost:TCP_PORT
+listen                  = ssl://localhost:SSL_PORT
 
 ########################################################################
 # Authorization. Disabled by default. Enable to verify user credentials
