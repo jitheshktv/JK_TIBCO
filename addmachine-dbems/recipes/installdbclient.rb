@@ -7,11 +7,13 @@
 # This recipe is temporarily kept here. This should be deleted once a seperate Cookbook for installing db client jar files have been created.
 # The JARs can be kept in S3 and downloaded from there
 
+# Intialize the variables
 tra_home_dir = node['addmachine-dbems']['config']['tra_home_dir']
 tra_lib = "#{tra_home_dir}/lib"
 config_user = node['addmachine-dbems']['config']['user']
 config_group = node['addmachine-dbems']['config']['group']
 
+# Copy the Oracle DB driver to the server tra lib directory from the files
 cookbook_file 'ojdbc.jar' do
   source 'ojdbc6.jar'
   owner config_user

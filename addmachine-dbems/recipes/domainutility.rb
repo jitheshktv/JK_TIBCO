@@ -7,6 +7,7 @@
 # Run the domainutility to add domain to the domain
 #
 
+# Intialize the variables
 config_user = node['addmachine-dbems']['config']['user']
 config_group = node['addmachine-dbems']['config']['group']
 tra_home_dir = node['addmachine-dbems']['config']['tra_home_dir']
@@ -22,7 +23,7 @@ hawkagent = "#{tra_domain_dir}/hawkagent_#{domain_name}"
 yum_package 'glibc.i686'
 yum_package 'libstdc++48.i686'
 
-# Execute the domain utility
+# Execute the domain utility to add machine to the domain
 execute 'addmachine' do
   command "./domainutilitycmd -cmdFile #{addmachine_cmdfile}"
   cwd tra_bin
