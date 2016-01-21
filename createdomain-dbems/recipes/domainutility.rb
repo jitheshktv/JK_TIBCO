@@ -7,6 +7,7 @@
 # Run the domainutility to create domain
 #
 
+# variables
 config_user = node['createdomain-dbems']['config']['user']
 config_group = node['createdomain-dbems']['config']['group']
 tra_home_dir = node['createdomain-dbems']['config']['tra_home_dir']
@@ -25,7 +26,7 @@ administrator = "#{tibcoadmin_bin_dir}/tibcoadmin_#{domain_name}"
 yum_package 'glibc.i686'
 yum_package 'libstdc++48.i686'
 
-# Execute the domain utility
+# Execute the domain utility to create the domain
 execute 'create_domain' do
   command "./domainutilitycmd -cmdFile #{createdomain_cmdfile}"
   cwd tra_bin
@@ -42,7 +43,7 @@ execute 'start_hawkagent' do
   group config_group
 end
 
-# Start the admin domain
+# Start the administrator
 execute 'start_admin' do
   command "nohup #{administrator} 2>&1 &"
   cwd tibcoadmin_bin_dir

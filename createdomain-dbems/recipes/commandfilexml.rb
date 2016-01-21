@@ -6,6 +6,7 @@
 #
 # Generate the CreateDomain.xml from the template
 
+# Initialize the variables
 config_user = node['createdomain-dbems']['config']['user']
 config_group = node['createdomain-dbems']['config']['group']
 createdomain_cmdfile = node['createdomain-dbems']['config']['createdomain_cmdfile']
@@ -19,6 +20,7 @@ db_hostname = node['createdomain-dbems']['config']['db_hostname']
 db_port = node['createdomain-dbems']['config']['db_port']
 db_sid = node['createdomain-dbems']['config']['db_sid']
 
+# Form the DB url based on the usage of TNS and the selected driver
 if "#{db_use_tns}" == 'true'
   case db_driver
   when 'oracle.jdbc.driver.OracleDriver'
@@ -35,6 +37,7 @@ else
   end
 end
 
+# Generate the CreateDomain commandfile XML from the template and based on the DB url
 template 'CreateDomain.xml' do
   source 'CreateDomain.xml.erb'
   mode '0755'
