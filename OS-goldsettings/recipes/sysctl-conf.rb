@@ -13,7 +13,7 @@ end
 # Update the sysctl.conf file with gold settings values
 ruby_block 'update sysctl.conf file' do
   block do
-    sysctl_conf = Chef::Util::FileEdit.new("#{node['OS-goldsettings']['config'][etc_dir]}/sysctl.conf")
+    sysctl_conf = Chef::Util::FileEdit.new("#{node['OS-goldsettings']['config']['etc_dir']}/sysctl.conf")
     sysctl_conf.insert_line_if_no_match("net.ipv4.ip_local_port_range", "\n#Tibco Settings\nnet.ipv4.ip_local_port_range = #{node['ip_local_port_range']}")
     sysctl_conf.insert_line_if_no_match("net.core.rmem_max", "net.core.rmem_max = #{node['rmem_max']}")
     sysctl_conf.insert_line_if_no_match("net.core.wmem_max", "net.core.wmem_max = #{node['wmem_max']}")
@@ -23,7 +23,7 @@ ruby_block 'update sysctl.conf file' do
     sysctl_conf.insert_line_if_no_match("net.core.netdev_max_backlog", "net.core.netdev_max_backlog = #{node['netdev_max_backlog']}")
     sysctl_conf.insert_line_if_no_match("net.core.somaxconn", "net.core.somaxconn = #{node['somaxconn']}")
     sysctl_conf.insert_line_if_no_match("net.ipv4.tcp_keepalive_intvl", "net.ipv4.tcp_keepalive_intvl = #{node['tcp_keepalive_intvl']}")
-    sysctl_conf.insert_line_if_no_match("net.ipv4.tcp_keepalive_probes", "net.ipv4.tcp_keepalive_probes = #{nde['tcp_keepalive_probes']}")
+    sysctl_conf.insert_line_if_no_match("net.ipv4.tcp_keepalive_probes", "net.ipv4.tcp_keepalive_probes = #{node['tcp_keepalive_probes']}")
     sysctl_conf.insert_line_if_no_match("kernel.sem", "kernel.sem = #{node['kernell.sem']}")
     sysctl_conf.insert_line_if_no_match("kernel.msgmni", "kernel.msgmni = #{node['kernel.msgmni']}")
     sysctl_conf.insert_line_if_no_match("kernel.shmmni", "kernel.shmmni = #{node['kernel.shmmni']}")
@@ -35,6 +35,6 @@ ruby_block 'update sysctl.conf file' do
 end
 
 #Delete the back up file created by ruby_block
-file "#{node['OS-goldsettings']['config'][etc_dir]}/sysctl.conf.old" do
-  action :Delete
+file "#{node['OS-goldsettings']['config']['etc_dir']}/sysctl.conf.old" do
+  action :delete
 end
