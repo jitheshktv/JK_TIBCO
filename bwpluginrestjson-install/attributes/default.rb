@@ -9,7 +9,7 @@ default['bwpluginrestjson-install']['install']['logs_home_dir'] = '/logs/tibco'
 default['bwpluginrestjson-install']['install']['tibco_install_dir'] = '/apps/tibco'
 default['bwpluginrestjson-install']['install']['tibco_instance_dir'] = '/apps/tibco'
 default['bwpluginrestjson-install']['install']['logs_instance_dir'] = '/logs/tibco'
-default['bwpluginrestjson-install']['install']['bwpluginrestjson_home_dir'] = '/apps/tibc/bw/plugins'
+default['bwpluginrestjson-install']['install']['bwpluginrestjson_home_dir'] = '/apps/tibco/bw/plugins'
 
 default['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_source'] = 'https://s3-us-west-2.amazonaws.com/restjsonplugin-2.0.0-bin/linux/TIB_bwpluginrestjson_2.0.0_linux26gl23_x86.zip'
 default['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_target_path'] = '/tmp/bwpluginrestjson'
