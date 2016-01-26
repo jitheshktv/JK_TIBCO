@@ -15,7 +15,7 @@ default['sdk-install']['install']['sdk_bin_target_path'] = '/tmp/sdk'
 default['sdk-install']['install']['sdk_bin_zip'] = 'TIB_sdk_5.8.0_linux24gl23_x86.zip'
 default['sdk-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['sdk-install']['install']['response_file'] = 'sdkInstallResponseFile.silent'
-default['sdk-install']['install']['sdk_home_dir'] = '/apps/tibco/adapter/adsdk/5.8'
+default['sdk-install']['install']['sdk_home_dir'] = '/apps/tibco/adapter/sdk/5.8'
 
 default['java']['install_flavor'] = 'oracle'
 default['java']['jdk_version'] = '8'
