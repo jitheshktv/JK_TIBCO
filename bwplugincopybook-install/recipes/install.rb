@@ -18,6 +18,7 @@ install_user = node['bwplugincopybook-install']['install']['user']
 
 execute 'install_bwplugincopybook' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{bwplugincopybook_install_responsefile}"
+  cwd bwplugincopybook_bin_target_path
   user install_user
   group install_group
   not_if { File.exist? "#{copybook_jar}" }
