@@ -9,6 +9,7 @@ default['bwplugincopybook-install']['install']['logs_home_dir'] = '/logs/tibco'
 default['bwplugincopybook-install']['install']['tibco_install_dir'] = '/apps/tibco'
 default['bwplugincopybook-install']['install']['tibco_instance_dir'] = '/apps/tibco'
 default['bwplugincopybook-install']['install']['logs_instance_dir'] = '/logs/tibco'
+default['bwplugincopybook-install']['install']['bwplugincopybook_home_dir'] = '/apps/tibc/bw/plugins'
 
 default['bwplugincopybook-install']['install']['bwplugincopybook_bin_source'] = 'https://s3-us-west-2.amazonaws.com/ccbplugin-3.4.0-bin/linux/TIB_bwplugincopybook_3.4.0_linux24gl23_x86.zip'
 default['bwplugincopybook-install']['install']['bwplugincopybook_bin_target_path'] = '/tmp/bwplugincopybook'
