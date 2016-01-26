@@ -36,8 +36,8 @@ execute 'chown-install-directories' do
 end
 
 #Clean up the temporary files used for the installation.
-#directory 'install_bin_file' do
-#  path sdk_bin_target_path
-#  recursive true
-#  action :delete
-#end
+directory 'install_bin_file' do
+  path sdk_bin_target_path
+  recursive true
+  action :delete
+end
