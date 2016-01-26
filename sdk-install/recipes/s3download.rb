@@ -45,3 +45,10 @@ end
 file "#{sdk_bin_target_path}/#{tibco_universalinstaller_bin}" do
   mode '0755'
 end
+
+# Change the permission of all the installation files. This is to copy the downloaded missing assembly file to the assembly directory
+execute 'chmod-install-directories' do
+  command "chmod -R 777 #{sdk_bin_target_path}"
+  user 'root'
+  action :run
+end
