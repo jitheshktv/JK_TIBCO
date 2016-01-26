@@ -31,6 +31,7 @@ ruby_block 'update sysctl.conf file' do
     sysctl_conf.insert_line_if_no_match("net.ipv4.tcp_slow_start_after_idle", "net.ipv4.tcp_slow_start_after_idle = #{node['tcp_slow_start_after_idle']}")
     sysctl_conf.insert_line_if_no_match("kernel.pid_max", "kernel.pid_max = #{node['kernel.pid_max']}")
     sysctl_conf.insert_line_if_no_match("fs.file-max", "fs.file-max = #{node['fs.file-max']}")
+    sysctl_conf.write_file
   end
 end
 
