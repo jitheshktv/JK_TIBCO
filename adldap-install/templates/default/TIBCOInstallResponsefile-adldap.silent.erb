@@ -1,0 +1,28 @@
+<?xml  version="1.0"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>---Universal Installer Silent Installation Properties---</comment>
+
+<!--accept the license agreement-->
+<entry key="acceptLicense">true</entry>
+
+<!--the root installation directory-->
+<!--if the product does not support multiple instances and TIBCO_HOME has already been set then-->
+<!--this value is ignored and the existing TIBCO_HOME is used as the installation root-->
+<entry key="installationRoot"><%= node['adldap-install']['install']['tibco_install_dir'] %></entry>
+
+<!--If multiple environments are supported, create a new one or use and existing one-->
+<!--If the product does not support multiple environments, then the values below are ignored-->
+<entry key="createNewEnvironment">true</entry>
+
+<!--If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment-->
+<entry key="environmentName"><%= node['adldap-install']['install']['tibco_home_name'] %></entry>
+
+<!--Product Feature Settings-->
+<entry key="feature_Adapter_adldap">true</entry>
+<entry key="feature_Palette_adldap">true</entry>
+<entry key="feature_Samples_adldap">true</entry>
+<entry key="feature_LDAP Documentation_adldap">true</entry>
+
+<!--Product Specific Properties can be set below using the same 'entry key=' format as above-->
+</properties>
