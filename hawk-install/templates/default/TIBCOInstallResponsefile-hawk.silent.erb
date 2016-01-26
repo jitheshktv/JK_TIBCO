@@ -1,0 +1,52 @@
+<?xml  version="1.0"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+<comment>---Universal Installer Silent Installation Properties---</comment>
+
+<!--accept the license agreement-->
+<entry key="acceptLicense">true</entry>
+
+<!--the root installation directory-->
+<!--if the product does not support multiple instances and TIBCO_HOME has already been set then-->
+<!--this value is ignored and the existing TIBCO_HOME is used as the installation root-->
+<entry key="installationRoot"><%= node['hawk-install']['install']['tibco_install_dir'] %></entry>
+
+<!--If multiple environments are supported, create a new one or use and existing one-->
+<!--If the product does not support multiple environments, then the values below are ignored-->
+<!-- <entry key="createNewEnvironment">true</entry> -->
+
+<!--If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment-->
+<!--If creating a new environment then the installationRoot AND environmentName MUST BE UNIQUE and not match a pre-existing environment-->
+<entry key="environmentName"><%= node['hawk-install']['install']['tibco_home_name'] %></entry>
+<entry key="environmentDesc">My HAWK Installation</entry>
+
+<!--Install Via Profile-->
+<!-- <entry key="useInstallProfile">true</entry> -->
+<!-- <entry key="selectedProfiles">TIBCO Hawk 5.1.1 Components</entry> -->
+
+<!--Product Feature settings-->
+<!-- <entry key="feature_JRE_hawk">true</entry> -->
+<!-- <entry key="feature_TIBCO Hawk Documentation_hawk">true</entry> -->
+<entry key="feature_Agent, EventService, Display, SDK, Examples_hawk">true</entry>
+<entry key="feature_Runtime_hawk">true</entry>
+<entry key="feature_WebConsole Application_hawk">true</entry>
+<entry key="feature_WebContainer - Apache Tomcat_hawk">true</entry>
+<!-- <entry key="feature_Admin Agent Runtime_hawk">true</entry> -->
+
+<!-- configDirectory - location of configuration files if it is not already defined for the TIBCO HOME instance -->
+<entry key="configDirectoryRoot"><%= node['hawk-install']['install']['tibco_install_dir'] %>/tibco_cfg</entry>
+
+<!-- JRE Directory location -->
+<entry key="java.home.directory"><%= node['hawk-install']['install']['tibcojre_home_dir'] %></entry>
+
+<!--Force re-installation of previously installed features-->
+<entry key="reinstallFeatures">true</entry>
+
+<!--Product Specific Properties can be set below using the same 'entry key=' format as above-->
+<entry key="tomcatHost">localhost</entry>
+<entry key="tomcatPort"><%= node['hawk-install']['install']['tomcat_port'] %></entry>
+<entry key="tomcatShutdownPort"><%= node['hawk-install']['install']['tomcat_shutdown_port'] %></entry>
+<entry key="tomcatUsername"><%= node['hawk-install']['install']['tomcat_user_name'] %></entry>
+<entry key="tomcatPassword"><%= node['hawk-install']['install']['tomcat_user_password'] %></entry>
+
+</properties>
