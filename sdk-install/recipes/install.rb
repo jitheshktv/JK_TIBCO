@@ -10,7 +10,7 @@
 sdk_bin_target_path = node['sdk-install']['install']['sdk_bin_target_path']
 tibco_universalinstaller_bin = "#{sdk_bin_target_path}/#{node['sdk-install']['install']['tibco_universalinstaller_bin']}"
 sdk_install_responsefile = "#{sdk_bin_target_path}/#{node['sdk-install']['install']['response_file']}"
-adaptersdk = "#{node['sdk-install']['install']['sdk_home_dir']}/bin/bwengine"
+adaptersdk = "#{node['sdk-install']['install']['sdk_home_dir']}/bin/aesend"
 
 tibco_install_dir = node['sdk-install']['install']['tibco_install_dir']
 install_group = node['sdk-install']['install']['group']
@@ -22,6 +22,7 @@ yum_package 'libstdc++48.i686'
 
 execute 'install_sdk' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{sdk_install_responsefile}"
+  cwd sdk_bin_target_path
   user install_user
   group install_group
   not_if { File.exist? "#{adaptersdk}" }
