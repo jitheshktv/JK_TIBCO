@@ -20,7 +20,7 @@ install_group = node['bwpluginrestjson-install']['install']['group']
 config_user = node['bwpluginrestjson-install']['config']['user']
 config_group = node['bwpluginrestjson-install']['config']['group']
 
-[tibco_home_dir, logs_home_dir, tibco_install_dir, bwpluginrestjson_home_dir, bwpluginrestjson_bin_target_path, tibco_cfgmgmt_dir, tibco_thirdpartydownload_dir].each do |dir_name|
+[tibco_home_dir, logs_home_dir, tibco_install_dir, bwpluginrestjson_home_dir, bwpluginrestjson_bin_target_path].each do |dir_name|
   directory dir_name do
     owner install_user
     group install_group
