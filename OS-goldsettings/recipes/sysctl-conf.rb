@@ -7,7 +7,7 @@ remote_file "Backup of sysctl.conf file" do
   source "file://#{node['OS-goldsettings']['config']['etc_dir']}/sysctl.conf"
   owner node['OS-goldsettings']['config']['user']
   group node['OS-goldsettings']['config']['group']
-  mode '0644'
+  mode '0544'
 end
 
 # Update the sysctl.conf file with gold settings values
