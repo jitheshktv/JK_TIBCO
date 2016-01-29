@@ -293,7 +293,7 @@ ssl_server_issuer       =
 
 # Trusted issuers of client certificates. Supports PEM, DER and PKCS7.
 
-ssl_server_trusted      = CERT_STORE/SERVER_TRUSTED
+ssl_server_trusted      = TRUSTED_STORE/SERVER_TRUSTED
 
 # Path to installed Enthropy Gathering Daemon
 
@@ -396,7 +396,7 @@ ldap_static_member_attribute = uniquemember
 ldap_static_group_member_filter = (uniqueMember=%s)
 
 ldap_conn_type=ldaps
-ldap_tls_cacert_file=CERT_STORE/SERVER_TRUSTED
+ldap_tls_cacert_file=TRUSTED_STORE/SERVER_TRUSTED
 
 ################ End of LDAP Configuration #####################
 
