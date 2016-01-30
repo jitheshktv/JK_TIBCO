@@ -31,7 +31,7 @@ package 'unzip'
 
 # Unzip the downloaded file to tra lib direcrory
 execute 'unzip_tempfile' do
-  command "unzip #{temp_file}"
+  command "unzip -o #{temp_file}"
   cwd tra_lib_dir
 end
 
