@@ -1,5 +1,5 @@
 
-default['jmsclient-install']['config']['s3_bucket'] = 'https://s3-us-west-2.amazonaws.com/ems-client/'
+default['jmsclient-install']['config']['s3_bucket'] = 'https://s3-us-west-2.amazonaws.com/ems-client'
 default['jmsclient-install']['config']['ems_client_version'] = '8.2.2'
 
 default['jmsclient-install']['config']['user'] = 'esbuser'
