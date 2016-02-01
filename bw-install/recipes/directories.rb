@@ -13,7 +13,8 @@ tibco_install_dir = node['bw-install']['install']['tibco_install_dir']
 tibco_instance_dir = node['bw-install']['install']['tibco_instance_dir']
 logs_instance_dir = node['bw-install']['install']['logs_instance_dir']
 bw_bin_target_path = node['bw-install']['install']['bw_bin_target_path']
-bw_home_dir = node['bw-install']['install']['bw_home_dir']
+bw_version = node['bw-install']['install']['bw_version']
+bw_home_dir = "#{tibco_install_dir}/bw/#{bw_version}"
 
 install_user = node['bw-install']['install']['user']
 install_group = node['bw-install']['install']['group']

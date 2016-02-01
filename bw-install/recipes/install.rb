@@ -10,9 +10,12 @@
 bw_bin_target_path = node['bw-install']['install']['bw_bin_target_path']
 tibco_universalinstaller_bin = "#{bw_bin_target_path}/#{node['bw-install']['install']['tibco_universalinstaller_bin']}"
 bw_install_responsefile = "#{bw_bin_target_path}/#{node['bw-install']['install']['response_file']}"
-bwengine = "#{node['bw-install']['install']['bw_home_dir']}/bin/bwengine"
 
 tibco_install_dir = node['bw-install']['install']['tibco_install_dir']
+bw_version = node['bw-install']['install']['bw_version']
+bw_home_dir = "#{tibco_install_dir}/bw/#{bw_version}"
+bwengine = "#{bw_home_dir}/bin/bwengine"
+
 install_group = node['bw-install']['install']['group']
 install_user = node['bw-install']['install']['user']
 
