@@ -31,3 +31,9 @@ Example Custom JSON:
     }
   }
 }
+
+
+version 0.1.1 :
+- Added new attributes for the product versions, and removed a few attributes including the tra_home_dir. The home directory is now dynamically set.
+- Added the AppManage.tra template, instead of editing the existing file.
+- Updated the directories recipe to create more directories 

@@ -9,6 +9,7 @@ default['tra-install']['install']['logs_home_dir'] = '/logs/tibco'
 default['tra-install']['install']['tibco_install_dir'] = '/apps/tibco'
 default['tra-install']['install']['tibco_instance_dir'] = '/apps/tibco'
 default['tra-install']['install']['logs_instance_dir'] = '/logs/tibco'
+default['tra-install']['install']['logs_temp_dir'] = '/logs/tibco/tmp'
 
 default['tra-install']['install']['tra_bin_source'] = 'https://s3-us-west-2.amazonaws.com/tra-5.10.0-bin/linux/TIB_TRA_5.10.0_linux_x86.zip'
 default['tra-install']['install']['tra_bin_target_path'] = '/tmp/tra'
@@ -18,6 +19,12 @@ default['tra-install']['install']['response_file'] = 'traInstallResponseFile.sil
 
 default['tra-install']['install']['tra_home_dir'] = '/apps/tibco/tra/5.10'
 default['tra-install']['install']['logs_home_tra'] = '/logs/tibco/tra/5.10'
+
+default['tra-install']['install']['tra_version'] = '5.10'
+default['tra-install']['install']['tibrv_version'] = '8.4'
+default['tra-install']['install']['tibcojre_version'] = '1.8.0'
+default['tra-install']['install']['hawk_version'] = '5.2'
+default['tra-install']['install']['tpcl_version'] = '5.10'
 
 default['java']['install_flavor'] = 'oracle'
 default['java']['jdk_version'] = '8'
