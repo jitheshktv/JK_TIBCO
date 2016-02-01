@@ -25,6 +25,14 @@ directory logs_tra do
   action :create
 end
 
+directory logs_temp_dir do
+  owner install_user
+  group install_group
+  mode '0755'
+  recursive true
+  action :create
+end
+
 # Delete the logs directory under tra_home_dir
 directory tra_logs do
   recursive true
@@ -39,7 +47,7 @@ end
 
 # Add the temp dir to AppManage.tra
 regexp_tempdir = "java.property.java.io.tmpdir=#{logs_temp_dir}"
-regexp_driversupport = "tibco.env.native.driver.support true"
+regexp_driversupport = "tibco.env.native.driver.support=true"
 ruby_block 'Find and replce in tibemsd.conf' do
   block do
     appmanage_tra = Chef::Util::FileEdit.new("#{tra_home_dir}/bin/AppManage.tra")
