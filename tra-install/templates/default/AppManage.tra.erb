@@ -19,7 +19,7 @@ tibco.env.HAWK_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/h
 tibco.env.TPCL_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tpcl/<%= node['tra-install']['install']['tpcl_version'] %>
 tibco.env.TRA_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>
 tibco.env.TIB_JAVA_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>
-tibco.env.TRA_APPEND_VERSION=5.10
+tibco.env.TRA_APPEND_VERSION=<%= node['tra-install']['install']['tra_version'] %>
 
 #
 # Specifies the initial Java heap size to allocate
