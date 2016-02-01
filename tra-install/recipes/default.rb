@@ -11,3 +11,4 @@ include_recipe 'java'
 # Uncomment the below line to run rv install before tra when testing this recipe alone using kitchen
 # include_recipe 'rv-install::default'
 include_recipe 'tra-install::install'
+include_recipe 'tra-install::postinstall'
