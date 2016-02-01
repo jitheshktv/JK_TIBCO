@@ -4,8 +4,6 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-
-
 s3_bucket = node['jmsclient-install']['config']['s3_bucket']
 ems_client_version = node['jmsclient-install']['config']['ems_client_version']
 ems_client_s3_url = "#{s3_bucket}/ems-client-#{ems_client_version}.zip"
@@ -16,7 +14,6 @@ config_group = node['jmsclient-install']['config']['group']
 tibco_install_dir = node['jmsclient-install']['config']['tibco_install_dir']
 tra_version = node['jmsclient-install']['config']['tra_version']
 tra_lib_dir = "#{tibco_install_dir}/tra/#{tra_version}/lib"
-
 
 # Download the file from S3
 remote_file temp_file do

@@ -11,7 +11,7 @@ install_user = node['tra-install']['install']['user']
 
 tibco_install_dir = node['tra-install']['install']['tibco_install_dir']
 logs_home_dir = node['tra-install']['install']['logs_home_dir']
-logs_temp_dir = node['tra-install']['install']['logs_temp_dir']
+# logs_temp_dir = node['tra-install']['install']['logs_temp_dir']
 tra_version = node['tra-install']['install']['tra_version']
 tra_home_dir = "#{tibco_install_dir}/tra/#{tra_version}"
 logs_home_tra = "#{logs_home_dir}/tra/#{tra_version}"

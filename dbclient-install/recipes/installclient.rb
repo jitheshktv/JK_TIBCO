@@ -4,8 +4,6 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-
-
 s3_bucket = node['dbclient-install']['config']['s3_bucket']
 db_client_version = node['dbclient-install']['config']['db_client_version']
 db_client_s3_url = "#{s3_bucket}/#{db_client_version}.zip"
@@ -16,7 +14,6 @@ config_group = node['dbclient-install']['config']['group']
 tibco_install_dir = node['dbclient-install']['config']['tibco_install_dir']
 tra_version = node['dbclient-install']['config']['tra_version']
 tra_lib_dir = "#{tibco_install_dir}/tra/#{tra_version}/lib"
-
 
 # Download the file from S3
 remote_file temp_file do

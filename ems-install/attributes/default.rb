@@ -20,11 +20,11 @@ default['ems-install']['config']['ems_tibemsd'] = '/apps/tibco/ems/8.2/bin/tibem
 default['ems-install']['config']['default_cfgmgmt'] = '/apps/tibco/ems/8.2/config/tibco'
 
 default['ems-install']['config']['admin_user'] = 'stsadmin'
-default['ems-install']['config']['admin_user_passwd'] = "$2$89v3SweX$XqTXgIPUB1lcA2Bk1KoMaH/L"
+default['ems-install']['config']['admin_user_passwd'] = '$2$89v3SweX$XqTXgIPUB1lcA2Bk1KoMaH/L'
 default['ems-install']['config']['monitor_user'] = 'emsmon'
-default['ems-install']['config']['monitor_user_passwd'] = "$2$rjNU9xVS$D32ByMgWGk/fIEWhYdKew5Oe"
+default['ems-install']['config']['monitor_user_passwd'] = '$2$rjNU9xVS$D32ByMgWGk/fIEWhYdKew5Oe'
 default['ems-install']['config']['domain_user'] = 'domainadmin'
-default['ems-install']['config']['domain_user_passwd'] = "$2$TiLfogHj$ZInDn9w9+ITeDJmVFZOtB5DU"
+default['ems-install']['config']['domain_user_passwd'] = '$2$TiLfogHj$ZInDn9w9+ITeDJmVFZOtB5DU'
 default['ems-install']['passwords']['secret_path'] = '/etc/chef/encrypted_data_bag_emsinstall_secret'
 
 default['java']['install_flavor'] = 'oracle'

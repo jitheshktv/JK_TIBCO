@@ -7,8 +7,6 @@
 # Generate the CreateDomain.xml from the template
 
 # Initialize the variables
-config_user = node['createdomain-dbems']['config']['user']
-config_group = node['createdomain-dbems']['config']['group']
 createdomain_cmdfile = node['createdomain-dbems']['config']['createdomain_cmdfile']
 
 db_use_tns = node['createdomain-dbems']['config']['db_use_tns']
@@ -26,14 +24,14 @@ if "#{db_use_tns}" == 'true'
   when 'oracle.jdbc.driver.OracleDriver'
     db_connection_url = "jdbc:oracle:thin:@(TNSNamesFile=#{db_tnsfile};TNSServerName=#{db_tnsname})"
   when 'tibcosoftwareinc.jdbc.oracle.OracleDriver'
-    db_connection_url ="jdbc:tibcosoftwareinc:oracle:TNSNamesFile=#{db_tnsfile};TNSServerName=#{db_tnsname}"
+    db_connection_url = "jdbc:tibcosoftwareinc:oracle:TNSNamesFile=#{db_tnsfile};TNSServerName=#{db_tnsname}"
   end
 else
   case db_driver
   when 'oracle.jdbc.driver.OracleDriver'
     db_connection_url = "jdbc:oracle:thin:@#{db_hostname}:#{db_port}:#{db_sid}"
   when 'tibcosoftwareinc.jdbc.oracle.OracleDriver'
-    db_connection_url ="jdbc:tibcosoftwareinc:oracle://#{db_hostname}:#{db_port};SID=#{db_sid}"
+    db_connection_url = "jdbc:tibcosoftwareinc:oracle://#{db_hostname}:#{db_port};SID=#{db_sid}"
   end
 end
 
@@ -42,7 +40,5 @@ template 'CreateDomain.xml' do
   source 'CreateDomain.xml.erb'
   mode '0755'
   path createdomain_cmdfile
-  variables({
-        :DatabaseUrl => db_connection_url
-        })
+  variables(DatabaseUrl: db_connection_url)
 end

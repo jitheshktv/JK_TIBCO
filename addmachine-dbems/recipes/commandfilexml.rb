@@ -7,8 +7,6 @@
 # Generate the AddMachine.xml from the template
 
 # Intialize the variables
-config_user = node['addmachine-dbems']['config']['user']
-config_group = node['addmachine-dbems']['config']['group']
 addmachine_cmdfile = node['addmachine-dbems']['config']['addmachine_cmdfile']
 
 # Generate the AddMachine.xml from the template

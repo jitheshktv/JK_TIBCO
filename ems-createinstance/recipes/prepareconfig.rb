@@ -5,15 +5,15 @@
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 # Commenting the below as it throws compilation error and the file doesnt created until the ems-install recipe runs.
-#file "#{node['ems-createinstance']['config']['tibemsd_conf_path']}/tibemsd.conf" do
+# file "#{node['ems-createinstance']['config']['tibemsd_conf_path']}/tibemsd.conf" do
 #  owner node['ems-createinstance']['config']['user']
 #  group node['ems-createinstance']['config']['group']
 #  mode '0755'
 #  content ::File.open("#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/tibemsd.conf").read
 #  action :create
-#end
+# end
 
-remote_file "Create copy of tibemsd.conf" do
+remote_file 'Create copy of tibemsd.conf' do
   path "#{node['ems-createinstance']['config']['tibemsd_conf_path']}/tibemsd.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/tibemsd.conf"
   owner node['ems-createinstance']['config']['user']
@@ -40,7 +40,7 @@ ruby_block 'Find and replce in tibemsd.conf' do
   end
 end
 
-remote_file "Create copy of acl.conf" do
+remote_file 'Create copy of acl.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/acl.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/acl.conf"
   owner node['ems-createinstance']['config']['user']
@@ -48,7 +48,7 @@ remote_file "Create copy of acl.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of bridges.conf" do
+remote_file 'Create copy of bridges.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/bridges.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/bridges.conf"
   owner node['ems-createinstance']['config']['user']
@@ -56,7 +56,7 @@ remote_file "Create copy of bridges.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of channels.conf" do
+remote_file 'Create copy of channels.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/channels.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/channels.conf"
   owner node['ems-createinstance']['config']['user']
@@ -64,7 +64,7 @@ remote_file "Create copy of channels.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of durables.conf" do
+remote_file 'Create copy of durables.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/durables.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/durables.conf"
   owner node['ems-createinstance']['config']['user']
@@ -72,7 +72,7 @@ remote_file "Create copy of durables.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of factories.conf" do
+remote_file 'Create copy of factories.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/factories.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/factories.conf"
   owner node['ems-createinstance']['config']['user']
@@ -91,7 +91,7 @@ ruby_block 'Find and replce in factories.conf' do
   end
 end
 
-remote_file "Create copy of groups.conf" do
+remote_file 'Create copy of groups.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/groups.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/groups.conf"
   owner node['ems-createinstance']['config']['user']
@@ -99,7 +99,7 @@ remote_file "Create copy of groups.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of queues.conf" do
+remote_file 'Create copy of queues.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/queues.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/queues.conf"
   owner node['ems-createinstance']['config']['user']
@@ -107,7 +107,7 @@ remote_file "Create copy of queues.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of routes.conf" do
+remote_file 'Create copy of routes.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/routes.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/routes.conf"
   owner node['ems-createinstance']['config']['user']
@@ -115,7 +115,7 @@ remote_file "Create copy of routes.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of stores.conf" do
+remote_file 'Create copy of stores.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/stores.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/stores.conf"
   owner node['ems-createinstance']['config']['user']
@@ -123,7 +123,7 @@ remote_file "Create copy of stores.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of tibrvcm.conf" do
+remote_file 'Create copy of tibrvcm.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/tibrvcm.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/tibrvcm.conf"
   owner node['ems-createinstance']['config']['user']
@@ -131,7 +131,7 @@ remote_file "Create copy of tibrvcm.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of topics.conf" do
+remote_file 'Create copy of topics.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/topics.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/topics.conf"
   owner node['ems-createinstance']['config']['user']
@@ -139,7 +139,7 @@ remote_file "Create copy of topics.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of transports.conf" do
+remote_file 'Create copy of transports.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/transports.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/transports.conf"
   owner node['ems-createinstance']['config']['user']
@@ -147,7 +147,7 @@ remote_file "Create copy of transports.conf" do
   mode '0755'
 end
 
-remote_file "Create copy of users.conf" do
+remote_file 'Create copy of users.conf' do
   path "#{node['ems-createinstance']['config']['shared_conf_path']}/users.conf"
   source "file://#{node['ems-createinstance']['config']['ems_conf_templates_dir']}/users.conf"
   owner node['ems-createinstance']['config']['user']

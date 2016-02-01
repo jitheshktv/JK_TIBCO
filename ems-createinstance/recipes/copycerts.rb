@@ -10,7 +10,7 @@ cert_s3_bucket = node['ems-createinstance']['config']['cert_s3_bucket']
 cert_store_path = node['ems-createinstance']['config']['cert_store_path']
 trusted_store_path = node['ems-createinstance']['config']['trusted_store_path']
 
-ssl_server_identity  =node['ems-createinstance']['config']['ssl_server_identity']
+ssl_server_identity  = node['ems-createinstance']['config']['ssl_server_identity']
 ssl_server_key = node['ems-createinstance']['config']['ssl_server_key']
 ssl_server_trusted = node['ems-createinstance']['config']['ssl_server_trusted']
 

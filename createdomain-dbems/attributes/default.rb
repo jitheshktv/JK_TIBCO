@@ -17,7 +17,7 @@ default['createdomain-dbems']['config']['max_deployment_revisions'] = '5'
 
 default['createdomain-dbems']['config']['ems_server_url'] = 'tcp://sawgrass-adminserver-1.localdomain:7222'
 default['createdomain-dbems']['config']['ems_user_name'] = 'domainadmin'
-default['createdomain-dbems']['config']['ems_user_password'] = "#!2Qw95oT/yw5Dk4+ioC3xEEvjqRLSlNPN6S57AXq/f80="
+default['createdomain-dbems']['config']['ems_user_password'] = '#!2Qw95oT/yw5Dk4+ioC3xEEvjqRLSlNPN6S57AXq/f80='
 
 default['createdomain-dbems']['config']['db_use_tns'] = 'false'
 default['createdomain-dbems']['config']['db_tnsfile'] = '/apps/tibco/tnsnames.ora'

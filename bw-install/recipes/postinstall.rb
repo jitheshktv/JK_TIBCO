@@ -11,9 +11,6 @@ bw_version = node['bw-install']['install']['bw_version']
 bw_home_dir = "#{tibco_install_dir}/bw/#{bw_version}"
 bwengine_tra = "#{bw_home_dir}/bin/bwengine.tra"
 
-install_group = node['bw-install']['install']['group']
-install_user = node['bw-install']['install']['user']
-
 # Generate the bwengine.tra from template
 template bwengine_tra do
   source 'bwengine.tra.erb'
