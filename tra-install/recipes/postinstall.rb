@@ -43,8 +43,8 @@ regexp_driversupport = "tibco.env.native.driver.support true"
 ruby_block 'Find and replce in tibemsd.conf' do
   block do
     appmanage_tra = Chef::Util::FileEdit.new("#{tra_home_dir}/bin/AppManage.tra")
-    tibemsd_conf.insert_line_if_no_match(/#{regexp_tempdir}/, "#{regexp_tempdir}")
-    tibemsd_conf.insert_line_if_no_match(/#{regexp_driversupport}/, "#{regexp_driversupport}")
+    appmanage_tra.insert_line_if_no_match(/#{regexp_tempdir}/, "#{regexp_tempdir}")
+    appmanage_tra.insert_line_if_no_match(/#{regexp_driversupport}/, "#{regexp_driversupport}")
     appmanage_tra.write_file
   end
 end
