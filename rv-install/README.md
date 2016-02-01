@@ -14,9 +14,9 @@ default['rv-install']['install']['tibco_home_dir']
 default['rv-install']['install']['logs_home_dir']
 
 For the version of RV :
-default['rv-install']['install']['rv_bin_source'] = 'https://s3-us-west-2.amazonaws.com/rv-8.4.4-bin/linux/TIB_rv_8.4.4_linux_x86.zip'
-default['rv-install']['install']['rv_bin_zip'] = 'TIB_rv_8.4.4_linux_x86.zip'
-default['rv-install']['install']['rv_home_dir'] = '/apps/tibco/tibrv/8.4'
+default['rv-install']['install']['rv_bin_source']
+default['rv-install']['install']['rv_bin_zip']
+default['rv-install']['install']['rv_home_dir']
 
 Example Custom JSON:
 {
