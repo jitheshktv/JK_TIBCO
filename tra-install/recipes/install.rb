@@ -10,9 +10,11 @@
 tra_bin_target_path = node['tra-install']['install']['tra_bin_target_path']
 tibco_universalinstaller_bin = "#{tra_bin_target_path}/#{node['tra-install']['install']['tibco_universalinstaller_bin']}"
 tra_install_responsefile = "#{tra_bin_target_path}/#{node['tra-install']['install']['response_file']}"
-wrap = "#{node['tra-install']['install']['tra_home_dir']}/bin/wrap"
-
 tibco_install_dir = node['tra-install']['install']['tibco_install_dir']
+tra_version = node['tra-install']['install']['tra_version']
+tra_home_dir = "#{tibco_install_dir}/tra/#{tra_version}"
+wrap = "#{tra_home_dir}/bin/wrap"
+
 install_group = node['tra-install']['install']['group']
 install_user = node['tra-install']['install']['user']
 

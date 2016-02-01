@@ -17,9 +17,6 @@ default['tra-install']['install']['tra_bin_zip'] = 'TIB_TRA_5.10.0_linux_x86.zip
 default['tra-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['tra-install']['install']['response_file'] = 'traInstallResponseFile.silent'
 
-default['tra-install']['install']['tra_home_dir'] = '/apps/tibco/tra/5.10'
-default['tra-install']['install']['logs_home_tra'] = '/logs/tibco/tra/5.10'
-
 default['tra-install']['install']['tra_version'] = '5.10'
 default['tra-install']['install']['tibrv_version'] = '8.4'
 default['tra-install']['install']['tibcojre_version'] = '1.8.0'
