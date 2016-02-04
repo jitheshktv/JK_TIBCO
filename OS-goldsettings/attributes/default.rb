@@ -1,9 +1,32 @@
-# This is a Chef attributes file. It can be used to specify default and override
-# attributes to be applied to nodes that run this cookbook.
-
-# Set a default name
-default['OS-goldsettings']['config']['etc_dir'] = '/etc'
 default['OS-goldsettings']['config']['user'] = 'root'
 default['OS-goldsettings']['config']['group'] = 'root'
 
-# For further information, see the Chef documentation (https://docs.chef.io/essentials_cookbook_attribute_files.html).
+default['OS-goldsettings']['sysctl_config']['etc_dir'] = '/etc'
+default['OS-goldsettings']['sysctl_config']['ip_local_port_range'] = '1024 65000'
+default['OS-goldsettings']['sysctl_config']['rmem_max'] = '16777216'
+default['OS-goldsettings']['sysctl_config']['wmem_max'] = '16777216'
+default['OS-goldsettings']['sysctl_config']['tcp_rmem'] = '4096 87380 16777216'
+default['OS-goldsettings']['sysctl_config']['tcp_wmem'] = '4096 65536 16777216'
+default['OS-goldsettings']['sysctl_config']['tcp_fin_timeout'] = '30'
+default['OS-goldsettings']['sysctl_config']['netdev_max_backlog'] = '3000'
+default['OS-goldsettings']['sysctl_config']['somaxconn'] = '10000'
+default['OS-goldsettings']['sysctl_config']['tcp_keepalive_intvl'] = '15'
+default['OS-goldsettings']['sysctl_config']['tcp_keepalive_probes'] = '5'
+default['OS-goldsettings']['sysctl_config']['kernel.sem'] = '512 524288 512 1024'
+default['OS-goldsettings']['sysctl_config']['kernel.msgmni'] = '1024'
+default['OS-goldsettings']['sysctl_config']['kernel.shmmni'] = '4096'
+default['OS-goldsettings']['sysctl_config']['tcp_keepalive_time'] = '300'
+default['OS-goldsettings']['sysctl_config']['tcp_slow_start_after_idle'] = '0'
+default['OS-goldsettings']['sysctl_config']['kernel.pid_max'] = '105535'
+default['OS-goldsettings']['sysctl_config']['fs.file-max'] = '19620270'
+
+default['OS-goldsettings']['limits_config']['etc_dir'] = '/etc/security'
+default['OS-goldsettings']['limits_config']['soft_nofile'] = '105535'
+default['OS-goldsettings']['limits_config']['hard_nofile'] = '105535'
+default['OS-goldsettings']['limits_config']['soft_core'] = 'unlimited'
+default['OS-goldsettings']['limits_config']['hard_core'] = 'unlimited'
+default['OS-goldsettings']['limits_config']['user'] = 'esbuser'
+default['OS-goldsettings']['limits_config']['soft_stack'] = '65536'
+default['OS-goldsettings']['limits_config']['hard_stack'] = '65536'
+default['OS-goldsettings']['limits_config']['soft_nproc'] = '1032345'
+default['OS-goldsettings']['limits_config']['hard_nproc'] = '1032345'
