@@ -16,10 +16,6 @@ tibco_install_dir = node['sdk-install']['install']['tibco_install_dir']
 install_group = node['sdk-install']['install']['group']
 install_user = node['sdk-install']['install']['user']
 
-# Install the required yum packages for running 32 bit domainutility on a 64 bit OS arch
-yum_package 'glibc.i686'
-yum_package 'libstdc++48.i686'
-
 execute 'install_sdk' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{sdk_install_responsefile}"
   cwd sdk_bin_target_path
