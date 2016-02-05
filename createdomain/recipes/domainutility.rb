@@ -22,8 +22,14 @@ tibcoadmin_bin_dir = "#{tibcoadmin_domainhome_dir}/#{domain_name}/bin"
 administrator = "#{tibcoadmin_bin_dir}/tibcoadmin_#{domain_name}"
 
 # Install the required yum packages for running 32 bit domainutility on a 64 bit OS arch
-yum_package 'glibc.i686'
-yum_package 'libstdc++48.i686'
+case node['platform']
+when 'redhat', 'centos', 'ubuntu'
+  yum_package 'glibc.i686'
+  yum_package 'libstdc++.i686'
+when  'fedora'
+  yum_package 'glibc.i686'
+  yum_package 'libstdc++48.i686'
+end
 
 # Execute the domain utility
 execute 'create_domain' do
