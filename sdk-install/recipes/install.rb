@@ -16,6 +16,9 @@ tibco_install_dir = node['sdk-install']['install']['tibco_install_dir']
 install_group = node['sdk-install']['install']['group']
 install_user = node['sdk-install']['install']['user']
 
+# Install bc utility
+yum_package 'bc'
+
 execute 'install_sdk' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{sdk_install_responsefile}"
   cwd sdk_bin_target_path
