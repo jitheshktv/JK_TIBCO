@@ -1,0 +1,62 @@
+#
+# Copyright (c) 2007 TIBCO Software Inc.
+# All Rights Reserved.
+#
+# This software is the confidential and proprietary information of
+# TIBCO Software Inc.
+#
+#
+#========================================================== 
+# *** Common variables. Modify these only. ***
+#========================================================== 
+#
+tibco.env.PSP=:
+tibco.env.JVM_LIB_PATH=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386/server/libjvm.so
+tibco.env.RV_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibrv/<%= node['tra-install']['install']['tibrv_version'] %>
+tibco.env.TPCL_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tpcl/<%= node['tra-install']['install']['tpcl_version'] %>
+tibco.env.TRA_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>
+tibco.env.TIB_JAVA_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>
+tibco.env.TRA_APPEND_VERSION=<%= node['tra-install']['install']['tra_version'] %>
+
+#
+# Specifies the initial Java heap size to allocate
+java.heap.size.max 32M
+
+#========================================================== 
+# *** Do NOT modify beyond this line ***
+#========================================================== 
+
+tibco.env.PATH .:%TRA_HOME%/hotfix/bin:%TRA_HOME%/bin:%TPCL_HOME%/bin:%RV_HOME%/bin:%TIB_JAVA_HOME%/bin
+
+tibco.env.LD_LIBRARY_PATH %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386/client:<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386
+
+tibco.env.SHLIB_PATH %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386/client:<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386
+
+tibco.env.LIBPATH %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386/client:<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386
+
+tibco.env.DYLD_LIBRARY_PATH %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib:%DYLD_LIBRARY_PATH%
+
+#
+# Specifies the JVM to be used to launch this application
+java.library %JVM_LIB_PATH%
+
+#
+# Specifies the class to launch
+java.start.class com.tibco.administrator.util.ObfuscateFile
+#
+# Specifies the main function in invoke
+java.start.method main
+
+
+#
+# Specifies the initial Java heap size to allocate
+java.heap.size.max 32M
+
+#
+# Specifies the -Djava.ext.dirs flag
+tibco.class.path.extended %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib/tibrvj.jar:%RV_HOME%/bin:%TPCL_HOME%/lib/entrust
+
+
+#
+# Specifies the remaining arguments to pass into the application
+#application.args 

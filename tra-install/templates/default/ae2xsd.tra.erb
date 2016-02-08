@@ -1,0 +1,43 @@
+#
+# Copyright (c) 2003 TIBCO Software Inc.
+# All Rights Reserved.
+#
+# This software is the confidential and proprietary information of
+# TIBCO Software Inc.
+#
+
+#
+# Specifies the JVM to be used to launch this application
+java.library <%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386/client/libjvm.so
+
+#
+# Specifies the Java class that contains the main
+java.start.class com.tibco.xml.schema.parse.ae.AE2XSDTool
+
+
+#
+# Specifies the main function in invoke
+java.start.method main
+
+#
+# Specifies the classpath and provides for automatic expansion 
+tibco.class.path.extended <%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/hotfix/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/lib/repository_mappers:<%= node['tra-install']['install']['tibco_install_dir'] %>/tpcl/<%= node['tra-install']['install']['tpcl_version'] %>/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/tibrv/<%= node['tra-install']['install']['tibrv_version'] %>/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/hawk/<%= node['tra-install']['install']['hawk_version'] %>/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/tpcl/<%= node['tra-install']['install']['tpcl_version'] %>/lib/entrust
+
+#
+# Specifies the initial Java heap size to allocate
+java.heap.size.max 512M
+
+#
+# Specifies the default user directory
+#java.property.user.dir <%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/bin
+
+#
+# Sets the TIBCO_HOME and TIBCO_TRA_VERSION system variables
+java.property.TIBCO_HOME <%= node['tra-install']['install']['tibco_install_dir'] %>
+java.property.TIBCO_TRA_VERSION <%= node['tra-install']['install']['tra_version'] %>
+
+#
+# Specifies the remaining arguments to pass into the application
+#application.args 
+
+

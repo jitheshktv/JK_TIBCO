@@ -1,0 +1,24 @@
+#java arguments
+java.library <%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386/server/libjvm.so
+java.start.class COM/TIBCO/hawk/agent/HawkAgent
+java.start.method main
+java.heap.size.initial 8m
+java.heap.size.max 32m
+java.thread.stack.size 128k
+
+
+#java properties
+tibco.class.path.extended <%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/bin:<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/lib:<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/lib/ext
+
+java.property.hawk.hawk_root=<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %> 
+java.property.hawk.cluster=%TIBCO_SUBNET% 
+
+# Define application command line.
+application.args -M com.tibco.tra.tsm.TSM -hawk_domain %TIBCO_DOMAIN% -rvd_session 7474 ; tcp:7474 -tsm_traceLogFile <%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/logs/tsm.log -tsm_traceLevel 7 -tsm_traceSize 0 -tsm_traceMaxFile 0 -tra_home <%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %> -M Self -cluster %TIBCO_SUBNET% -hawk_domain %TIBCO_DOMAIN% -rvd_session 7474 ; tcp:7474 -M RuleBaseEngine -M TIBProtocolAdapter -interval 30 -M LogfileMicroAgent -scan_rate 10 -block_size 16 -eval_rate 300
+
+# NT Service Parameters
+ntservice.name=TIBCORuntimeAgent
+ntservice.displayname=TIBCO Runtime Agent
+ntservice.starttype=automatic
+ntservice.binary.path.absolute=<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>/bin/tra.exe
+ntservice.interactive=false

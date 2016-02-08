@@ -1,0 +1,72 @@
+#
+# Copyright (c) 2007 TIBCO Software Inc.
+# All Rights Reserved.
+#
+# This software is the confidential and proprietary information of
+# TIBCO Software Inc.
+#
+#
+#========================================================== 
+# *** Common variables. Modify these only. ***
+#========================================================== 
+#
+tibco.env.PSP=:
+tibco.env.JVM_LIB_PATH=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386/server/libjvm.so
+tibco.env.JVM_LIB_DIR=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386
+tibco.env.JVM_LIB_SERVER_DIR=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>/lib/i386/server
+tibco.env.RV_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibrv/<%= node['tra-install']['install']['tibrv_version'] %>
+tibco.env.HAWK_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/hawk/<%= node['tra-install']['install']['hawk_version'] %>
+tibco.env.TPCL_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tpcl/<%= node['tra-install']['install']['tpcl_version'] %>
+tibco.env.TRA_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tra/<%= node['tra-install']['install']['tra_version'] %>
+tibco.env.TIB_JAVA_HOME=<%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>
+tibco.env.TRA_APPEND_VERSION=<%= node['tra-install']['install']['tra_version'] %>
+
+#
+# Specifies the initial Java heap size to allocate
+java.heap.size.max 128M
+
+#========================================================== 
+# *** Do NOT modify beyond this line ***
+#========================================================== 
+
+tibco.env.PATH .:%TRA_HOME%/hotfix/bin:%TRA_HOME%/bin:%TPCL_HOME%/bin:%RV_HOME%/bin:%HAWK_HOME%/bin:%TIB_JAVA_HOME%/bin:%PATH%
+
+tibco.env.LD_LIBRARY_PATH %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib:%JVM_LIB_SERVER_DIR%:%JVM_LIB_DIR%
+
+tibco.env.SHLIB_PATH %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib:%JVM_LIB_SERVER_DIR%:%JVM_LIB_DIR%
+
+tibco.env.LIBPATH %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib:%JVM_LIB_SERVER_DIR%:%JVM_LIB_DIR%
+
+tibco.env.DYLD_LIBRARY_PATH %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/lib:%RV_HOME%/lib:%DYLD_LIBRARY_PATH%
+#
+# Specifies the JVM to be used to launch this application
+java.library %JVM_LIB_PATH%
+
+#
+# Specifies the class to launch
+java.start.class com.tibco.administrator.du.DomainUtility
+#
+# Specifies the main function in invoke
+java.start.method main
+
+#
+# Specifies the -Djava.ext.dirs flag
+tibco.class.path.extended %TRA_HOME%/hotfix/lib:%TRA_HOME%/lib:%TPCL_HOME%/tomcat/7/lib:%TPCL_HOME%/tomcat/7/bin:%TPCL_HOME%/tomcat/common/lib/:%TPCL_HOME%/tomcat/server/lib/:%TPCL_HOME%/lib:%RV_HOME%/lib/tibrvj.jar:%RV_HOME%/bin:%HAWK_HOME%/bin:%HAWK_HOME%/lib:%TPCL_HOME%/jdbc:%TPCL_HOME%/ant/1.6/lib:%TPCL_HOME%/lib/entrust:%TRA_HOME%/lib/install
+
+
+#
+# Specifies the remaining arguments to pass into the application
+#application.args 
+
+
+# eof
+java.property.TIBCO_TRA_HOME %TRA_HOME%
+java.property.TIBCO_TRA_VERSION %TRA_APPEND_VERSION%
+java.property.TIBCO_HAWK_HOME %HAWK_HOME%
+java.property.TIBCO_RV_HOME %RV_HOME%
+java.property.JAVA_HOME <%= node['tra-install']['install']['tibco_install_dir'] %>/tibcojre/<%= node['tra-install']['install']['tibcojre_version'] %>
+java.property.TPCL_HOME %TPCL_HOME%
+java.property.cmdMode true
+java.property.plugin com.tibco.administrator.du.plugin.JMS.JMSPlugin:com.tibco.administrator.du.plugin.servletengine.ServletEnginePlugin
+
+
