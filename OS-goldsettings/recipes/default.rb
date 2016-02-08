@@ -1,2 +1,2 @@
-include_recipe 'OS-goldsettings::sysctl.conf'
-include_recipe 'OS-goldsettings::limits.conf'
+include_recipe 'OS-goldsettings::sysctl_conf'
+include_recipe 'OS-goldsettings::limits_conf'
