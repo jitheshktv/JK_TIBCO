@@ -13,7 +13,8 @@ tibco_install_dir = node['tibcoadmin-install']['install']['tibco_install_dir']
 tibco_instance_dir = node['tibcoadmin-install']['install']['tibco_instance_dir']
 logs_instance_dir = node['tibcoadmin-install']['install']['logs_instance_dir']
 tibcoadmin_bin_target_path = node['tibcoadmin-install']['install']['tibcoadmin_bin_target_path']
-tibcoadmin_home_dir = node['tibcoadmin-install']['install']['tibcoadmin_home_dir']
+tibcoadmin_version = node['tibcoadmin-install']['install']['tibcoadmin_version']
+tibcoadmin_home_dir = "#{tibco_install_dir}/administrator/#{tibcoadmin_version}"
 
 install_user = node['tibcoadmin-install']['install']['user']
 install_group = node['tibcoadmin-install']['install']['group']

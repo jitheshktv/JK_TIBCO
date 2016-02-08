@@ -10,9 +10,12 @@
 tibcoadmin_bin_target_path = node['tibcoadmin-install']['install']['tibcoadmin_bin_target_path']
 tibco_universalinstaller_bin = "#{tibcoadmin_bin_target_path}/#{node['tibcoadmin-install']['install']['tibco_universalinstaller_bin']}"
 tibcoadmin_install_responsefile = "#{tibcoadmin_bin_target_path}/#{node['tibcoadmin-install']['install']['response_file']}"
-uninstall_admin = "#{node['tibcoadmin-install']['install']['tibcoadmin_home_dir']}/bin/uninstall_admin"
 
 tibco_install_dir = node['tibcoadmin-install']['install']['tibco_install_dir']
+tibcoadmin_version = node['tibcoadmin-install']['install']['tibcoadmin_version']
+tibcoadmin_home_dir = "#{tibco_install_dir}/administrator/#{tibcoadmin_version}"
+uninstall_admin = "#{tibcoadmin_home_dir}/bin/uninstall_admin"
+
 install_group = node['tibcoadmin-install']['install']['group']
 install_user = node['tibcoadmin-install']['install']['user']
 
