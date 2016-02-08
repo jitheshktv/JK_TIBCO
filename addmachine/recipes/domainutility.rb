@@ -1,4 +1,4 @@
-#
+
 # Cookbook Name:: addmachine
 # Recipe:: domainutility
 #
@@ -23,7 +23,7 @@ case node['platform']
 when 'redhat', 'centos', 'ubuntu'
   yum_package 'glibc.i686'
   yum_package 'libstdc++.i686'
-when  'fedora'
+when 'fedora'
   yum_package 'glibc.i686'
   yum_package 'libstdc++48.i686'
 end
