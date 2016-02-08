@@ -10,9 +10,12 @@
 rv_bin_target_path = node['rv-install']['install']['rv_bin_target_path']
 tibco_universalinstaller_bin = "#{rv_bin_target_path}/#{node['rv-install']['install']['tibco_universalinstaller_bin']}"
 rv_install_responsefile = "#{rv_bin_target_path}/#{node['rv-install']['install']['response_file']}"
-rvd = "#{node['rv-install']['install']['rv_home_dir']}/bin/rvd"
 
 tibco_install_dir = node['rv-install']['install']['tibco_install_dir']
+rv_major_version = node['rv-install']['install']['rv_major_version']
+rv_home_dir = "#{tibco_install_dir}/tibrv/#{rv_major_version}"
+rvd = "#{rv_home_dir}/bin/rvd"
+
 install_group = node['rv-install']['install']['group']
 install_user = node['rv-install']['install']['user']
 

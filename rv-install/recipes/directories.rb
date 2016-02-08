@@ -13,7 +13,8 @@ tibco_install_dir = node['rv-install']['install']['tibco_install_dir']
 tibco_instance_dir = node['rv-install']['install']['tibco_instance_dir']
 logs_instance_dir = node['rv-install']['install']['logs_instance_dir']
 rv_bin_target_path = node['rv-install']['install']['rv_bin_target_path']
-rv_home_dir = node['rv-install']['install']['rv_home_dir']
+rv_major_version = node['rv-install']['install']['rv_major_version']
+rv_home_dir = "#{tibco_install_dir}/tibrv/#{rv_major_version}"
 
 install_user = node['rv-install']['install']['user']
 install_group = node['rv-install']['install']['group']

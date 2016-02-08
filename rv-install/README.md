@@ -24,8 +24,10 @@ Example Custom JSON:
     "Install" : {
       "user" : "esbuser",
       "group" : "sgsup",
-      "tibco_home_dir" : "/apps/tibco",
-      "rv_home_dir" : "/apps/tibco/tibrv/8.4"
+      "tibco_home_dir" : "/apps/tibco"
     }
   }
 }
+
+version : 0.1.1
+- Removed the home rv_home_dir attribute with the rv_major_version, and dynamically set the home directory in the recipe.
