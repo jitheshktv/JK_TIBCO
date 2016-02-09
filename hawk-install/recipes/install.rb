@@ -10,9 +10,11 @@
 hawk_bin_target_path = node['hawk-install']['install']['hawk_bin_target_path']
 tibco_universalinstaller_bin = "#{hawk_bin_target_path}/#{node['hawk-install']['install']['tibco_universalinstaller_bin']}"
 hawk_install_responsefile = "#{hawk_bin_target_path}/#{node['hawk-install']['install']['response_file']}"
-tibhawkhma = "#{node['hawk-install']['install']['hawk_home_dir']}/bin/tibhawkhma"
-
 tibco_install_dir = node['hawk-install']['install']['tibco_install_dir']
+hawk_major_version = node['hawk-install']['install']['hawk_major_version']
+hawk_home_dir = "#{tibco_install_dir}/hawk/#{hawk_major_version}"
+tibhawkhma = "#{hawk_home_dir}/bin/tibhawkhma"
+
 install_group = node['hawk-install']['install']['group']
 install_user = node['hawk-install']['install']['user']
 

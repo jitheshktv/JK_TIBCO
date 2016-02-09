@@ -13,7 +13,8 @@ tibco_install_dir = node['hawk-install']['install']['tibco_install_dir']
 tibco_instance_dir = node['hawk-install']['install']['tibco_instance_dir']
 logs_instance_dir = node['hawk-install']['install']['logs_instance_dir']
 hawk_bin_target_path = node['hawk-install']['install']['hawk_bin_target_path']
-hawk_home_dir = node['hawk-install']['install']['hawk_home_dir']
+hawk_major_version = node['hawk-install']['install']['hawk_major_version']
+hawk_home_dir = "#{tibco_install_dir}/hawk/#{hawk_major_version}"
 tibco_cfgmgmt_dir = "#{tibco_install_dir}/tibco_cfg"
 tibco_thirdpartydownload_dir = "#{tibco_install_dir}/thirdpartyDownload"
 
