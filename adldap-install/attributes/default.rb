@@ -15,7 +15,9 @@ default['adldap-install']['install']['adldap_bin_target_path'] = '/tmp/adldap'
 default['adldap-install']['install']['adldap_bin_zip'] = 'TIB_adldap_6.1.1_linux24gl23_x86.zip'
 default['adldap-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['adldap-install']['install']['response_file'] = 'adldapInstallResponseFile.silent'
-default['adldap-install']['install']['adldap_home_dir'] = '/apps/tibco/adapter/adldap/6.1'
+# version 0.1.1 : JK : replacing the adldap_home_dir attribute with adldap_major_version.
+# default['adldap-install']['install']['adldap_home_dir'] = '/apps/tibco/adapter/adldap/6.1'
+default['adldap-install']['install']['adldap_major_version'] = '6.1'
 
 default['java']['install_flavor'] = 'oracle'
 default['java']['jdk_version'] = '8'

@@ -13,7 +13,8 @@ tibco_install_dir = node['adldap-install']['install']['tibco_install_dir']
 tibco_instance_dir = node['adldap-install']['install']['tibco_instance_dir']
 logs_instance_dir = node['adldap-install']['install']['logs_instance_dir']
 adldap_bin_target_path = node['adldap-install']['install']['adldap_bin_target_path']
-adldap_home_dir = node['adldap-install']['install']['adldap_home_dir']
+adldap_major_version = node['adldap-install']['install']['adldap_major_version']
+adldap_home_dir = "#{tibco_install_dir}/adapter/adldap/#{adldap_major_version}"
 tibco_cfgmgmt_dir = "#{tibco_install_dir}/tibco_cfg"
 tibco_thirdpartydownload_dir = "#{tibco_install_dir}/thirdpartyDownload"
 

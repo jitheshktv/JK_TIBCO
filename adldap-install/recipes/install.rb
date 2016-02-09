@@ -10,9 +10,12 @@
 adldap_bin_target_path = node['adldap-install']['install']['adldap_bin_target_path']
 tibco_universalinstaller_bin = "#{adldap_bin_target_path}/#{node['adldap-install']['install']['tibco_universalinstaller_bin']}"
 adldap_install_responsefile = "#{adldap_bin_target_path}/#{node['adldap-install']['install']['response_file']}"
-adldap = "#{node['adldap-install']['install']['adldap_home_dir']}/bin/adldap"
 
 tibco_install_dir = node['adldap-install']['install']['tibco_install_dir']
+adldap_major_version = node['adldap-install']['install']['adldap_major_version']
+adldap_home_dir = "#{tibco_install_dir}/adapter/adldap/#{adldap_major_version}"
+adldap = "#{adldap_home_dir}/bin/adldap"
+
 install_group = node['adldap-install']['install']['group']
 install_user = node['adldap-install']['install']['user']
 
