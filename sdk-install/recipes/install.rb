@@ -10,14 +10,20 @@
 sdk_bin_target_path = node['sdk-install']['install']['sdk_bin_target_path']
 tibco_universalinstaller_bin = "#{sdk_bin_target_path}/#{node['sdk-install']['install']['tibco_universalinstaller_bin']}"
 sdk_install_responsefile = "#{sdk_bin_target_path}/#{node['sdk-install']['install']['response_file']}"
-adaptersdk = "#{node['sdk-install']['install']['sdk_home_dir']}/bin/aesend"
 
 tibco_install_dir = node['sdk-install']['install']['tibco_install_dir']
+sdk_major_version = node['sdk-install']['install']['sdk_major_version']
+sdk_home_dir = "#{tibco_install_dir}/adapter/sdk/#{sdk_major_version}"
+adaptersdk = "#{sdk_home_dir}/bin/aesend"
+
 install_group = node['sdk-install']['install']['group']
 install_user = node['sdk-install']['install']['user']
 
 # Install bc utility
 yum_package 'bc'
+
+# Install the libstdc++
+yum_package 'libstdc++*.i686'
 
 execute 'install_sdk' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{sdk_install_responsefile}"
