@@ -48,7 +48,7 @@ seed_tra = "#{tra_home_dir}/bin/seed.tra"
 tra_tra = "#{tra_home_dir}/bin/tra.tra"
 traDBConfig_tra = "#{tra_home_dir}/bin/traDBConfig.tra"
 tramodify_tra = "#{tra_home_dir}/bin/tramodify.tra"
-traUpgradeManager_tra = "#{tra_home_dir}/bin/traUpgradeManager.tra"
+traupgrademanager_tra = "#{tra_home_dir}/bin/traUpgradeManager.tra"
 
 # Create the logs directory under logs_home_tra.
 directory logs_tra do
@@ -260,9 +260,9 @@ template tramodify_tra do
   mode '0644'
 end
 
-template traUpgradeManager_tra do
+template traupgrademanager_tra do
   source 'traUpgradeManager.tra.erb'
-  path traUpgradeManager_tra
+  path traupgrademanager_tra
   mode '0644'
 end
 
