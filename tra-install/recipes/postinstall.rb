@@ -46,7 +46,7 @@ repoping_tra = "#{tra_home_dir}/bin/RepoPing.tra"
 reporename_tra = "#{tra_home_dir}/bin/RepoRename.tra"
 seed_tra = "#{tra_home_dir}/bin/seed.tra"
 tra_tra = "#{tra_home_dir}/bin/tra.tra"
-traDBConfig_tra = "#{tra_home_dir}/bin/traDBConfig.tra"
+tradbconfig_tra = "#{tra_home_dir}/bin/traDBConfig.tra"
 tramodify_tra = "#{tra_home_dir}/bin/tramodify.tra"
 traupgrademanager_tra = "#{tra_home_dir}/bin/traUpgradeManager.tra"
 
@@ -248,9 +248,9 @@ template tra_tra do
   mode '0644'
 end
 
-template traDBConfig_tra do
+template tradbconfig_tra do
   source 'traDBConfig.tra.erb'
-  path traDBConfig_tra
+  path tradbconfig_tra
   mode '0644'
 end
 
