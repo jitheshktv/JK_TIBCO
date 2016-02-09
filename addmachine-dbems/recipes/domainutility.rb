@@ -23,10 +23,10 @@ hawkagent = "#{tra_domain_dir}/hawkagent_#{domain_name}"
 case node['platform']
 when 'redhat', 'centos', 'ubuntu'
   yum_package 'glibc.i686'
-  yum_package 'libstdc++.i686'
+  yum_package 'libstdc++*.i686'
 when 'fedora'
   yum_package 'glibc.i686'
-  yum_package 'libstdc++48.i686'
+  yum_package 'libstdc++*.i686'
 end
 
 # Execute the domain utility to add machine to the domain

@@ -6,7 +6,7 @@ default['addmachine-rv']['config']['logs_instance_dir'] = '/logs/tibco'
 
 default['addmachine-rv']['config']['domain_name'] = 'TEST_DOMAIN'
 default['addmachine-rv']['config']['administrator_user_name'] = 'admin'
-default['addmachine-rv']['config']['administrator_user_password'] = 'admin'
+default['addmachine-rv']['config']['administrator_user_password'] = '#!S/PZNikhLBiI4iTu8H0jXbNe/xvWtlFp'
 default['addmachine-rv']['config']['tra_home_dir'] = '/apps/tibco/tra/5.10'
 default['addmachine-rv']['config']['tra_domainhome_dir'] = '/apps/tibco/tra/domain'
 default['addmachine-rv']['config']['use_local_appdata'] = 'true'

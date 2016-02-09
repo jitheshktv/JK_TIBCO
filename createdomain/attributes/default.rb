@@ -6,7 +6,7 @@ default['createdomain-rv']['config']['logs_instance_dir'] = '/logs/tibco'
 
 default['createdomain-rv']['config']['domain_name'] = 'TEST_DOMAIN'
 default['createdomain-rv']['config']['administrator_user_name'] = 'admin'
-default['createdomain-rv']['config']['administrator_user_password'] = 'admin'
+default['createdomain-rv']['config']['administrator_user_password'] = '#!S/PZNikhLBiI4iTu8H0jXbNe/xvWtlFp'
 default['createdomain-rv']['config']['tibcoadmin_home_dir'] = '/apps/tibco/administrator/5.10'
 default['createdomain-rv']['config']['tra_home_dir'] = '/apps/tibco/tra/5.10'
 default['createdomain-rv']['config']['tibcoadmin_domainhome_dir'] = '/apps/tibco/administrator/domain'

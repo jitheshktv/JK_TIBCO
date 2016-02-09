@@ -6,7 +6,7 @@ default['addmachine-dbems']['config']['logs_instance_dir'] = '/logs/tibco'
 
 default['addmachine-dbems']['config']['domain_name'] = 'TEST_DOMAIN_DBEMS'
 default['addmachine-dbems']['config']['administrator_user_name'] = 'admin'
-default['addmachine-dbems']['config']['administrator_user_password'] = 'admin'
+default['addmachine-dbems']['config']['administrator_user_password'] = '#!S/PZNikhLBiI4iTu8H0jXbNe/xvWtlFp'
 default['addmachine-dbems']['config']['tra_home_dir'] = '/apps/tibco/tra/5.10'
 default['addmachine-dbems']['config']['tra_domainhome_dir'] = '/apps/tibco/tra/domain'
 default['addmachine-dbems']['config']['use_local_appdata'] = 'true'

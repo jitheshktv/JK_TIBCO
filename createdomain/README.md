@@ -1,4 +1,3 @@
 # createdomain
 
-TODO: Enter the cookbook description here.
-
+Cookbook to create a filebased domain.
