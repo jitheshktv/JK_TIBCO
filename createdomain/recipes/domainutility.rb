@@ -25,10 +25,10 @@ administrator = "#{tibcoadmin_bin_dir}/tibcoadmin_#{domain_name}"
 case node['platform']
 when 'redhat', 'centos', 'ubuntu'
   yum_package 'glibc.i686'
-  yum_package 'libstdc++*.i686'
-when 'fedora'
+  yum_package 'libstdc++.i686'
+when 'amazon'
   yum_package 'glibc.i686'
-  yum_package 'libstdc++*.i686'
+  yum_package 'libstdc++48.i686'
 end
 
 # Execute the domain utility

@@ -22,8 +22,13 @@ install_user = node['sdk-install']['install']['user']
 # Install bc utility
 yum_package 'bc'
 
-# Install the libstdc++
-yum_package 'libstdc++*.i686'
+# Install the libstdc++ for 32 bit, on 64 bit servers
+case node['platform']
+when 'redhat', 'centos', 'ubuntu'
+  yum_package 'libstdc++.i686'
+when 'amazon'
+  yum_package 'libstdc++48.i686'
+end
 
 execute 'install_sdk' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{sdk_install_responsefile}"
