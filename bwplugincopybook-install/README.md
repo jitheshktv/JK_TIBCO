@@ -30,4 +30,4 @@ Example Custom JSON:
 
 version 0.1.1 :
 - Added README.
-- Deleted the below attribute copybook_jar, to dynamically set it in the install recipe based on tibco_install_dir.
+- Deleted the attribute copybook_jar, to dynamically set it in the install recipe based on tibco_install_dir.
