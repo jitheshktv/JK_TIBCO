@@ -16,7 +16,8 @@ default['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_target_path
 default['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_zip'] = 'TIB_bwpluginrestjson_2.0.0_linux26gl23_x86.zip'
 default['bwpluginrestjson-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['bwpluginrestjson-install']['install']['response_file'] = 'bwpluginrestjsonInstallResponseFile.silent'
-default['bwpluginrestjson-install']['install']['restjsonplugin_jar'] = '/apps/tibco/eai/4.0/bw/plugins/lib/palettes/restjsonplugin.jar'
+# version 0.1.1 : JK : Deleting the below attribute restjsonplugin_jar, to dynamically set it in the recipe based on tibco_install_dir
+# default['bwpluginrestjson-install']['install']['restjsonplugin_jar'] = '/apps/tibco/eai/4.0/bw/plugins/lib/palettes/restjsonplugin.jar'
 
 default['java']['install_flavor'] = 'oracle'
 default['java']['jdk_version'] = '8'

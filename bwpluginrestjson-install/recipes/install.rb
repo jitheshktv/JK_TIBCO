@@ -10,9 +10,9 @@
 bwpluginrestjson_bin_target_path = node['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_target_path']
 tibco_universalinstaller_bin = "#{bwpluginrestjson_bin_target_path}/#{node['bwpluginrestjson-install']['install']['tibco_universalinstaller_bin']}"
 bwpluginrestjson_install_responsefile = "#{bwpluginrestjson_bin_target_path}/#{node['bwpluginrestjson-install']['install']['response_file']}"
-restjsonplugin_jar = node['bwpluginrestjson-install']['install']['restjsonplugin_jar']
-
 tibco_install_dir = node['bwpluginrestjson-install']['install']['tibco_install_dir']
+restjsonplugin_jar = "#{tibco_install_dir}/bw/plugins/lib/palettes/restjsonplugin.jar"
+
 install_group = node['bwpluginrestjson-install']['install']['group']
 install_user = node['bwpluginrestjson-install']['install']['user']
 
