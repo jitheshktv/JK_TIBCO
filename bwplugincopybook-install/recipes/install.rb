@@ -10,9 +10,9 @@
 bwplugincopybook_bin_target_path = node['bwplugincopybook-install']['install']['bwplugincopybook_bin_target_path']
 tibco_universalinstaller_bin = "#{bwplugincopybook_bin_target_path}/#{node['bwplugincopybook-install']['install']['tibco_universalinstaller_bin']}"
 bwplugincopybook_install_responsefile = "#{bwplugincopybook_bin_target_path}/#{node['bwplugincopybook-install']['install']['response_file']}"
-copybook_jar = node['bwplugincopybook-install']['install']['copybook_jar']
 
 tibco_install_dir = node['bwplugincopybook-install']['install']['tibco_install_dir']
+copybook_jar = "#{tibco_install_dir}/bw/plugins/lib/palettes/copybook.jar"
 install_group = node['bwplugincopybook-install']['install']['group']
 install_user = node['bwplugincopybook-install']['install']['user']
 
