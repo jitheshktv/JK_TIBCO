@@ -13,7 +13,8 @@ tibco_install_dir = node['sdk-install']['install']['tibco_install_dir']
 tibco_instance_dir = node['sdk-install']['install']['tibco_instance_dir']
 logs_instance_dir = node['sdk-install']['install']['logs_instance_dir']
 sdk_bin_target_path = node['sdk-install']['install']['sdk_bin_target_path']
-sdk_home_dir = node['sdk-install']['install']['sdk_home_dir']
+sdk_major_version = node['sdk-install']['install']['sdk_major_version']
+sdk_home_dir = "#{tibco_install_dir}/adapter/sdk/#{sdk_major_version}"
 
 install_user = node['sdk-install']['install']['user']
 install_group = node['sdk-install']['install']['group']
