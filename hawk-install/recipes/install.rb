@@ -18,6 +18,16 @@ tibhawkhma = "#{hawk_home_dir}/bin/tibhawkhma"
 install_group = node['hawk-install']['install']['group']
 install_user = node['hawk-install']['install']['user']
 
+# Install the libstdc++ for 32 bit, on 64 bit servers
+case node['platform']
+when 'redhat', 'centos', 'ubuntu'
+  yum_package 'glibc.i686'
+  yum_package 'libstdc++.i686'
+when 'amazon'
+  yum_package 'glibc.i686'
+  yum_package 'libstdc++48.i686'
+end
+
 execute 'install_hawk' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{hawk_install_responsefile}"
   user install_user
