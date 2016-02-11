@@ -21,6 +21,7 @@ install_user = node['rv-install']['install']['user']
 
 execute 'install_rv' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{rv_install_responsefile}"
+  cwd rv_bin_target_path
   user install_user
   group install_group
   not_if { File.exist? "#{rvd}" }

@@ -20,6 +20,7 @@ install_user = node['tra-install']['install']['user']
 
 execute 'install_tra' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{tra_install_responsefile}"
+  cwd tra_bin_target_path
   user install_user
   group install_group
   not_if { File.exist? "#{wrap}" }

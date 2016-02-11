@@ -30,6 +30,7 @@ end
 
 execute 'install_hawk' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{hawk_install_responsefile}"
+  cwd hawk_bin_target_path
   user install_user
   group install_group
   not_if { File.exist? "#{tibhawkhma}" }

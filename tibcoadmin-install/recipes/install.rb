@@ -21,6 +21,7 @@ install_user = node['tibcoadmin-install']['install']['user']
 
 execute 'install_tibcoadmin' do
   command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{tibcoadmin_install_responsefile}"
+  cwd tibcoadmin_bin_target_path
   user install_user
   group install_group
   not_if { File.exist? "#{uninstall_admin}" }
