@@ -31,6 +31,3 @@ Example Custom JSON:
 
 version : 0.1.1
 - Removed the home rv_home_dir attribute with the rv_major_version, and dynamically set the home directory in the recipe.
-
-version : 0.1.2
-- Added the new attribute (default['rv-install']['install']['explicit_rvinstall_needed'] = 'true'). This is to check if an explicit rv installation is required, since in older versions, RV is installed as part of TRA.
