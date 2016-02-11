@@ -9,6 +9,7 @@
 install_group = node['tra-install']['install']['group']
 install_user = node['tra-install']['install']['user']
 
+tra_bin_target_path = node['tra-install']['install']['tra_bin_target_path']
 tibco_install_dir = node['tra-install']['install']['tibco_install_dir']
 logs_home_dir = node['tra-install']['install']['logs_home_dir']
 # logs_temp_dir = node['tra-install']['install']['logs_temp_dir']
@@ -271,4 +272,11 @@ execute 'chown-logs-directories' do
   command "chown -R #{install_user}:#{install_group} #{logs_home_dir}"
   user 'root'
   action :run
+end
+
+# Clean up the temporary files used for the installation.
+directory 'install_bin_file' do
+  path tra_bin_target_path
+  recursive true
+  action :delete
 end
