@@ -8,7 +8,7 @@
 explicit_rvinstall_needed = node['rv-install']['install']['explicit_rvinstall_needed']
 
 # Excute the recipes only if an explicit rv installation is required
-if explicit_rvinstall_needed
+if explicit_rvinstall_needed == 'true'
   include_recipe 'rv-install::users'
   include_recipe 'rv-install::directories'
   include_recipe 'rv-install::s3download'
