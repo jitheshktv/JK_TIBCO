@@ -4,11 +4,12 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-explicit_rvinstall_needed = node['rv-install']['install']['explicit_rvinstall_needed']
+file '/tmp/testing_platform' do
+  content node['platform']
+  mode '0777'
+end
 
-if explicit_rvinstall_needed == 'true'
-  file '/tmp/tesing' do
-    content node['platform']
-    mode '0777'
-  end
+file '/tmp/testing_architecture' do
+  content node['kernel']['machine']
+  mode '0777'
 end
