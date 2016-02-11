@@ -31,3 +31,6 @@ Example Custom JSON:
 
 version : 0.1.1
 - Removed the home rv_home_dir attribute with the rv_major_version, and dynamically set the home directory in the recipe.
+
+Version 0.1.2 : JK : 02/10/2016
+ -  Added a new recipe (libinstall) which will be executed prior to any other recipes, to install the GNU C++ libraries of other architecture (64 or 32) so that any binaries can be executed regardless of its architecture.

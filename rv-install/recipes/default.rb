@@ -4,6 +4,7 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
+include_recipe 'rv-install::libinstall'
 include_recipe 'rv-install::users'
 include_recipe 'rv-install::directories'
 include_recipe 'rv-install::s3download'
