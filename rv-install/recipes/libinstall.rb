@@ -15,7 +15,7 @@ os_platform = node['platform']
 
 case os_platform
 when 'redhat', 'centos', 'ubuntu'
-  if os_bit == 'x86_64'
+  if os_arch == 'x86_64'
     yum_package 'glibc.i686'
     yum_package 'libstdc++.i686'
   else
@@ -23,7 +23,7 @@ when 'redhat', 'centos', 'ubuntu'
     yum_package 'libstdc++.x86_64'
   end
 when 'amazon'
-  if os_bit == 'x86_64'
+  if os_arch == 'x86_64'
     yum_package 'glibc.i686'
     yum_package 'libstdc++48.i686'
   else
