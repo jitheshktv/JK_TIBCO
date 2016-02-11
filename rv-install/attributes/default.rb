@@ -1,3 +1,4 @@
+default['rv-install']['install']['explicit_rvinstall_needed'] = 'true'
 default['rv-install']['install']['group'] = 'sgsup'
 default['rv-install']['install']['user'] = 'esbuser'
 default['rv-install']['config']['group'] = 'sgsup'
