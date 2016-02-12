@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-# include_recipe 'ems-install'
+# include_recipe 'ems-install::default'
 include_recipe 'ems-createinstance::users'
 include_recipe 'ems-createinstance::directories'
 include_recipe 'ems-createinstance::prepareconfig'
