@@ -15,11 +15,6 @@ default['ems-install']['install']['linux_bin'] = 'TIBCOUniversalInstaller-lnx-x8
 default['ems-install']['install']['response_file'] = 'emsInstallResponseFile.silent'
 default['ems-install']['config']['ems_config_dir'] = '/apps/tibco/config/ems'
 
-# default['ems-install']['config']['ems_conf_templates_dir'] = '/apps/tibco/ems/8.2/config/templates/conf'
-# default['ems-install']['config']['ems_conf_tibemsd'] = '/apps/tibco/ems/8.2/config/templates/conf/tibemsd.conf'
-# default['ems-install']['config']['ems_tibemsd'] = '/apps/tibco/ems/8.2/bin/tibemsd'
-# default['ems-install']['config']['default_cfgmgmt'] = '/apps/tibco/ems/8.2/config/tibco'
-
 default['ems-install']['config']['admin_user'] = 'stsadmin'
 default['ems-install']['config']['admin_user_passwd'] = '$2$89v3SweX$XqTXgIPUB1lcA2Bk1KoMaH/L'
 default['ems-install']['config']['monitor_user'] = 'emsmon'
