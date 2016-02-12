@@ -1,6 +1,0 @@
----
-hostname: 127.0.0.1
-port: '2222'
-username: vagrant
-ssh_key: C:/Users/NINUS/Documents/GitHub/JK_TIBCO/ems-install/.kitchen/kitchen-vagrant/kitchen-ems-install-default-centos-71/.vagrant/machines/default/virtualbox/private_key
-last_action: converge
