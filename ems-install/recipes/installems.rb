@@ -10,9 +10,10 @@ ems_bin = "#{ems_bin_target_path}/#{node['ems-install']['install']['linux_bin']}
 group_name = node['ems-install']['install']['group']
 user_name = node['ems-install']['install']['user']
 ems_install_dir = node['ems-install']['install']['ems_install_dir']
-ems_conf_templates_dir = node['ems-install']['config']['ems_conf_templates_dir']
-tibemsd = node['ems-install']['config']['ems_tibemsd']
-default_cfgmgmt = node['ems-install']['config']['default_cfgmgmt']
+ems_major_version = node['ems-install']['install']['ems_major_version']
+ems_conf_templates_dir = "#{ems_install_dir}/ems/#{ems_major_version}/config/templates/conf"
+tibemsd = "#{ems_install_dir}/ems/#{ems_major_version}/bin/tibemsd"
+default_cfgmgmt = "#{ems_install_dir}/ems/#{ems_major_version}/config/tibco"
 ENV['JAVA_HOME'] = '/usr/lib/jvm/java'
 
 # Install ems binary using the response file

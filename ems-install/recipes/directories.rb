@@ -9,10 +9,11 @@
 
 tibco_home_dir = node['ems-install']['install']['tibco_home_dir']
 logs_home_dir = node['ems-install']['install']['logs_home_dir']
-ems_install_dir = node['ems-install']['install']['ems_install_dir']
 ems_log_dir = node['ems-install']['install']['ems_log_dir']
-ems_conf_templates_dir = node['ems-install']['config']['ems_conf_templates_dir']
-ems_conf_tibemsd = node['ems-install']['config']['ems_conf_tibemsd']
+ems_install_dir = node['ems-install']['install']['ems_install_dir']
+ems_major_version = node['ems-install']['install']['ems_major_version']
+ems_conf_templates_dir = "#{ems_install_dir}/ems/#{ems_major_version}/config/templates/conf"
+ems_conf_tibemsd = "#{ems_conf_templates_dir}/tibemsd.conf"
 
 user_name = node['ems-install']['install']['user']
 group_name = node['ems-install']['install']['group']
