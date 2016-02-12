@@ -9,8 +9,16 @@
 
 sdk_bin_target_path = node['sdk-install']['install']['sdk_bin_target_path']
 sdk_install_responsefile = "#{sdk_bin_target_path}/#{node['sdk-install']['install']['response_file']}"
+installer = node['sdk-install']['install']['tibco_universalinstaller_bin']
 
-template sdk_install_responsefile do
-  source 'TIBCOInstallResponsefile-sdk.silent.erb'
-  mode '0755'
-end
+if installer.include? "TIBCOUniversalInstaller"
+  template sdk_install_responsefile do
+    source 'UnivTIBCOInstallResponsefile-sdk.silent.erb'
+    mode '0755'
+ end
+ else
+   template sdk_install_responsefile do
+     source 'SimpleTIBCOInstallResponsefile-sdk.silent.erb'
+     mode '0755'
+   end
+ end

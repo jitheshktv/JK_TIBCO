@@ -1,0 +1,142 @@
+################################################################################
+#
+# InstallShield Options File
+#
+# Wizard name: Setup
+# Wizard source: sdk.5.7.0-simple_linux24gl23_x86.jar
+# Created on: Fri Feb 12 02:51:24 UTC 2016
+# Created by: InstallShield Options File Generator
+#
+# This file contains values that were specified during a recent execution of
+# Setup. It can be used to configure Setup with the options specified below when
+# the wizard is run with the "-options" command line option. Read each setting's
+# documentation for information on how to change its value.
+#
+# A common use of an options file is to run the wizard in silent mode. This lets
+# the options file author specify wizard settings without having to run the
+# wizard in graphical or console mode. To use this options file for silent mode
+# execution, use the following command line arguments when running the wizard:
+#
+#    -options "/tmp/responsefile.txt" -silent
+#
+################################################################################
+
+
+################################################################################
+#
+# License Agreement State
+#
+# The initial state of the License Agreement panel. Legal values are:
+#
+#    0 - Nothing will be selected
+#    1 - "I accept the terms of the License Agreements." will be selected
+#    2 - "I do not accept the terms of the License Agreements." will be
+#        selected
+#
+# For example, to configure the panel to initially display "I do not accept the
+# terms of the License Agreements.", use
+#
+#    -W TIBCOLicensePanel.selection=2
+#
+
+
+-W TIBCOLicensePanel.selection=1
+
+
+################################################################################
+#
+# Specify Installation Home
+#
+# TIBCO SDK 5.7.0
+#
+
+
+-P root.installLocation=<%= node['sdk-install']['install']['tibco_install_dir'] %>
+
+
+################################################################################
+#
+# Get useExistingTibcoHome
+#
+# Get useExistingTibcoHome
+#
+
+
+-W TIBCOProductDestinationPanel.useExistingTibcoHome=true
+
+
+################################################################################
+#
+# Get allowMultipleInstances
+#
+# Get allowMultipleInstances
+#
+
+
+-W TIBCOProductDestinationPanel.allowMultipleInstances=false
+
+
+################################################################################
+#
+# Setup Type
+#
+# The setup type to be used when installing the product. Legal values are:
+#
+#    typical - Typical: The product will be installed using the default
+#              configuration. Recommended for most users.
+#    custom  - Custom: The installer will prompt you for product components and
+#              other information. Recommended only for advanced users.
+#
+# For example, to specify that the "Typical" setup type is selected, use
+#
+#    -W SetupTypePanel.selectedSetupTypeId=typical
+#
+# You may also set the setup type to nothing by using
+#
+#    -W SetupTypePanel.selectedSetypTypeId=
+#
+# This clears the current setup type and prevents any changes to the set of
+# selected features. Use this option whenever you set feature active states in
+# this options file. If you do not clear the selected setup type, the setup type
+# panel will override any changes you make to feature active states using this
+# file.
+#
+
+
+-W SetupTypePanel.selectedSetupTypeId=typical
+
+
+################################################################################
+#
+# "TIBCO Adapter SDK" Feature
+#
+# The selection state of the "TIBCO Adapter SDK" feature. Legal values are:
+#
+#    true  - Indicates that the feature is selected for installation
+#    false - Indicates that the feature is not selected for installation
+#
+# For example, to select "TIBCO Adapter SDK" for installation, use
+#
+#    -P runtime.active=true
+#
+
+
+-P runtime.active=true
+
+
+################################################################################
+#
+# "SDK Resources" Feature
+#
+# The selection state of the "SDK Resources" feature. Legal values are:
+#
+#    true  - Indicates that the feature is selected for installation
+#    false - Indicates that the feature is not selected for installation
+#
+# For example, to select "SDK Resources" for installation, use
+#
+#    -P resources.active=true
+#
+
+
+-P resources.active=true
