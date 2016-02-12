@@ -8,7 +8,7 @@
 #
 
 sdk_bin_target_path = node['sdk-install']['install']['sdk_bin_target_path']
-tibco_universalinstaller_bin = "#{sdk_bin_target_path}/#{node['sdk-install']['install']['tibco_universalinstaller_bin']}"
+tibco_installer = "#{sdk_bin_target_path}/#{node['sdk-install']['install']['tibco_universalinstaller_bin']}"
 sdk_install_responsefile = "#{sdk_bin_target_path}/#{node['sdk-install']['install']['response_file']}"
 
 tibco_install_dir = node['sdk-install']['install']['tibco_install_dir']
@@ -30,12 +30,22 @@ when 'amazon'
   yum_package 'libstdc++48.i686'
 end
 
-execute 'install_sdk' do
-  command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{sdk_install_responsefile}"
-  cwd sdk_bin_target_path
-  user install_user
-  group install_group
-  not_if { File.exist? "#{adaptersdk}" }
+if tibco_installer.include? "TIBCOUniversalInstaller"
+  execute 'install_sdk' do
+    command "#{tibco_installer} -silent -V responseFile=#{sdk_install_responsefile}"
+    cwd sdk_bin_target_path
+    user install_user
+    group install_group
+    not_if { File.exist? "#{adaptersdk}" }
+  end
+else
+  execute 'install_sdk' do
+    command "#{tibco_installer} -silent"
+    cwd sdk_bin_target_path
+    user install_user
+    group install_group
+    not_if { File.exist? "#{adaptersdk}" }
+  end
 end
 
 # Change the ownership of the directories
