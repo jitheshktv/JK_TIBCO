@@ -10,7 +10,9 @@
 # variables
 config_user = node['createdomain-dbems']['config']['user']
 config_group = node['createdomain-dbems']['config']['group']
-tra_home_dir = node['createdomain-dbems']['config']['tra_home_dir']
+tibco_instance_dir = node['createdomain-dbems']['config']['tibco_instance_dir']
+tra_version = node['createdomain-dbems']['config']['tra_version']
+tra_home_dir = "#{tibco_instance_dir}/tra/#{tra_version}"
 tra_bin = "#{tra_home_dir}/bin"
 createdomain_cmdfile = node['createdomain-dbems']['config']['createdomain_cmdfile']
 

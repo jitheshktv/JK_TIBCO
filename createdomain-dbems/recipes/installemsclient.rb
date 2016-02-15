@@ -8,7 +8,9 @@
 # The JARs can be kept in S3 and downloaded from there
 
 # Variables
-tra_home_dir = node['createdomain-dbems']['config']['tra_home_dir']
+tibco_instance_dir = node['createdomain-dbems']['config']['tibco_instance_dir']
+tra_version = node['createdomain-dbems']['config']['tra_version']
+tra_home_dir = "#{tibco_instance_dir}/tra/#{tra_version}"
 tra_lib = "#{tra_home_dir}/lib"
 config_user = node['createdomain-dbems']['config']['user']
 config_group = node['createdomain-dbems']['config']['group']

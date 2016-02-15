@@ -5,7 +5,7 @@
         <DomainName><%= node['createdomain-dbems']['config']['domain_name'] %></DomainName>
         <AdministratorUsername><%= node['createdomain-dbems']['config']['administrator_user_name'] %></AdministratorUsername>
         <AdministratorPassword><%= node['createdomain-dbems']['config']['administrator_user_password'] %></AdministratorPassword>
-        <AdminHome><%= node['createdomain-dbems']['config']['tibcoadmin_home_dir'] %></AdminHome>
+        <AdminHome><%= @var_tibcoadmin_home_dir %></AdminHome>
         <LocalApplicationData><%= node['createdomain-dbems']['config']['use_local_appdata'] %></LocalApplicationData>
         <TRADomainHome><%= node['createdomain-dbems']['config']['tra_domainhome_dir'] %></TRADomainHome>
         <AdminDomainHome><%= node['createdomain-dbems']['config']['tibcoadmin_domainhome_dir'] %></AdminDomainHome>
@@ -32,14 +32,15 @@
         </EMSParameters>
 
         <HawkHMAParameters>
-          <RvDaemon><%= node['createdomain-dbems']['config']['hawkhma_rv_daemon'] %></RvDaemon>
-          <RvNetwork><%= node['createdomain-dbems']['config']['hawkhma_rv_network'] %></RvNetwork>
-          <RvService><%= node['createdomain-dbems']['config']['hawkhma_rv_service'] %></RvService>
+          <RvDaemon><%= @var_hawkhma_rv_daemon %></RvDaemon>
+          <RvNetwork><%= @var_hawkhma_rv_network %></RvNetwork>
+          <RvService><%= @var_hawkhma_rv_service %></RvService>
         </HawkHMAParameters>
 
         <TomcatConfiguration>
-            <HttpPort><%= node['createdomain-dbems']['config']['tomcat_http_port'] %></HttpPort>
-            <ShutDownPort><%= node['createdomain-dbems']['config']['tomcat_shutdown_port'] %></ShutDownPort>
+            <HttpPort><%= @var_tomcat_http_port %></HttpPort>
+            <ShutDownPort><%= @var_tomcat_shutdown_port %></ShutDownPort>
+            <AJPPort><%= @var_tomcat_ajp_port %></AJPPort>
             <ShutDownString><%= node['createdomain-dbems']['config']['tomcat_shutdown_string'] %></ShutDownString>
         </TomcatConfiguration>
 
