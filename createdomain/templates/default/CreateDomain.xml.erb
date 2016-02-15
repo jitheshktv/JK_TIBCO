@@ -21,19 +21,20 @@
 -->
 
         <ApplicationRVParameters>
-            <RvDaemon><%= node['createdomain-rv']['config']['application_rv_daemon'] %></RvDaemon>
-            <RvNetwork><%= node['createdomain-rv']['config']['application_rv_network'] %></RvNetwork>
-            <RvService><%= node['createdomain-rv']['config']['application_rv_service'] %></RvService>
+            <RvDaemon><%= @var_application_rv_daemon %></RvDaemon>
+            <RvNetwork><%= @var_application_rv_network %></RvNetwork>
+            <RvService><%= @var_application_rv_service %></RvService>
         </ApplicationRVParameters>
         <HawkRVParameters>
-            <RvDaemon><%= node['createdomain-rv']['config']['application_hawk_daemon'] %></RvDaemon>
-            <RvNetwork><%= node['createdomain-rv']['config']['application_hawk_network'] %></RvNetwork>
-            <RvService><%= node['createdomain-rv']['config']['application_hawk_service'] %></RvService>
+            <RvDaemon><%= @var_application_hawk_daemon %></RvDaemon>
+            <RvNetwork><%= @var_application_hawk_network %></RvNetwork>
+            <RvService><%= @var_application_hawk_service %></RvService>
         </HawkRVParameters>
 
         <TomcatConfiguration>
-            <HttpPort><%= node['createdomain-rv']['config']['tomcat_http_port'] %></HttpPort>
-            <ShutDownPort><%= node['createdomain-rv']['config']['tomcat_shutdown_port'] %></ShutDownPort>
+            <HttpPort><%= @var_tomcat_http_port %></HttpPort>
+            <ShutDownPort><%= @var_tomcat_shutdown_port %></ShutDownPort>
+            <AJPPort><%= @var_tomcat_ajp_port %></AJPPort>
             <ShutDownString><%= node['createdomain-rv']['config']['tomcat_shutdown_string'] %></ShutDownString>
         </TomcatConfiguration>
 
