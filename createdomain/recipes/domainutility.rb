@@ -9,7 +9,10 @@
 
 config_user = node['createdomain-rv']['config']['user']
 config_group = node['createdomain-rv']['config']['group']
-tra_home_dir = node['createdomain-rv']['config']['tra_home_dir']
+
+tibco_instance_dir = node['createdomain-rv']['config']['tibco_instance_dir']
+tra_version = node['createdomain-rv']['config']['tra_version']
+tra_home_dir = "#{tibco_instance_dir}/tra/#{tra_version}"
 tra_bin = "#{tra_home_dir}/bin"
 createdomain_cmdfile = node['createdomain-rv']['config']['createdomain_cmdfile']
 
