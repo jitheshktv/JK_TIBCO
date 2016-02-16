@@ -31,7 +31,7 @@ tomcat_shutdown_port = rv_port + 82
 
 tibco_instance_dir = node['createdomain-dbems']['config']['tibco_instance_dir']
 tibcoadmin_version = node['createdomain-dbems']['config']['tibcoadmin_version']
-tibcoadmin_home_dir = "#{tibco_instance_dir}/tra/#{tibcoadmin_version}"
+tibcoadmin_home_dir = "#{tibco_instance_dir}/administrator/#{tibcoadmin_version}"
 
 # Form the DB url based on the usage of TNS and the selected driver
 if "#{db_use_tns}" == 'true'
