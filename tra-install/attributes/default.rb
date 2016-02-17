@@ -13,7 +13,7 @@ default['tra-install']['install']['logs_temp_dir'] = '/logs/tibco/tmp'
 
 default['tra-install']['install']['tra_bin_source'] = 'https://s3-us-west-2.amazonaws.com/tra-5.10.0-bin/linux/TIB_TRA_5.10.0_linux_x86.zip'
 default['tra-install']['install']['tra_bin_target_path'] = '/tmp/tra'
-default['tra-install']['install']['tra_bin_zip'] = 'TIB_TRA_5.10.0_linux_x86.zip'
+default['tra-install']['install']['tra_bin_zip'] = 'TIB_TRA.zip'
 default['tra-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['tra-install']['install']['response_file'] = 'traInstallResponseFile.silent'
 

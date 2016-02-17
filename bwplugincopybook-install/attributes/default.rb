@@ -13,7 +13,7 @@ default['bwplugincopybook-install']['install']['bwplugincopybook_home_dir'] = '/
 
 default['bwplugincopybook-install']['install']['bwplugincopybook_bin_source'] = 'https://s3-us-west-2.amazonaws.com/ccbplugin-3.4.0-bin/linux/TIB_bwplugincopybook_3.4.0_linux24gl23_x86.zip'
 default['bwplugincopybook-install']['install']['bwplugincopybook_bin_target_path'] = '/tmp/bwplugincopybook'
-default['bwplugincopybook-install']['install']['bwplugincopybook_bin_zip'] = 'TIB_bwplugincopybook_3.4.0_linux24gl23_x86.zip'
+default['bwplugincopybook-install']['install']['bwplugincopybook_bin_zip'] = 'TIB_bwplugincopybook.zip'
 default['bwplugincopybook-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['bwplugincopybook-install']['install']['response_file'] = 'bwplugincopybookInstallResponseFile.silent'
 # version 0.1.1 : JK : Deleting the below attribute copybook_jar, to dynamically set it in the recipe based on tibco_install_dir

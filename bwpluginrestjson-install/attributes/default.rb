@@ -13,7 +13,7 @@ default['bwpluginrestjson-install']['install']['bwpluginrestjson_home_dir'] = '/
 
 default['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_source'] = 'https://s3-us-west-2.amazonaws.com/restjsonplugin-2.0.0-bin/linux/TIB_bwpluginrestjson_2.0.0_linux26gl23_x86.zip'
 default['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_target_path'] = '/tmp/bwpluginrestjson'
-default['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_zip'] = 'TIB_bwpluginrestjson_2.0.0_linux26gl23_x86.zip'
+default['bwpluginrestjson-install']['install']['bwpluginrestjson_bin_zip'] = 'TIB_bwpluginrestjson.zip'
 default['bwpluginrestjson-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['bwpluginrestjson-install']['install']['response_file'] = 'bwpluginrestjsonInstallResponseFile.silent'
 # version 0.1.1 : JK : Deleting the below attribute restjsonplugin_jar, to dynamically set it in the recipe based on tibco_install_dir

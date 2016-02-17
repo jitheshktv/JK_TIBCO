@@ -11,11 +11,12 @@ default['tibcoadmin-install']['install']['tibco_instance_dir'] = '/apps/tibco'
 default['tibcoadmin-install']['install']['logs_instance_dir'] = '/logs/tibco'
 
 default['tibcoadmin-install']['install']['tibcoadmin_bin_source'] = 'https://s3-us-west-2.amazonaws.com/admin-5.10.0-bin/linux/TIB_TIBCOAdmin_5.10.0_linux_x86.zip'
+default['tibcoadmin-install']['install']['tibcoadmin_version'] = '5.10'
+
 default['tibcoadmin-install']['install']['tibcoadmin_bin_target_path'] = '/tmp/administrator'
-default['tibcoadmin-install']['install']['tibcoadmin_bin_zip'] = 'TIB_TIBCOAdmin_5.10.0_linux_x86.zip'
+default['tibcoadmin-install']['install']['tibcoadmin_bin_zip'] = 'TIB_TIBCOAdmin.zip'
 default['tibcoadmin-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['tibcoadmin-install']['install']['response_file'] = 'tibadminInstallResponseFile.silent'
-default['tibcoadmin-install']['install']['tibcoadmin_version'] = '5.10'
 # default['tibcoadmin-install']['install']['tibcoadmin_home_dir'] = '/apps/tibco/administrator/5.10'
 
 default['java']['install_flavor'] = 'oracle'

@@ -8,9 +8,10 @@ default['ems-install']['install']['ems_install_dir'] = '/apps/tibco'
 default['ems-install']['install']['ems_log_dir'] = '/logs/tibco/ems'
 
 default['ems-install']['install']['linux_bin_source'] = 'https://s3-us-west-2.amazonaws.com/ems-8.2.2-bin/linux/TIB_ems_8.2.2_linux_x86.zip'
-default['ems-install']['install']['ems_bin_target_path'] = '/tmp/ems'
-default['ems-install']['install']['linux_bin_zip'] = 'TIB_ems_8.2.2_linux_x86.zip'
 default['ems-install']['install']['ems_major_version'] = '8.2'
+
+default['ems-install']['install']['ems_bin_target_path'] = '/tmp/ems'
+default['ems-install']['install']['linux_bin_zip'] = 'TIB_ems.zip'
 default['ems-install']['install']['linux_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['ems-install']['install']['response_file'] = 'emsInstallResponseFile.silent'
 default['ems-install']['config']['ems_config_dir'] = '/apps/tibco/config/ems'

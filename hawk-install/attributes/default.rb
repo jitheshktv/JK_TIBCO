@@ -12,11 +12,12 @@ default['hawk-install']['install']['logs_instance_dir'] = '/logs/tibco'
 default['hawk-install']['install']['tibcojre_home_dir'] = '/apps/tibco/tibcojre/1.8.0'
 
 default['hawk-install']['install']['hawk_bin_source'] = 'https://s3-us-west-2.amazonaws.com/hawk-5.1.1-bin/linux/TIB_hawk_5.1.1_linux26gl23_x86.zip'
+default['hawk-install']['install']['hawk_major_version'] = '5.1'
+
 default['hawk-install']['install']['hawk_bin_target_path'] = '/tmp/hawk'
-default['hawk-install']['install']['hawk_bin_zip'] = 'TIB_hawk_5.1.1_linux26gl23_x86.zip'
+default['hawk-install']['install']['hawk_bin_zip'] = 'TIB_hawk.zip'
 default['hawk-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['hawk-install']['install']['response_file'] = 'hawkInstallResponseFile.silent'
-default['hawk-install']['install']['hawk_major_version'] = '5.1'
 # version 0.1.1 : JK : removed the below attribute with the hawk_major_version
 # default['hawk-install']['install']['hawk_home_dir'] = '/apps/tibco/hawk/5.1'
 

@@ -12,7 +12,7 @@ default['bw-install']['install']['logs_instance_dir'] = '/logs/tibco'
 
 default['bw-install']['install']['bw_bin_source'] = 'https://s3-us-west-2.amazonaws.com/bw-5.13.0-bin/linux/TIB_BW_5.13.0_linux26gl23_x86.zip'
 default['bw-install']['install']['bw_bin_target_path'] = '/tmp/bw'
-default['bw-install']['install']['bw_bin_zip'] = 'TIB_BW_5.13.0_linux26gl23_x86.zip'
+default['bw-install']['install']['bw_bin_zip'] = 'TIB_BW.zip'
 default['bw-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['bw-install']['install']['response_file'] = 'bwInstallResponseFile.silent'
 
