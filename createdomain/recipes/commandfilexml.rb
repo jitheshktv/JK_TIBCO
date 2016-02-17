@@ -8,7 +8,7 @@
 
 createdomain_cmdfile = node['createdomain-rv']['config']['createdomain_cmdfile']
 
-rv_port = node['createdomain-rv']['config']['rv_port']
+rv_port = node['createdomain-rv']['config']['rv_port'].to_i
 rv_network = node['createdomain-rv']['config']['rv_network']
 application_hawk_daemonport = rv_port + 74
 

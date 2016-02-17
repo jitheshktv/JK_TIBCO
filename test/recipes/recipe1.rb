@@ -22,7 +22,7 @@ file '/tmp/sample.JSON' do
   mode '0777'
 end
 
-y = node['test']['x'] + 100
+y = node['test']['x'].to_i + 100
 file '/tmp/math' do
   content "value of y is #{y}"
   mode '0777'
