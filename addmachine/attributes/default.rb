@@ -12,7 +12,7 @@ default['addmachine-rv']['config']['tra_version'] = '5.10'
 # default['addmachine-rv']['config']['tra_domainhome_dir'] = '/apps/tibco/tra/domain'
 default['addmachine-rv']['config']['use_local_appdata'] = 'true'
 
-default['addmachine-rv']['config']['rv_port'] = 30000
+default['addmachine-rv']['config']['rv_port'] = '30000'
 default['addmachine-rv']['config']['rv_network'] = ';'
 
 # default['addmachine-rv']['config']['application_rv_daemon'] = 'tcp:7500'

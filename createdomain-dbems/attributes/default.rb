@@ -22,7 +22,7 @@ default['createdomain-dbems']['config']['tibcojre_version'] = '1.8.0'
 default['createdomain-dbems']['config']['hawk_version'] = '5.2'
 default['createdomain-dbems']['config']['tpcl_version'] = '5.10'
 
-default['createdomain-dbems']['config']['rv_port'] = 40_000
+default['createdomain-dbems']['config']['rv_port'] = '40000'
 default['createdomain-dbems']['config']['rv_network'] = ';'
 
 # default['createdomain-dbems']['config']['hawkhma_rv_daemon'] = 'tcp:17474'
