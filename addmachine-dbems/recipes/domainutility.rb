@@ -10,14 +10,17 @@
 # Intialize the variables
 config_user = node['addmachine-dbems']['config']['user']
 config_group = node['addmachine-dbems']['config']['group']
-tra_home_dir = node['addmachine-dbems']['config']['tra_home_dir']
-tra_bin = "#{tra_home_dir}/bin"
-addmachine_cmdfile = node['addmachine-dbems']['config']['addmachine_cmdfile']
 
+tibco_instance_dir = node['addmachine-dbems']['config']['tibco_instance_dir']
+tra_version  = node['addmachine-dbems']['config']['tra_version']
+tra_home_dir = "#{tibco_instance_dir}/tra/#{tra_version}"
+tra_bin = "#{tra_home_dir}/bin"
 domain_name = node['addmachine-dbems']['config']['domain_name']
-tra_domainhome_dir = node['addmachine-dbems']['config']['tra_domainhome_dir']
+tra_domainhome_dir = "#{tibco_instance_dir}/tra/domain"
 tra_domain_dir = "#{tra_domainhome_dir}/#{domain_name}"
 hawkagent = "#{tra_domain_dir}/hawkagent_#{domain_name}"
+
+addmachine_cmdfile = node['addmachine-dbems']['config']['addmachine_cmdfile']
 
 # Install the required yum packages for running 32 bit domainutility on a 64 bit OS arch
 case node['platform']

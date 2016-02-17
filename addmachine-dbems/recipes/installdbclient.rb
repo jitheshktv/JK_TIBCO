@@ -8,7 +8,10 @@
 # The JARs can be kept in S3 and downloaded from there
 
 # Intialize the variables
-tra_home_dir = node['addmachine-dbems']['config']['tra_home_dir']
+
+tibco_instance_dir = node['addmachine-dbems']['config']['tibco_instance_dir']
+tra_version  = node['addmachine-dbems']['config']['tra_version']
+tra_home_dir = "#{tibco_instance_dir}/tra/#{tra_version}"
 tra_lib = "#{tra_home_dir}/lib"
 config_user = node['addmachine-dbems']['config']['user']
 config_group = node['addmachine-dbems']['config']['group']

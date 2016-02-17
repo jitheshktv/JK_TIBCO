@@ -6,7 +6,7 @@
       <AdministratorUsername><%= node['addmachine-dbems']['config']['administrator_user_name'] %></AdministratorUsername>
       <AdministratorPassword><%= node['addmachine-dbems']['config']['administrator_user_password'] %></AdministratorPassword>
       <LocalApplicationData><%= node['addmachine-dbems']['config']['use_local_appdata'] %></LocalApplicationData>
-      <TRADomainHome><%= node['addmachine-dbems']['config']['tra_domainhome_dir'] %></TRADomainHome>
+      <TRADomainHome><%= @var_tra_domainhome_dir %></TRADomainHome>
       <MachineName><%= node['fqdn'] %></MachineName>
       <HawkCluster></HawkCluster>
       <DiscoverTimeOut><%= node['addmachine-dbems']['config']['discover_timeout'] %></DiscoverTimeOut>
@@ -30,9 +30,9 @@
       </EMSParameters>
 
       <HawkHMAParameters>
-        <RvDaemon><%= node['addmachine-dbems']['config']['hawkhma_rv_daemon'] %></RvDaemon>
-        <RvNetwork><%= node['addmachine-dbems']['config']['hawkhma_rv_network'] %></RvNetwork>
-        <RvService><%= node['addmachine-dbems']['config']['hawkhma_rv_service'] %></RvService>
+        <RvDaemon><%= @var_hawkhma_rv_daemon %></RvDaemon>
+        <RvNetwork><%= @var_hawkhma_rv_network %></RvNetwork>
+        <RvService><%= @var_hawkhma_rv_service %></RvService>
       </HawkHMAParameters>
       <!-- uncomment the following for cluster group configuration -->
       <!--
