@@ -18,7 +18,7 @@ db_hostname = node['createdomain-dbems']['config']['db_hostname']
 db_port = node['createdomain-dbems']['config']['db_port']
 db_sid = node['createdomain-dbems']['config']['db_sid']
 
-rv_port = node['createdomain-dbems']['config']['rv_port']
+rv_port = node['createdomain-dbems']['config']['rv_port'].to_i
 rv_network = node['createdomain-dbems']['config']['rv_network']
 hawkhma_rv_daemonport = rv_port + 74
 
