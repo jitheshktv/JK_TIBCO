@@ -8,17 +8,17 @@
         <MachineName><%= node['fqdn'] %></MachineName>
         <HawkCluster></HawkCluster>
         <DiscoverTimeOut>20</DiscoverTimeOut>
-        <TRADomainHome><%= node['addmachine-rv']['config']['tra_domainhome_dir'] %></TRADomainHome>
+        <TRADomainHome><%= @var_tra_domainhome_dir %></TRADomainHome>
 
         <ApplicationRVParameters>
-            <RvDaemon><%= node['addmachine-rv']['config']['application_rv_daemon'] %></RvDaemon>
-            <RvNetwork><%= node['addmachine-rv']['config']['application_rv_network'] %></RvNetwork>
-            <RvService><%= node['addmachine-rv']['config']['application_rv_service'] %></RvService>
+            <RvDaemon><%= @var_application_rv_daemon %></RvDaemon>
+            <RvNetwork><%= @var_application_rv_network %></RvNetwork>
+            <RvService><%= @var_application_rv_service %></RvService>
         </ApplicationRVParameters>
         <HawkRVParameters>
-            <RvDaemon><%= node['addmachine-rv']['config']['application_hawk_daemon'] %></RvDaemon>
-            <RvNetwork><%= node['addmachine-rv']['config']['application_hawk_network'] %></RvNetwork>
-            <RvService><%= node['addmachine-rv']['config']['application_hawk_service'] %></RvService>
+            <RvDaemon><%= @var_application_hawk_daemon %></RvDaemon>
+            <RvNetwork><%= @var_application_hawk_network %></RvNetwork>
+            <RvService><%= @var_application_hawk_service %></RvService>
         </HawkRVParameters>
 
         <!--

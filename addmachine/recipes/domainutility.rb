@@ -9,12 +9,14 @@
 
 config_user = node['addmachine-rv']['config']['user']
 config_group = node['addmachine-rv']['config']['group']
-tra_home_dir = node['addmachine-rv']['config']['tra_home_dir']
+tibco_instance_dir = node['addmachine-rv']['config']['tibco_instance_dir']
+tra_version = node['addmachine-rv']['config']['tra_version']
+tra_home_dir = "#{tibco_instance_dir}/tra/#{tra_version}"
 tra_bin = "#{tra_home_dir}/bin"
 addmachine_cmdfile = node['addmachine-rv']['config']['addmachine_cmdfile']
 
 domain_name = node['addmachine-rv']['config']['domain_name']
-tra_domainhome_dir = node['addmachine-rv']['config']['tra_domainhome_dir']
+tra_domainhome_dir = "#{tibco_instance_dir}/tra/domain"
 tra_domain_dir = "#{tra_domainhome_dir}/#{domain_name}"
 hawkagent = "#{tra_domain_dir}/hawkagent_#{domain_name}"
 

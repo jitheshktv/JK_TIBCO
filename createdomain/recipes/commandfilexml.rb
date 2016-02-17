@@ -22,6 +22,12 @@ tomcat_http_port = rv_port + 80
 tomcat_ajp_port = rv_port + 81
 tomcat_shutdown_port = rv_port + 82
 
+tibco_instance_dir = node['createdomain-rv']['config']['tibco_instance_dir']
+tibcoadmin_version = node['createdomain-rv']['config']['tibcoadmin_version']
+tibcoadmin_home_dir = "#{tibco_instance_dir}/administrator/#{tibcoadmin_version}"
+tibcoadmin_domainhome_dir = "#{tibco_instance_dir}/administrator/domain"
+tra_domainhome_dir = "#{tibco_instance_dir}/tra/domain"
+
 template 'CreateDomain.xml' do
   source 'CreateDomain.xml.erb'
   mode '0755'
@@ -35,6 +41,9 @@ template 'CreateDomain.xml' do
     var_application_hawk_service:  application_hawk_service,
     var_tomcat_http_port:  tomcat_http_port,
     var_tomcat_ajp_port:  tomcat_ajp_port,
-    var_tomcat_shutdown_port:  tomcat_shutdown_port
+    var_tomcat_shutdown_port:  tomcat_shutdown_port,
+    var_tibcoadmin_home_dir: tibcoadmin_home_dir,
+    var_tibcoadmin_domainhome_dir: tibcoadmin_domainhome_dir,
+    var_tra_domainhome_dir: tra_domainhome_dir
   )
 end

@@ -5,10 +5,10 @@
         <DomainName><%= node['createdomain-rv']['config']['domain_name'] %></DomainName>
         <AdministratorUsername><%= node['createdomain-rv']['config']['administrator_user_name'] %></AdministratorUsername>
         <AdministratorPassword><%= node['createdomain-rv']['config']['administrator_user_password'] %></AdministratorPassword>
-        <AdminHome><%= node['createdomain-rv']['config']['tibco_instance_dir'] %>/administrator/<%= node['createdomain-rv']['config']['tibcoadmin_version'] %></AdminHome>
+        <AdminHome><%= @var_tibcoadmin_home_dir %></AdminHome>
         <LocalApplicationData><%= node['createdomain-rv']['config']['use_local_appdata'] %></LocalApplicationData>
-        <TRADomainHome><%= node['createdomain-rv']['config']['tra_domainhome_dir'] %></TRADomainHome>
-        <AdminDomainHome><%= node['createdomain-rv']['config']['tibcoadmin_domainhome_dir'] %></AdminDomainHome>
+        <TRADomainHome><%= var_tra_domainhome_dir %></TRADomainHome>
+        <AdminDomainHome><%= var_tibcoadmin_domainhome_dir %></AdminDomainHome>
         <MachineName><%= node['fqdn'] %></MachineName>
         <!-- uncomment the following if non default values required -->
 <!--
