@@ -11,11 +11,13 @@ default['rv-install']['install']['tibco_instance_dir'] = '/apps/tibco'
 default['rv-install']['install']['logs_instance_dir'] = '/logs/tibco'
 
 default['rv-install']['install']['rv_bin_source'] = 'https://s3-us-west-2.amazonaws.com/rv-8.4.4-bin/linux/TIB_rv_8.4.4_linux_x86.zip'
+default['rv-install']['install']['rv_major_version'] = '8.4'
+
 default['rv-install']['install']['rv_bin_target_path'] = '/tmp/rv'
-default['rv-install']['install']['rv_bin_zip'] = 'TIB_rv_8.4.4_linux_x86.zip'
+default['rv-install']['install']['rv_bin_zip'] = 'TIB_rv.zip'
 default['rv-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
 default['rv-install']['install']['response_file'] = 'rvInstallResponseFile.silent'
-default['rv-install']['install']['rv_major_version'] = '8.4'
+
 # version 0.1.1 : JK : remove the below attribute with the rv_major_version.
 # default['rv-install']['install']['rv_home_dir'] = '/apps/tibco/tibrv/8.4'
 
