@@ -47,10 +47,10 @@ end
 ruby_block 'configure hawkagent_domain.tra' do
   block do
     hawkagent_tra_file = Chef::Util::FileEdit.new(hawkagent_tra)
-    hawkagent_tra_file.search_file_replace_line(/java.heap.size.max/, "java.heap.size.max=#{hawkagent_tra_maxheap}")
-    hawkagent_tra_file.insert_line_if_no_match(/java.heap.size.max/, "java.heap.size.max=#{hawkagent_tra_maxheap}")
-    hawkagent_tra_file.search_file_replace_line(/java.property.java.io.tmpdir/, "java.property.java.io.tmpdir=#{logs_temp_dir}")
-    hawkagent_tra_file.insert_line_if_no_match(/java.property.java.io.tmpdir/, "java.property.java.io.tmpdir=#{logs_temp_dir}")
+    hawkagent_tra_file.search_file_replace_line('java.heap.size.max', "java.heap.size.max=#{hawkagent_tra_maxheap}")
+    hawkagent_tra_file.insert_line_if_no_match('java.heap.size.max', "java.heap.size.max=#{hawkagent_tra_maxheap}")
+    hawkagent_tra_file.search_file_replace_line('java.property.java.io.tmpdir', "java.property.java.io.tmpdir=#{logs_temp_dir}")
+    hawkagent_tra_file.insert_line_if_no_match('java.property.java.io.tmpdir', "java.property.java.io.tmpdir=#{logs_temp_dir}")
     hawkagent_tra_file.write_file
   end
 end

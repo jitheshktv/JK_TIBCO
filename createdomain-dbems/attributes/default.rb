@@ -54,8 +54,8 @@ default['createdomain-dbems']['config']['createdomain_cmdfile'] = '/tmp/CreateDo
 # GOLD Settings
 default['createdomain-dbems']['config']['hawkagent_cfg_threadpool'] = '256'
 default['createdomain-dbems']['config']['hawkagent_tra_maxheap'] = '2048M'
-default['createdomain-dbems']['config']['tibcoadmin_tra_minheap'] = '1024M'
-default['createdomain-dbems']['config']['tibcoadmin_tra_maxheap'] = '2048M'
-default['createdomain-dbems']['config']['tibcoadmin_tra_maxconn'] = '100'
-default['createdomain-dbems']['config']['tibcoadmin_tra_auditFileSize'] = '5000000'
-default['createdomain-dbems']['config']['tibcoadmin_tra_autoRefreshInterval'] = '45000'
+default['createdomain-dbems']['config']['tibcoadmin_minheap'] = '1024M'
+default['createdomain-dbems']['config']['tibcoadmin_maxheap'] = '2048M'
+default['createdomain-dbems']['config']['tibcoadmin_maxconn'] = '100'
+default['createdomain-dbems']['config']['tibcoadmin_auditFileSize'] = '5000000'
+default['createdomain-dbems']['config']['tibcoadmin_autoRefreshInterval'] = '45000'
