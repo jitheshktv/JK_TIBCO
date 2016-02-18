@@ -16,6 +16,7 @@ tra_home_dir = "#{tibco_instance_dir}/tra/#{tra_version}"
 tra_bin = "#{tra_home_dir}/bin"
 createdomain_cmdfile = node['createdomain-dbems']['config']['createdomain_cmdfile']
 tra_domainhome_dir = "#{tibco_instance_dir}/tra/domain"
+domain_name = node['createdomain-dbems']['config']['domain_name']
 tra_domain_dir = "#{tra_domainhome_dir}/#{domain_name}"
 hawkagent = "#{tra_domain_dir}/hawkagent_#{domain_name}"
 
