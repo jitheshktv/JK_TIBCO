@@ -15,7 +15,7 @@ tnsfile = node['createdomain-dbems']['config']['db_tnsfile']
 db_use_tns = node['createdomain-dbems']['config']['db_use_tns']
 
 # Create the TNS file from the template if TNS is used in the admin domain creation
-if "#{db_use_tns}" == 'true'
+if db_use_tns == 'true'
   template 'tnsnames.ora' do
     source 'tnsnames.ora.erb'
     mode '0755'

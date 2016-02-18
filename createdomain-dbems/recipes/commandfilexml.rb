@@ -36,7 +36,7 @@ tibcoadmin_domainhome_dir = "#{tibco_instance_dir}/administrator/domain"
 tra_domainhome_dir = "#{tibco_instance_dir}/tra/domain"
 
 # Form the DB url based on the usage of TNS and the selected driver
-if "#{db_use_tns}" == 'true'
+if db_use_tns == 'true'
   case db_driver
   when 'oracle.jdbc.driver.OracleDriver'
     db_connection_url = "jdbc:oracle:thin:@(TNSNamesFile=#{db_tnsfile};TNSServerName=#{db_tnsname})"

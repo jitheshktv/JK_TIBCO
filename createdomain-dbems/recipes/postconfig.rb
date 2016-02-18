@@ -34,7 +34,7 @@ tibcoadmin_autorfrshint = node['createdomain-dbems']['config']['tibcoadmin_autoR
 # Change the configuration in hawkagent.cfg
 ruby_block 'configure hawkagent.cfg' do
   block do
-    hawkagent_cfg_file = Chef::Util::FileEdit.new("#{hawkagent_cfg}")
+    hawkagent_cfg_file = Chef::Util::FileEdit.new(hawkagent_cfg)
     hawkagent_cfg_file.search_file_replace_line('-use_thread_pool', "-use_thread_pool #{hawkagent_cfg_threadpool}")
     hawkagent_cfg_file.insert_line_if_no_match('-use_thread_pool', "-use_thread_pool=#{hawkagent_cfg_threadpool}")
     hawkagent_cfg_file.write_file
@@ -44,7 +44,7 @@ end
 # Change the configuration in hawkagent_domain.tra
 ruby_block 'configure hawkagent_domain.tra' do
   block do
-    hawkagent_tra_file = Chef::Util::FileEdit.new("#{hawkagent_tra}")
+    hawkagent_tra_file = Chef::Util::FileEdit.new(hawkagent_tra)
     hawkagent_tra_file.search_file_replace_line('java.heap.size.max', "java.heap.size.max=#{hawkagent_tra_maxheap}")
     hawkagent_tra_file.insert_line_if_no_match('java.heap.size.max', "java.heap.size.max=#{hawkagent_tra_maxheap}")
     hawkagent_tra_file.search_file_replace_line('java.property.java.io.tmpdir', "java.property.java.io.tmpdir=#{logs_temp_dir}")
@@ -64,7 +64,7 @@ end
 # Change the configuration in administrator.tra
 ruby_block 'configure tibcoadmin_domain.tra' do
   block do
-    administrator_tra_file = Chef::Util::FileEdit.new("#{administrator}")
+    administrator_tra_file = Chef::Util::FileEdit.new(administrator)
     administrator_tra_file.search_file_replace_line('java.heap.size.min', "java.heap.size.min=#{tibcoadmin_minheap}")
     administrator_tra_file.insert_line_if_no_match('java.heap.size.min', "java.heap.size.min=#{tibcoadmin_minheap}")
     administrator_tra_file.search_file_replace_line('java.heap.size.max', "java.heap.size.max=#{tibcoadmin_maxheap}")
