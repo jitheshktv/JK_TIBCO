@@ -55,7 +55,7 @@ end
 
 # Start the hawkagent
 execute 'start_hawkagent' do
-  command "nohup #{hawkagent} 2>&1 &"
+  command "nohup #{hawkagent_tra} 2>&1 &"
   cwd tra_domain_dir
   user config_user
   group config_group
