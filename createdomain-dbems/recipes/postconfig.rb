@@ -17,10 +17,10 @@ domain_name = node['createdomain-dbems']['config']['domain_name']
 tibcoadmin_domainhome_dir = "#{tibco_instance_dir}/administrator/domain"
 tra_domainhome_dir = "#{tibco_instance_dir}/tra/domain"
 tra_domain_dir = "#{tra_domainhome_dir}/#{domain_name}"
-hawkagent_tra = "#{tra_domain_dir}/hawkagent_#{domain_name}"
+hawkagent_tra = "#{tra_domain_dir}/hawkagent_#{domain_name}.tra"
 hawkagent_cfg = "#{tra_domain_dir}/hawkagent.cfg"
 tibcoadmin_bin_dir = "#{tibcoadmin_domainhome_dir}/#{domain_name}/bin"
-administrator = "#{tibcoadmin_bin_dir}/tibcoadmin_#{domain_name}"
+administrator_tra = "#{tibcoadmin_bin_dir}/tibcoadmin_#{domain_name}.tra"
 
 hawkagent_cfg_threadpool = node['createdomain-dbems']['config']['hawkagent_cfg_threadpool']
 hawkagent_tra_maxheap = node['createdomain-dbems']['config']['hawkagent_tra_maxheap']
@@ -64,7 +64,7 @@ end
 # Change the configuration in administrator.tra
 ruby_block 'configure tibcoadmin_domain.tra' do
   block do
-    administrator_tra_file = Chef::Util::FileEdit.new(administrator)
+    administrator_tra_file = Chef::Util::FileEdit.new(administrator_tra)
     administrator_tra_file.search_file_replace_line('java.heap.size.min', "java.heap.size.min=#{tibcoadmin_minheap}")
     administrator_tra_file.insert_line_if_no_match('java.heap.size.min', "java.heap.size.min=#{tibcoadmin_minheap}")
     administrator_tra_file.search_file_replace_line('java.heap.size.max', "java.heap.size.max=#{tibcoadmin_maxheap}")
