@@ -50,3 +50,12 @@ default['createdomain-dbems']['config']['db_sid'] = 'ORCL'
 
 default['createdomain-dbems']['config']['tomcat_shutdown_string'] = 'SHUTDOWN'
 default['createdomain-dbems']['config']['createdomain_cmdfile'] = '/tmp/CreateDomain.xml'
+
+# GOLD Settings
+default['createdomain-dbems']['config']['hawkagent_cfg_threadpool'] = '256'
+default['createdomain-dbems']['config']['hawkagent_tra_maxheap'] = '2048M'
+default['createdomain-dbems']['config']['tibcoadmin_tra_minheap'] = '1024M'
+default['createdomain-dbems']['config']['tibcoadmin_tra_maxheap'] = '2048M'
+default['createdomain-dbems']['config']['tibcoadmin_tra_maxconn'] = '100'
+default['createdomain-dbems']['config']['tibcoadmin_tra_auditFileSize'] = '5000000'
+default['createdomain-dbems']['config']['tibcoadmin_tra_autoRefreshInterval'] = '45000'
