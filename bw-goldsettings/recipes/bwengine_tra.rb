@@ -1,32 +1,37 @@
+# variables
 config_user = node['bw-goldsettings']['config']['user']
 config_group = node['bw-goldsettings']['config']['group']
-bw_bin_dir = node['bw-goldsettings']['config']['bw_bin_dir']
-bwengine = "#{bw_bin_dir}/bwengine.tra"
 
-timestamp = Time.new.strftime("%F-%T")
-remote_file "Backup of bwengine_tra file" do
-path "#{bwengine}_#{timestamp}"
-source "file://#{bwengine}"
-owner config_user
-group config_group
+bw_home_dir = node['bw-goldsettings']['config']['bw_home_dir']
+bw_version = node['bw-goldsettings']['config']['bw_version']
+bw_bin_dir = "#{bw_home_dir}/#{bw_version}/bin"
+bwengine_tra = "#{bw_bin_dir}/bwengine.tra"
+
+#Create a copy of bwengine.tra file with timestamp
+timestamp = Time.new.strftime('%F-%T')
+remote_file 'Backup of bwengine_tra file' do
+  path "#{bwengine_tra}_#{timestamp}"
+  source "file://#{bwengine_tra}"
+  owner config_user
+  group config_group
+  mode '0755'
 end
 
-ruby_block 'Find and replce in bwengine_tra' do
-block do
-bwengine_tra = Chef::Util::FileEdit.new("#{bwengine}")
-bwengine_tra.search_file_replace_line("tibco.tibjms.connect.attempts", "tibco.tibjms.connect.attempts=#{node['bw-goldsettings']['bwengine_tra_config']['connect_attempts']}")
-not_if 'tibco.tibjms.connect.attempts'
-bwengine_tra.insert_line_if_no_match("tibco.tibjms.connect.attempts", "tibco.tibjms.connect.attempts=#{node['bw-goldsettings']['bwengine_tra_config']['connect_attempts']}")
-bwengine_tra.search_file_replace_line("tibco.tibjms.connect.attempt.timeout", "tibco.tibjms.connect.attempt.timeout=#{node['bw-goldsettings']['bwengine_tra_config']['connect_attempt_timeout']}")
-not_if 'tibco.tibjms.connect.attempt.timeout'
-bwengine_tra.insert_line_if_no_match("tibco.tibjms.connect.attempt.timeout", "tibco.tibjms.connect.attempt.timeout=#{node['bw-goldsettings']['bwengine_tra_config']['connect_attempt_timeout']}")
-bwengine_tra.search_file_replace_line("EnableMemorySavingMode", "EnableMemorySavingMode=#{node['bw-goldsettings']['bwengine_tra_config']['EnableMemorySavingMode']}")
-not_if 'EnableMemorySavingMode'
-bwengine_tra.insert_line_if_no_match("EnableMemorySavingMode", "EnableMemorySavingMode=#{node['bw-goldsettings']['bwengine_tra_config']['EnableMemorySavingMode']}")
-bwengine_tra.write_file
-end
+# Update the bwengine.tra gold setting values using ruby_block
+ruby_block 'Configure bwengine_tra' do
+  block do
+    bwengine_tra_file = Chef::Util::FileEdit.new(bwengine_tra)
+    bwengine_tra_file.search_file_replace_line("tibco.tibjms.connect.attempts", "tibco.tibjms.connect.attempts=#{node['bw-goldsettings']['bwengine_tra_config']['connect_attempts']}")
+    bwengine_tra_file.insert_line_if_no_match("tibco.tibjms.connect.attempts", "tibco.tibjms.connect.attempts=#{node['bw-goldsettings']['bwengine_tra_config']['connect_attempts']}")
+    bwengine_tra_file.search_file_replace_line("tibco.tibjms.connect.attempt.timeout", "tibco.tibjms.connect.attempt.timeout=#{node['bw-goldsettings']['bwengine_tra_config']['connect_attempt_timeout']}")
+    bwengine_tra_file.insert_line_if_no_match("tibco.tibjms.connect.attempt.timeout", "tibco.tibjms.connect.attempt.timeout=#{node['bw-goldsettings']['bwengine_tra_config']['connect_attempt_timeout']}")
+    bwengine_tra_file.search_file_replace_line("EnableMemorySavingMode", "EnableMemorySavingMode=#{node['bw-goldsettings']['bwengine_tra_config']['EnableMemorySavingMode']}")
+    bwengine_tra_file.insert_line_if_no_match("EnableMemorySavingMode", "EnableMemorySavingMode=#{node['bw-goldsettings']['bwengine_tra_config']['EnableMemorySavingMode']}")
+    bwengine_tra_file.write_file
+  end
 end
 
-file "#{bwengine}.old" do
-action :delete
+# Delete the back up file created by ruby_block
+file "#{bwengine_tra}.old" do
+  action :delete
 end

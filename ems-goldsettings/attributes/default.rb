@@ -1,9 +1,8 @@
 default['ems-goldsettings']['config']['group'] = 'sgsup'
 default['ems-goldsettings']['config']['user'] = 'esbuser'
-default['ems-goldsettings']['config']['ems_tibemsd'] = '/apps/tibco/ems/8.2/bin/tibemsd64'
-default['ems-goldsettings']['config']['tibemsd_conf_path'] = '/apps/tibco/config/ems/TEST_EMS/conf'
-default['ems-goldsettings']['config']['shared_conf_path'] = '/apps/tibco/config/ems/TEST_EMS/conf/shared'
-default['ems-goldsettings']['config']['ems_instance_logdir'] = '/logs/tibco/ems/TEST_EMS'
+default['ems-goldsettings']['config']['ems_install_dir'] = '/apps/tibco'
+default['ems-goldsettings']['config']['ems_major_version'] = '8.2'
+default['ems-goldsettings']['config']['ems_log_home'] = '/logs/tibco/ems'
 default['ems-goldsettings']['config']['ems_config_home'] = '/apps/tibco/config/ems'
 default['ems-goldsettings']['config']['ems_instance_name'] = 'TEST_EMS'
 
