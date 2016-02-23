@@ -16,7 +16,7 @@ default['tibcoadmin-install']['install']['tibcoadmin_version'] = '5.10'
 default['tibcoadmin-install']['install']['tibcoadmin_bin_target_path'] = '/tmp/administrator'
 default['tibcoadmin-install']['install']['tibcoadmin_bin_zip'] = 'TIB_TIBCOAdmin.zip'
 default['tibcoadmin-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
-default['tibcoadmin-install']['install']['response_file'] = 'tibadminInstallResponseFile.silent'
+default['tibcoadmin-install']['install']['response_file'] = 'TIBCOUniversalInstaller.silent'
 # default['tibcoadmin-install']['install']['tibcoadmin_home_dir'] = '/apps/tibco/administrator/5.10'
 
 default['java']['install_flavor'] = 'oracle'
