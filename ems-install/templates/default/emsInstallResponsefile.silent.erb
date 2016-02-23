@@ -11,6 +11,10 @@
 <!-- this value is ignored and the existing TIBCO_HOME is used as the installation root. -->
 <entry key="installationRoot"><%= node['ems-install']['install']['ems_install_dir'] %></entry>
 
+<!--If multiple environments are supported, create a new one or use and existing one-->
+<!--If the product does not support multiple environments, then the values below are ignored-->
+<entry key="createNewEnvironment">true</entry>
+
 <!-- If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment. -->
 <!-- If creating a new environment then the installationRoot AND environmentName MUST BE UNIQUE and not match a pre-existing environment. -->
 <entry key="environmentName"><%= node['ems-install']['install']['tibco_home_name'] %></entry>
@@ -18,7 +22,7 @@
 <entry key="environmentDesc">my installation</entry>
 
 <!-- configDirectoryRoot - location of configuration files if it does not already exist -->
-<entry key="configDirectoryRoot"><%= node['ems-install']['install']['ems_install_dir'] %>/ems/8.2/config</entry>
+<entry key="configDirectoryRoot"><%= node['ems-install']['install']['ems_install_dir'] %>/ems/<%= node['ems-install']['install']['ems_major_version'] %>/config</entry>
 
 <!-- The following configuration parameters control the download of Hibernate -->
 <!-- LGPLAssemblyLicenseAccepted - true or false to accept the license -->
