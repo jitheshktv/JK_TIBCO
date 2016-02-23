@@ -8,7 +8,7 @@
 #
 
 adldap_bin_target_path = node['adldap-install']['install']['adldap_bin_target_path']
-tibco_universalinstaller_bin = "#{adldap_bin_target_path}/#{node['adldap-install']['install']['tibco_universalinstaller_bin']}"
+tibco_installer = "#{adldap_bin_target_path}/#{node['adldap-install']['install']['tibco_universalinstaller_bin']}"
 adldap_install_responsefile = "#{adldap_bin_target_path}/#{node['adldap-install']['install']['response_file']}"
 
 tibco_install_dir = node['adldap-install']['install']['tibco_install_dir']
@@ -19,12 +19,22 @@ adldap = "#{adldap_home_dir}/bin/adldap"
 install_group = node['adldap-install']['install']['group']
 install_user = node['adldap-install']['install']['user']
 
-execute 'install_adldap' do
-  command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{adldap_install_responsefile}"
-  cwd adldap_bin_target_path
-  user install_user
-  group install_group
-  not_if { File.exist? "#{adldap}" }
+if tibco_installer.include? "TIBCOUniversalInstaller"
+  execute 'install_adldap' do
+    command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{adldap_install_responsefile}"
+    cwd adldap_bin_target_path
+    user install_user
+    group install_group
+    not_if { File.exist? "#{adldap}" }
+  end
+else
+  execute 'install_adldap' do
+    command "#{tibco_universalinstaller_bin} -silent"
+    cwd adldap_bin_target_path
+    user install_user
+    group install_group
+    not_if { File.exist? "#{adldap}" }
+  end
 end
 
 # Change the ownership of the directories
