@@ -1,0 +1,75 @@
+{
+  "rv-install" : {
+    "install" : {
+      "rv_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/rv/TIB_rv_8.3.2_linux26gl23_x86.zip",
+      "rv_major_version" : "8.3"
+    }
+  },
+  "tra-install" : {
+    "install" : {
+      "tra_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/tra/TIB_tra_5.7.4_linux26gl23_x86.zip",
+      "tra_version" : "5.7",
+      "tibrv_version" : "8.3",
+      "tibcojre_version" : "1.6.0",
+      "hawk_version" : "4.9",
+      "tpcl_version" : "5.7"
+    }
+  },
+  "jmsclient-install" : {
+    "config" : {
+      "ems_client_version" : "6.3.0",
+      "tra_version" : "5.7"
+    }
+  },
+  "dbclient-install" : {
+    "config" : {
+      "db_client_version" : "ora11g_mysql-5.1.38",
+      "tra_version" : "5.7"
+    }
+  },
+  "hawk-install" : {
+    "install" : {
+      "hawk_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/hawk/TIB_hawk_4.9.0_linux26gl23_x86.zip",
+      "hawk_major_version" : "4.9",
+      "tibcojre_home_dir" : "/apps/tibco/tibcojre/1.6.0"
+    }
+  },
+  "sdk-install" : {
+    "install" : {
+      "sdk_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/sdk/TIB_sdk-simple_5.7.0_linux24gl23_x86.zip",
+      "sdk_major_version" : "5.7",
+      "tibco_universalinstaller_bin" : "TIB_sdk-simple_5.7.0_linux24gl23_x86.bin"
+    }
+  },
+  "bwplugincopybook-install" : {
+    "install" : {
+      "bwplugincopybook_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/bwplugins/TIB_bwplugincopybook_3.3.0_linux24gl23_x86.zip"
+    }
+  },
+  "bw-install" : {
+    "install" : {
+      "bw_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/bw/TIB_bw_5.10.0_linux26gl23_x86.zip",
+      "bw_version" : "5.10",
+      "tra_version" : "5.7",
+      "tibrv_version" : "8.3",
+      "tibcojre_version" : "1.6.0",
+      "hawk_version" : "4.9",
+      "tpcl_version" : "5.7"
+    }
+  },
+  "adldap-install" : {
+    "install" : {
+      "adldap_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/adapters/TIB_adldap-simple_5.4.0_linux24gl23_x86.zip",
+      "adldap_major_version" : "5.4",
+      "tibco_universalinstaller_bin" : "TIB_adldap-simple_5.4.0_linux24gl23_x86.bin"
+    }
+  },
+  "addmachine-dbems" : {
+    "config" : {
+      "domain_name" : "TESTING_EMS",
+      "rv_port" : "30000",
+      "ems_server_url" : "tcp://sawgrass-adminserver1.localdomain:7222",
+      "tra_version" : "5.7"
+    }
+  }
+}

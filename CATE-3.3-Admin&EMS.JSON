@@ -1,0 +1,78 @@
+{
+  "ems-install" : {
+    "install" : {
+      "linux_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/ems/TIB_ems_6.3.0_linux26gl23_x86.zip",
+      "ems_major_version" : "6.3"
+    },
+    "config" : {
+      "ems_config_dir" : "/apps/tibco/config/ems"
+    }
+  },
+  "ems-createinstance" : {
+    "config" : {
+      "ems_major_version" : "6.3",
+      "ems_instance_name" : "TEST_EMS",
+      "ssl_port" : "7243",
+      "tcp_port" : "7222",
+      "ems_install_dir" : "/apps/tibco"
+    }
+  },
+  "rv-install" : {
+    "install" : {
+      "rv_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/rv/TIB_rv_8.3.2_linux26gl23_x86.zip",
+      "rv_major_version" : "8.3"
+    }
+  },
+  "tra-install" : {
+    "install" : {
+      "tra_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/tra/TIB_tra_5.7.4_linux26gl23_x86.zip",
+      "tra_version" : "5.7",
+      "tibrv_version" : "8.3",
+      "tibcojre_version" : "1.6.0",
+      "hawk_version" : "4.9",
+      "tpcl_version" : "5.7"
+    }
+  },
+  "jmsclient-install" : {
+    "config" : {
+      "ems_client_version" : "6.3.0",
+      "tra_version" : "5.7"
+    }
+  },
+  "dbclient-install" : {
+    "config" : {
+      "db_client_version" : "ora11g_mysql-5.1.38",
+      "tra_version" : "5.7"
+    }
+  },
+  "hawk-install" : {
+    "install" : {
+      "hawk_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/hawk/TIB_hawk_4.9.0_linux26gl23_x86.zip",
+      "hawk_major_version" : "4.9",
+      "tibcojre_home_dir" : "/apps/tibco/tibcojre/1.6.0"
+    }
+  },
+  "tibcoadmin-install" : {
+    "install" : {
+      "tibcoadmin_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/tibcoadmin/TIB_tibcoadmin_5.7.0_linux24gl23_x86.zip",
+      "tibcoadmin_version" : "5.7"
+      }
+  },
+  "createdomain-rv" : {
+    "config" : {
+      "domain_name" : "TESTING_RV",
+      "rv_port" : "20000",
+      "tibcoadmin_version" : "5.7",
+      "tra_version" : "5.7"
+    }
+  },
+  "createdomain-dbems" : {
+    "config" : {
+      "domain_name" : "TESTING_EMS",
+      "rv_port" : "30000",
+      "tibcoadmin_version" : "5.7",
+      "tra_version" : "5.7",
+      "ems_server_url" : "tcp://sawgrass-adminserver-1.localdomain:7222"
+    }
+  }
+}
