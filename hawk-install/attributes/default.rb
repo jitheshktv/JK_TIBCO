@@ -17,7 +17,7 @@ default['hawk-install']['install']['hawk_major_version'] = '5.1'
 default['hawk-install']['install']['hawk_bin_target_path'] = '/tmp/hawk'
 default['hawk-install']['install']['hawk_bin_zip'] = 'TIB_hawk.zip'
 default['hawk-install']['install']['tibco_universalinstaller_bin'] = 'TIBCOUniversalInstaller-lnx-x86.bin'
-default['hawk-install']['install']['response_file'] = 'hawkInstallResponseFile.silent'
+default['hawk-install']['install']['response_file'] = 'TIBCOUniversalInstaller.silent'
 # version 0.1.1 : JK : removed the below attribute with the hawk_major_version
 # default['hawk-install']['install']['hawk_home_dir'] = '/apps/tibco/hawk/5.1'
 
