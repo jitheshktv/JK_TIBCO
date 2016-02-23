@@ -33,7 +33,7 @@ execute 'install_hawk' do
   cwd hawk_bin_target_path
   user install_user
   group install_group
-  not_if { File.exist? "#{tibhawkhma}" }
+#  not_if { File.exist? "#{tibhawkhma}" }
 end
 
 # Change the ownership of the directories
