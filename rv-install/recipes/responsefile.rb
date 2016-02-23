@@ -16,17 +16,22 @@ config_user_home = "/home/#{config_user}"
 envinfo_dir = "#{config_user_home}/.TIBCOEnvInfo"
 envinfo_file = "#{envinfo_dir}/_envInfo.xml"
 tibco_home_name = node['rv-install']['install']['tibco_home_name']
+node.default[:createnewenvt] = nil
 
-if File.readlines(envinfo_file).grep(/tibco_home_name/).size > 0
-  createnewenvt = 'false'
-else
-  createnewenvt = 'true'
+ruby_block 'check if TIBCOEnvInfo exists' do
+  block do
+    if File.readlines(envinfo_file).grep(/tibco_home_name/).size > 0
+      node.set[:createnewenvt] = 'false'
+    else
+      node.set[:createnewenvt] = 'true'
+    end
+  end
 end
 
 template rv_install_responsefile do
   source 'TIBCOInstallResponsefile-rv.silent.erb'
   mode '0755'
   variables(
-    var_createnewenvt:  createnewenvt
+    var_createnewenvt:  node[:createnewenvt]
   )
 end
