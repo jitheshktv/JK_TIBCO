@@ -25,6 +25,7 @@ ruby_block 'check if TIBCOEnvInfo exists' do
       node.set[:createnewenvt] = 'true'
     end
   end
+  only_if { File.exist?(envinfo_file) }
 end
 
 template ems_install_responsefile do
