@@ -1,4 +1,12 @@
 {
+  "tibcohome-create" : {
+    "config" : {
+      "tibco_home_name" : "TIBCO_HOME",
+      "tibco_home_dir" : "/apps/tibco",
+      "tibco_config_home" : "/apps/tibco/config",
+      "installer_version" : "3.3"
+    }
+  },
   "rv-install" : {
     "install" : {
       "rv_bin_source" : "https://s3-us-west-2.amazonaws.com/cate-3.3/rv/TIB_rv_8.3.2_linux26gl23_x86.zip",
