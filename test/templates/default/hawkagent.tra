@@ -1,0 +1,61 @@
+#
+# Copyright (c) 2007-2052 TIBCO Software Inc.
+# All Rights Reserved.
+#
+# This software is the confidential and proprietary information of
+# TIBCO Software Inc.
+#
+#
+tibco.env.PSP=\:
+tibco.env.JVM_LIB_PATH=/apps/tibco/tibcojre/1.8.0/lib/i386/server/libjvm.so
+tibco.env.JVM_LIB_SERVER_DIR=/apps/tibco/tibcojre/1.8.0/lib/i386/server
+tibco.env.RV_HOME=/apps/tibco/tibrv/8.4
+tibco.env.HAWK_HOME=/apps/tibco/hawk/5.2
+tibco.env.TPCL_HOME=/apps/tibco/tpcl/5.10
+tibco.env.TRA_HOME=/apps/tibco/tra/5.10
+tibco.env.TIB_JAVA_HOME=/apps/tibco/tibcojre/1.8.0
+tibco.env.TRA_APPEND_VERSION=5.10
+
+
+tibco.env.PATH=.\:%TRA_HOME%/hotfix/bin\:%TRA_HOME%/bin\:%TPCL_HOME%/bin\:%RV_HOME%/bin\:%HAWK_HOME%/bin\:/apps/tibco/tibcojre/1.8.0/bin\:%PATH%
+tibco.env.LD_LIBRARY_PATH=%TRA_HOME%/hotfix/lib\:%TRA_HOME%/lib\:%TPCL_HOME%/lib\:%RV_HOME%/lib\:%JVM_LIB_SERVER_DIR%\:/apps/tibco/tibcojre/1.8.0/lib/i386\:%LD_LIBRARY_PATH%
+tibco.env.SHLIB_PATH=%TRA_HOME%/hotfix/lib\:%TRA_HOME%/lib\:%TPCL_HOME%/lib\:%RV_HOME%/lib\:%JVM_LIB_SERVER_DIR%\:/apps/tibco/tibcojre/1.8.0/lib/i386\:%SHLIB_PATH%
+tibco.env.LIBPATH=%TRA_HOME%/hotfix/lib\:%TRA_HOME%/lib\:%TPCL_HOME%/lib\:%RV_HOME%/lib\:%JVM_LIB_SERVER_DIR%\:/apps/tibco/tibcojre/1.8.0/lib/i386\:/apps/tibco/tibcojre/1.8.0/lib/i386/j9vm\:%LIBPATH%
+tibco.env.DYLD_LIBRARY_PATH=%TRA_HOME%/hotfix/lib\:%TRA_HOME%/lib\:%TPCL_HOME%/lib\:%RV_HOME%/lib\:%JVM_LIB_SERVER_DIR%\:/apps/tibco/tibcojre/1.8.0/lib/i386\:%DYLD_LIBRARY_PATH%
+
+# Specifies the JVM to be used to launch this application
+java.library=%JVM_LIB_PATH%
+java.start.method=main
+java.heap.size.initial=16m
+java.heap.size.max=256M
+java.thread.stack.size=512k
+
+
+# Sets the SAX and DOM JAXP factories to use so AIX uses the right Xerces
+java.property.javax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl
+java.property.javax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl
+
+# Specifies the class to launch
+java.start.class=com.tibco.tra.tsm.startup.TSMWrapper
+
+# Specifies the main function in invoke
+java.start.method=main
+
+#java properties
+tibco.class.path.extended=%TRA_HOME%/hotfix/lib\:%HAWK_HOME%/lib\:%TRA_HOME%/lib\:%TPCL_HOME%/tomcat/7/lib\:%TPCL_HOME%/tomcat/7/bin\:%TPCL_HOME%/lib\:%RV_HOME%/lib/tibrvj.jar\:%TPCL_HOME%/jdbc\:%TPCL_HOME%/lib/entrust\:%TRA_HOME%/lib/install\:%TPCL_HOME%/ant/1.6/lib/ant.jar\:%TPCL_HOME%/ant/1.6/lib
+
+java.property.TIBCO_TRA_HOME=%TRA_HOME%
+java.property.TIBCO_TRA_VERSION=%TRA_APPEND_VERSION%
+java.property.TIBCO_TRA_DOMAIN_HOME=/apps/tibco/tra/domain
+java.property.hawk.hawk_root=%HAWK_HOME%
+java.property.hawk.cluster=0.0.0.0
+java.property.domainName=TEST_DOMAIN_DBEMS
+java.property.TIBCO_APP_LOG_FILE=/apps/tibco/tra/domain/TEST_DOMAIN_DBEMS/logs/tsm.log
+java.property.java.util.Arrays.useLegacyMergeSort=true
+
+# Specify java.property.UNCHANGED_PROPERTY_NAMES property to skip service level global variables to be appended to "tibco.clientVar."
+# For example, to not append "tibco.clientVar." to service level variables "java.property" and "java.extended.properties", uncomment following line:
+# java.property.UNCHANGED_PROPERTY_NAMES=java.property,java.extended.properties
+
+# Define application command line.
+application.args=-file "/apps/tibco/tra/domain/TEST_DOMAIN_DBEMS/hawkagent.cfg"

@@ -15,3 +15,8 @@ directory "testing1" do
   path "/tmp/#{jk_ln}/testing_the_JSON"
   recursive true
 end
+
+var_a = node['test']['a'].to_i
+var_b = var_a + 10
+
+print "varible value is #{var_b}"
