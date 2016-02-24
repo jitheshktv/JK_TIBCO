@@ -9,7 +9,6 @@
 ems_bin_target_path = node['ems-install']['install']['ems_bin_target_path']
 ems_install_responsefile = "#{ems_bin_target_path}/#{node['ems-install']['install']['response_file']}"
 
-config_group = node['ems-install']['install']['group']
 config_user = node['ems-install']['install']['user']
 config_user_home = "/home/#{config_user}"
 envinfo_dir = "#{config_user_home}/.TIBCOEnvInfo"
@@ -19,7 +18,7 @@ node.default[:createnewenvt] = nil
 
 ruby_block 'check if TIBCOEnvInfo exists' do
   block do
-    if File.readlines(envinfo_file).grep(/tibco_home_name/).size > 0
+    if File.readlines(envinfo_file).grep(/"#{tibco_home_name}"/).size > 0
       node.set[:createnewenvt] = 'false'
     else
       node.set[:createnewenvt] = 'true'

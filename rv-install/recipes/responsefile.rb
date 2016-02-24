@@ -10,7 +10,6 @@
 rv_bin_target_path = node['rv-install']['install']['rv_bin_target_path']
 rv_install_responsefile = "#{rv_bin_target_path}/#{node['rv-install']['install']['response_file']}"
 
-config_group = node['rv-install']['config']['group']
 config_user = node['rv-install']['config']['user']
 config_user_home = "/home/#{config_user}"
 envinfo_dir = "#{config_user_home}/.TIBCOEnvInfo"
@@ -20,7 +19,7 @@ node.default[:createnewenvt] = nil
 
 ruby_block 'check if TIBCOEnvInfo exists' do
   block do
-    if File.readlines(envinfo_file).grep(/tibco_home_name/).size > 0
+    if File.readlines(envinfo_file).grep(/"#{tibco_home_name}"/).size > 0
       node.set[:createnewenvt] = 'false'
     else
       node.set[:createnewenvt] = 'true'
