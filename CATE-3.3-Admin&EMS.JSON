@@ -60,7 +60,7 @@
   },
   "createdomain-rv" : {
     "config" : {
-      "domain_name" : "TESTING_RV",
+      "domain_name" : "TEST_DOMAIN_RV",
       "rv_port" : "20000",
       "tibcoadmin_version" : "5.7",
       "tra_version" : "5.7"
@@ -68,11 +68,11 @@
   },
   "createdomain-dbems" : {
     "config" : {
-      "domain_name" : "TESTING_EMS",
+      "domain_name" : "TEST_DOMAIN_DBEMS",
       "rv_port" : "30000",
       "tibcoadmin_version" : "5.7",
       "tra_version" : "5.7",
-      "ems_server_url" : "tcp://sawgrass-adminserver-1.localdomain:7222"
+      "ems_server_url" : "tcp://sawgrass-adminserver1.localdomain:7222"
     }
   }
 }

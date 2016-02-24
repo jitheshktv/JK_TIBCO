@@ -66,7 +66,7 @@
   },
   "addmachine-dbems" : {
     "config" : {
-      "domain_name" : "TESTING_EMS",
+      "domain_name" : "TEST_DOMAIN_DBEMS",
       "rv_port" : "30000",
       "ems_server_url" : "tcp://sawgrass-adminserver1.localdomain:7222",
       "tra_version" : "5.7"
