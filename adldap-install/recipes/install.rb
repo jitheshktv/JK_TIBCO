@@ -21,7 +21,7 @@ install_user = node['adldap-install']['install']['user']
 
 if tibco_installer.include? "TIBCOUniversalInstaller"
   execute 'install_adldap' do
-    command "#{tibco_universalinstaller_bin} -silent -V responseFile=#{adldap_install_responsefile}"
+    command "#{tibco_installer} -silent -V responseFile=#{adldap_install_responsefile}"
     cwd adldap_bin_target_path
     user install_user
     group install_group
@@ -29,7 +29,7 @@ if tibco_installer.include? "TIBCOUniversalInstaller"
   end
 else
   execute 'install_adldap' do
-    command "#{tibco_universalinstaller_bin} -silent"
+    command "#{tibco_installer} -silent"
     cwd adldap_bin_target_path
     user install_user
     group install_group
