@@ -1,0 +1,359 @@
+I, [2016-04-14T13:54:47.756564 #6792]  INFO -- EMS-centos-71: -----> Creating <EMS-centos-71>...
+I, [2016-04-14T13:55:26.101122 #6792]  INFO -- EMS-centos-71: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2016-04-14T13:55:30.535223 #6792]  INFO -- EMS-centos-71: ==> default: Importing base box 'opscode-centos-7.1'...
+I, [2016-04-14T13:56:11.818930 #6792]  INFO -- EMS-centos-71: [KProgress: 20%[KProgress: 50%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2016-04-14T13:56:14.691847 #6792]  INFO -- EMS-centos-71: ==> default: Setting the name of the VM: kitchen-ems-install-EMS-centos-71_default_1460660174546_15571
+I, [2016-04-14T13:56:17.844164 #6792]  INFO -- EMS-centos-71: ==> default: Clearing any previously set network interfaces...
+I, [2016-04-14T13:56:18.095188 #6792]  INFO -- EMS-centos-71: ==> default: Preparing network interfaces based on configuration...
+I, [2016-04-14T13:56:18.095188 #6792]  INFO -- EMS-centos-71:     default: Adapter 1: nat
+I, [2016-04-14T13:56:18.362935 #6792]  INFO -- EMS-centos-71: ==> default: Forwarding ports...
+I, [2016-04-14T13:56:18.635646 #6792]  INFO -- EMS-centos-71:     default: 22 => 2222 (adapter 1)
+I, [2016-04-14T13:56:19.379200 #6792]  INFO -- EMS-centos-71: ==> default: Booting VM...
+I, [2016-04-14T13:56:29.133307 #6792]  INFO -- EMS-centos-71: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2016-04-14T13:56:33.653086 #6792]  INFO -- EMS-centos-71:     default: SSH address: 127.0.0.1:2222
+I, [2016-04-14T13:56:33.653086 #6792]  INFO -- EMS-centos-71:     default: SSH username: vagrant
+I, [2016-04-14T13:56:33.653086 #6792]  INFO -- EMS-centos-71:     default: SSH auth method: private key
+I, [2016-04-14T13:56:49.250514 #6792]  INFO -- EMS-centos-71:     default: Warning: Connection timeout. Retrying...
+I, [2016-04-14T13:57:04.829327 #6792]  INFO -- EMS-centos-71:     default: Warning: Connection timeout. Retrying...
+I, [2016-04-14T13:57:16.318865 #6792]  INFO -- EMS-centos-71:     default: 
+I, [2016-04-14T13:57:16.318865 #6792]  INFO -- EMS-centos-71:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2016-04-14T13:57:16.318865 #6792]  INFO -- EMS-centos-71:     default: this with a newly generated keypair for better security.
+I, [2016-04-14T13:57:22.505515 #6792]  INFO -- EMS-centos-71:     default: 
+I, [2016-04-14T13:57:22.505515 #6792]  INFO -- EMS-centos-71:     default: Inserting generated public key within guest...
+I, [2016-04-14T13:57:23.507348 #6792]  INFO -- EMS-centos-71:     default: Removing insecure key from the guest if it's present...
+I, [2016-04-14T13:57:24.150765 #6792]  INFO -- EMS-centos-71:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2016-04-14T13:57:26.336122 #6792]  INFO -- EMS-centos-71: ==> default: Machine booted and ready!
+I, [2016-04-14T13:57:26.336618 #6792]  INFO -- EMS-centos-71: ==> default: Checking for guest additions in VM...
+I, [2016-04-14T13:57:26.505324 #6792]  INFO -- EMS-centos-71: ==> default: Setting hostname...
+I, [2016-04-14T13:57:28.548511 #6792]  INFO -- EMS-centos-71: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2016-04-14T13:57:35.923551 #6792]  INFO -- EMS-centos-71: [SSH] Established
+I, [2016-04-14T13:57:35.926054 #6792]  INFO -- EMS-centos-71: Vagrant instance <EMS-centos-71> created.
+I, [2016-04-14T13:57:35.983883 #6792]  INFO -- EMS-centos-71: Finished creating <EMS-centos-71> (2m48.17s).
+I, [2016-04-14T13:57:35.987788 #6792]  INFO -- EMS-centos-71: -----> Converging <EMS-centos-71>...
+I, [2016-04-14T13:57:35.994631 #6792]  INFO -- EMS-centos-71: Preparing files for transfer
+I, [2016-04-14T13:57:35.996591 #6792]  INFO -- EMS-centos-71: Preparing dna.json
+I, [2016-04-14T13:57:36.008317 #6792]  INFO -- EMS-centos-71: Resolving cookbook dependencies with Berkshelf 4.0.1...
+I, [2016-04-14T13:57:41.825518 #6792]  INFO -- EMS-centos-71: Removing non-cookbook files before transfer
+I, [2016-04-14T13:57:41.932090 #6792]  INFO -- EMS-centos-71: Preparing validation.pem
+I, [2016-04-14T13:57:42.028369 #6792]  INFO -- EMS-centos-71: Preparing client.rb
+I, [2016-04-14T13:57:42.568330 #6792]  INFO -- EMS-centos-71: -----> Installing Chef Omnibus (install only if missing)
+I, [2016-04-14T13:57:42.583991 #6792]  INFO -- EMS-centos-71: Downloading https://www.chef.io/chef/install.sh to file /tmp/install.sh
+I, [2016-04-14T13:57:42.583991 #6792]  INFO -- EMS-centos-71: Trying wget...
+I, [2016-04-14T13:57:46.626363 #6792]  INFO -- EMS-centos-71: Download complete.
+I, [2016-04-14T13:57:46.843080 #6792]  INFO -- EMS-centos-71: el 7 x86_64
+I, [2016-04-14T13:57:46.843080 #6792]  INFO -- EMS-centos-71: Getting information for chef stable  for el...
+I, [2016-04-14T13:57:46.844058 #6792]  INFO -- EMS-centos-71: downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=&p=el&pv=7&m=x86_64
+I, [2016-04-14T13:57:46.844058 #6792]  INFO -- EMS-centos-71:   to file /tmp/install.sh.6388/metadata.txt
+I, [2016-04-14T13:57:46.856763 #6792]  INFO -- EMS-centos-71: trying wget...
+I, [2016-04-14T13:57:47.533005 #6792]  INFO -- EMS-centos-71: sha1	5907edce1a3b0f7bd42359fe64960da8833385e9
+I, [2016-04-14T13:57:47.533985 #6792]  INFO -- EMS-centos-71: sha256	1c3e680f106ab6829c3713307e447116f7bb3f2d9c30fd3943638b01d6246fe2
+I, [2016-04-14T13:57:47.533985 #6792]  INFO -- EMS-centos-71: url	https://packages.chef.io/stable/el/7/chef-12.9.38-1.el7.x86_64.rpm
+I, [2016-04-14T13:57:47.533985 #6792]  INFO -- EMS-centos-71: version	12.9.38
+I, [2016-04-14T13:57:47.548650 #6792]  INFO -- EMS-centos-71: downloaded metadata file looks valid...
+I, [2016-04-14T13:57:47.586035 #6792]  INFO -- EMS-centos-71: downloading https://packages.chef.io/stable/el/7/chef-12.9.38-1.el7.x86_64.rpm
+I, [2016-04-14T13:57:47.586035 #6792]  INFO -- EMS-centos-71:   to file /tmp/install.sh.6388/chef-12.9.38-1.el7.x86_64.rpm
+I, [2016-04-14T13:57:47.595810 #6792]  INFO -- EMS-centos-71: trying wget...
+I, [2016-04-14T13:58:53.005315 #6792]  INFO -- EMS-centos-71: Comparing checksum with sha256sum...
+I, [2016-04-14T14:45:50.535563 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:45:50.536542 #6792]  INFO -- EMS-centos-71: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2016-04-14T14:45:50.536542 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:45:50.536542 #6792]  INFO -- EMS-centos-71: You are installing an omnibus package without a version pin.  If you are installing
+I, [2016-04-14T14:45:50.536542 #6792]  INFO -- EMS-centos-71: on production servers via an automated process this is DANGEROUS and you will
+I, [2016-04-14T14:45:50.537516 #6792]  INFO -- EMS-centos-71: be upgraded without warning on new releases, even to new major releases.
+I, [2016-04-14T14:45:50.537516 #6792]  INFO -- EMS-centos-71: Letting the version float is only appropriate in desktop, test, development or
+I, [2016-04-14T14:45:50.537516 #6792]  INFO -- EMS-centos-71: CI/CD environments.
+I, [2016-04-14T14:45:50.537516 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:45:50.538498 #6792]  INFO -- EMS-centos-71: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2016-04-14T14:45:50.538498 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:45:50.538498 #6792]  INFO -- EMS-centos-71: Installing chef 
+I, [2016-04-14T14:45:50.538498 #6792]  INFO -- EMS-centos-71: installing with rpm...
+I, [2016-04-14T14:45:50.593680 #6792]  INFO -- EMS-centos-71: warning: /tmp/install.sh.6388/chef-12.9.38-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2016-04-14T14:45:50.599854 #6792]  INFO -- EMS-centos-71: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2016-04-14T14:45:50.646773 #6792]  INFO -- EMS-centos-71: Updating / installing...
+I, [2016-04-14T14:45:50.658510 #6792]  INFO -- EMS-centos-71:                            (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2016-04-14T14:45:50.702913 #6792]  INFO -- EMS-centos-71: Thank you for installing Chef!
+I, [2016-04-14T14:45:51.445967 #6792]  INFO -- EMS-centos-71: Transferring files to <EMS-centos-71>
+I, [2016-04-14T14:45:57.900149 #6792]  INFO -- EMS-centos-71: Starting Chef Client, version 12.9.38
+I, [2016-04-14T14:46:03.764166 #6792]  INFO -- EMS-centos-71: Creating a new client identity for EMS-centos-71 using the validator key.
+I, [2016-04-14T14:46:04.159388 #6792]  INFO -- EMS-centos-71: resolving cookbooks for run list: ["ems-install::default"]
+I, [2016-04-14T14:46:04.834835 #6792]  INFO -- EMS-centos-71: Synchronizing Cookbooks:
+I, [2016-04-14T14:46:05.116520 #6792]  INFO -- EMS-centos-71:   - ems-install (0.1.0)
+I, [2016-04-14T14:46:05.116520 #6792]  INFO -- EMS-centos-71:   - java (1.36.0)
+I, [2016-04-14T14:46:05.117499 #6792]  INFO -- EMS-centos-71:   - apt (2.9.2)
+I, [2016-04-14T14:46:05.117499 #6792]  INFO -- EMS-centos-71: Installing Cookbook Gems:
+I, [2016-04-14T14:46:05.117499 #6792]  INFO -- EMS-centos-71: Compiling Cookbooks...
+I, [2016-04-14T14:46:05.144134 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:26:38+00:00] WARN: Chef::Provider::AptRepository already exists!  Cannot create deprecation class for LWRP provider apt_repository from cookbook apt
+I, [2016-04-14T14:46:05.160899 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:26:38+00:00] WARN: AptRepository already exists!  Deprecation class overwrites Custom resource apt_repository from cookbook apt
+I, [2016-04-14T14:46:05.230060 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:26:38+00:00] WARN: Cloning resource attributes for directory[/apps/tibco] from prior resource (CHEF-3694)
+I, [2016-04-14T14:46:05.230060 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:26:38+00:00] WARN: Previous directory[/apps/tibco]: /tmp/kitchen/cache/cookbooks/ems-install/recipes/directories.rb:22:in `block in from_file'
+I, [2016-04-14T14:46:05.231038 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:26:38+00:00] WARN: Current  directory[/apps/tibco]: /tmp/kitchen/cache/cookbooks/ems-install/recipes/directories.rb:22:in `block in from_file'
+I, [2016-04-14T14:46:05.272621 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:26:38+00:00] WARN: Cloning resource attributes for execute[chown-ems-files] from prior resource (CHEF-3694)
+I, [2016-04-14T14:46:05.273361 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:26:38+00:00] WARN: Previous execute[chown-ems-files]: /tmp/kitchen/cache/cookbooks/ems-install/recipes/s3download.rb:48:in `from_file'
+I, [2016-04-14T14:46:05.273674 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:26:38+00:00] WARN: Current  execute[chown-ems-files]: /tmp/kitchen/cache/cookbooks/ems-install/recipes/installems.rb:106:in `from_file'
+I, [2016-04-14T14:46:05.273950 #6792]  INFO -- EMS-centos-71: Converging 41 resources
+I, [2016-04-14T14:46:05.300284 #6792]  INFO -- EMS-centos-71: Recipe: ems-install::users
+I, [2016-04-14T14:46:05.558877 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:05.558877 #6792]  INFO -- EMS-centos-71:     - create group sgsup
+I, [2016-04-14T14:46:05.892475 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:05.893236 #6792]  INFO -- EMS-centos-71:     - create user esbuser
+I, [2016-04-14T14:46:05.893555 #6792]  INFO -- EMS-centos-71: Recipe: ems-install::directories
+I, [2016-04-14T14:46:05.893831 #6792]  INFO -- EMS-centos-71:   * directory[/apps/tibco] action create
+I, [2016-04-14T14:46:05.904401 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:05.906360 #6792]  INFO -- EMS-centos-71:     - change mode from '' to '0755'
+I, [2016-04-14T14:46:05.906360 #6792]  INFO -- EMS-centos-71:     - change owner from '' to 'esbuser'
+I, [2016-04-14T14:46:06.127058 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.127058 #6792]  INFO -- EMS-centos-71:     - restore selinux security context
+I, [2016-04-14T14:46:06.128038 #6792]  INFO -- EMS-centos-71:   * directory[/logs/tibco] action create
+I, [2016-04-14T14:46:06.138787 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.139763 #6792]  INFO -- EMS-centos-71:     - change mode from '' to '0755'
+I, [2016-04-14T14:46:06.139763 #6792]  INFO -- EMS-centos-71:     - change owner from '' to 'esbuser'
+I, [2016-04-14T14:46:06.182020 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.183000 #6792]  INFO -- EMS-centos-71:     - restore selinux security context
+I, [2016-04-14T14:46:06.183000 #6792]  INFO -- EMS-centos-71:   * directory[/apps/tibco] action create (up to date)
+I, [2016-04-14T14:46:06.202551 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.204504 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.205483 #6792]  INFO -- EMS-centos-71:     - change mode from '' to '0755'
+I, [2016-04-14T14:46:06.206459 #6792]  INFO -- EMS-centos-71:     - change owner from '' to 'esbuser'
+I, [2016-04-14T14:46:06.256546 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.256546 #6792]  INFO -- EMS-centos-71:     - restore selinux security context
+I, [2016-04-14T14:46:06.257524 #6792]  INFO -- EMS-centos-71:   * directory[/apps/tibco/ems/8.2/config/templates/conf] action create
+I, [2016-04-14T14:46:06.266321 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.268273 #6792]  INFO -- EMS-centos-71:     - change mode from '' to '0755'
+I, [2016-04-14T14:46:06.269252 #6792]  INFO -- EMS-centos-71:     - change owner from '' to 'esbuser'
+I, [2016-04-14T14:46:06.320310 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.320310 #6792]  INFO -- EMS-centos-71:     - restore selinux security context
+I, [2016-04-14T14:46:06.321287 #6792]  INFO -- EMS-centos-71:   * file[/apps/tibco/ems/8.2/config/templates/conf/tibemsd.conf] action create
+I, [2016-04-14T14:46:06.321287 #6792]  INFO -- EMS-centos-71:     - create new file /apps/tibco/ems/8.2/config/templates/conf/tibemsd.conf
+I, [2016-04-14T14:46:06.321287 #6792]  INFO -- EMS-centos-71:     - update content in file /apps/tibco/ems/8.2/config/templates/conf/tibemsd.conf from none to 369ef0
+I, [2016-04-14T14:46:06.321287 #6792]  INFO -- EMS-centos-71:     --- /apps/tibco/ems/8.2/config/templates/conf/tibemsd.conf	2016-04-14 19:26:39.747429000 +0000
+I, [2016-04-14T14:46:06.321287 #6792]  INFO -- EMS-centos-71:     +++ /apps/tibco/ems/8.2/config/templates/conf/.chef-tibemsd.conf20160414-12618-h43kp1	2016-04-14 19:26:39.746428500 +0000
+I, [2016-04-14T14:46:06.321287 #6792]  INFO -- EMS-centos-71:     @@ -1 +1,2 @@
+I, [2016-04-14T14:46:06.358628 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.362727 #6792]  INFO -- EMS-centos-71:     - change mode from '' to '0755'
+I, [2016-04-14T14:46:06.363232 #6792]  INFO -- EMS-centos-71:     - change owner from '' to 'esbuser'
+I, [2016-04-14T14:46:06.393544 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.393544 #6792]  INFO -- EMS-centos-71:     - restore selinux security context
+I, [2016-04-14T14:46:06.394522 #6792]  INFO -- EMS-centos-71: Recipe: ems-install::s3download
+I, [2016-04-14T14:46:06.394522 #6792]  INFO -- EMS-centos-71:   * directory[/tmp/ems] action create
+I, [2016-04-14T14:46:06.408208 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.410162 #6792]  INFO -- EMS-centos-71:     - change mode from '' to '0777'
+I, [2016-04-14T14:46:06.410162 #6792]  INFO -- EMS-centos-71:     - change owner from '' to 'esbuser'
+I, [2016-04-14T14:46:06.451396 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:46:06.451396 #6792]  INFO -- EMS-centos-71:     - restore selinux security context
+I, [2016-04-14T14:50:26.136421 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:50:28.773730 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:50:28.773730 #6792]  INFO -- EMS-centos-71:     - update content in file /tmp/ems/TIB_ems.zip from none to f7bfeb
+I, [2016-04-14T14:50:28.779731 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:50:28.780233 #6792]  INFO -- EMS-centos-71:     - change mode from '' to '0777'
+I, [2016-04-14T14:50:28.780734 #6792]  INFO -- EMS-centos-71:     - change owner from '' to 'esbuser'
+I, [2016-04-14T14:50:29.173516 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:50:29.173516 #6792]  INFO -- EMS-centos-71:     - restore selinux security context
+I, [2016-04-14T14:51:21.116086 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:51:21.117064 #6792]  INFO -- EMS-centos-71:     - install version 6.0-15.el7 of package unzip
+I, [2016-04-14T14:51:27.403891 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:51:27.403891 #6792]  INFO -- EMS-centos-71:     - execute unzip /tmp/ems/TIB_ems.zip
+I, [2016-04-14T14:51:27.404395 #6792]  INFO -- EMS-centos-71:   * file[/tmp/ems/TIBCOUniversalInstaller-lnx-x86.bin] action create (up to date)
+I, [2016-04-14T14:51:27.527972 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:51:27.528837 #6792]  INFO -- EMS-centos-71:     - execute chown -R esbuser:sgsup /apps/tibco
+I, [2016-04-14T14:51:27.529144 #6792]  INFO -- EMS-centos-71: Recipe: ems-install::responsefile
+I, [2016-04-14T14:51:28.825265 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:51:28.826239 #6792]  INFO -- EMS-centos-71:     - create new file /tmp/ems/emsInstallResponseFile.silent
+I, [2016-04-14T14:51:28.826239 #6792]  INFO -- EMS-centos-71:     - update content in file /tmp/ems/emsInstallResponseFile.silent from none to 08c847
+I, [2016-04-14T14:51:28.826239 #6792]  INFO -- EMS-centos-71:     --- /tmp/ems/emsInstallResponseFile.silent	2016-04-14 19:32:02.124537000 +0000
+I, [2016-04-14T14:51:28.827219 #6792]  INFO -- EMS-centos-71:     +++ /tmp/ems/.chef-emsInstallResponseFile.silent20160414-12618-kexz03	2016-04-14 19:32:02.124537000 +0000
+I, [2016-04-14T14:51:28.827219 #6792]  INFO -- EMS-centos-71:     @@ -1 +1,54 @@
+I, [2016-04-14T14:51:28.827219 #6792]  INFO -- EMS-centos-71:     +<?xml  version="1.0"?>
+I, [2016-04-14T14:51:28.827219 #6792]  INFO -- EMS-centos-71:     +<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+I, [2016-04-14T14:51:28.828194 #6792]  INFO -- EMS-centos-71:     +<properties>
+I, [2016-04-14T14:51:28.828194 #6792]  INFO -- EMS-centos-71:     +<comment>---Universal Installer Silent Installation Properties---</comment>
+I, [2016-04-14T14:51:28.828194 #6792]  INFO -- EMS-centos-71:     +
+I, [2016-04-14T14:51:28.829174 #6792]  INFO -- EMS-centos-71:     +<!-- Accept the license agreement -->
+I, [2016-04-14T14:51:28.829174 #6792]  INFO -- EMS-centos-71:     +<entry key="acceptLicense">true</entry>
+I, [2016-04-14T14:51:28.829174 #6792]  INFO -- EMS-centos-71:     +
+I, [2016-04-14T14:51:28.829174 #6792]  INFO -- EMS-centos-71:     +<!-- The root installation directory -->
+I, [2016-04-14T14:51:28.830149 #6792]  INFO -- EMS-centos-71:     +<!-- If the product does not support multiple instances and TIBCO_HOME has already been set then -->
+I, [2016-04-14T14:51:28.830149 #6792]  INFO -- EMS-centos-71:     +<!-- this value is ignored and the existing TIBCO_HOME is used as the installation root. -->
+I, [2016-04-14T14:51:28.830149 #6792]  INFO -- EMS-centos-71:     +<entry key="installationRoot">/apps/tibco</entry>
+I, [2016-04-14T14:51:28.830149 #6792]  INFO -- EMS-centos-71:     +
+I, [2016-04-14T14:51:28.831129 #6792]  INFO -- EMS-centos-71:     +<!--If multiple environments are supported, create a new one or use and existing one-->
+I, [2016-04-14T14:51:28.831129 #6792]  INFO -- EMS-centos-71:     +<!--If the product does not support multiple environments, then the values below are ignored-->
+I, [2016-04-14T14:51:28.831129 #6792]  INFO -- EMS-centos-71:     +<entry key="createNewEnvironment">false</entry>
+I, [2016-04-14T14:51:28.832112 #6792]  INFO -- EMS-centos-71:     +
+I, [2016-04-14T14:51:28.832112 #6792]  INFO -- EMS-centos-71:     +<!-- If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment. -->
+I, [2016-04-14T14:51:28.832112 #6792]  INFO -- EMS-centos-71:     +<!-- If creating a new environment then the installationRoot AND environmentName MUST BE UNIQUE and not match a pre-existing environment. -->
+I, [2016-04-14T14:51:28.832112 #6792]  INFO -- EMS-centos-71:     +<entry key="environmentName">TIBCO_HOME</entry>
+I, [2016-04-14T14:51:28.832112 #6792]  INFO -- EMS-centos-71:     +<!-- This only needs to be used for the macos power platform. -->
+I, [2016-04-14T14:51:28.832112 #6792]  INFO -- EMS-centos-71:     +<entry key="environmentDesc">my installation</entry>
+I, [2016-04-14T14:51:28.833085 #6792]  INFO -- EMS-centos-71:     +
+I, [2016-04-14T14:51:28.833397 #6792]  INFO -- EMS-centos-71:     +<!-- configDirectoryRoot - location of configuration files if it does not already exist -->
+I, [2016-04-14T14:51:28.833691 #6792]  INFO -- EMS-centos-71:     +<entry key="configDirectoryRoot">/apps/tibco/ems/8.2/config</entry>
+I, [2016-04-14T14:51:28.833970 #6792]  INFO -- EMS-centos-71:     +
+I, [2016-04-14T14:51:28.834246 #6792]  INFO -- EMS-centos-71:     +<!-- The following configuration parameters control the download of Hibernate -->
+I, [2016-04-14T14:51:28.834524 #6792]  INFO -- EMS-centos-71:     +<!-- LGPLAssemblyLicenseAccepted - true or false to accept the license -->
+I, [2016-04-14T14:51:28.834811 #6792]  INFO -- EMS-centos-71:     +<!-- LGPLAssemblyDownload - true or false to download the assembly from the public TIBCO server -->
+I, [2016-04-14T14:51:28.835089 #6792]  INFO -- EMS-centos-71:     +<!-- LGPLAssemblyPath - if LGPLAssemblyDownload is false, this is the path where the Hibernate assembly is located on the system -->
+I, [2016-04-14T14:51:28.835377 #6792]  INFO -- EMS-centos-71:     +<entry key="LGPLAssemblyLicenseAccepted">true</entry>
+I, [2016-04-14T14:51:28.835669 #6792]  INFO -- EMS-centos-71:     +<entry key="LGPLAssemblyDownload">true</entry>
+I, [2016-04-14T14:51:28.835947 #6792]  INFO -- EMS-centos-71:     +<entry key="LGPLAssemblyPath">/apps/tibco/thirdpartyDownload</entry>
+I, [2016-04-14T14:51:28.836224 #6792]  INFO -- EMS-centos-71:     +
+I, [2016-04-14T14:51:28.836224 #6792]  INFO -- EMS-centos-71:     +<!--Product Feature Settings-->
+I, [2016-04-14T14:51:28.836224 #6792]  INFO -- EMS-centos-71:     +<entry key="feature_EMS Server Baseline_ems">true</entry>
+I, [2016-04-14T14:51:28.837206 #6792]  INFO -- EMS-centos-71:     +<entry key="feature_Development Kit_ems">true</entry>
+I, [2016-04-14T14:51:28.837206 #6792]  INFO -- EMS-centos-71:     +<entry key="feature_EMS Client Baseline_ems">true</entry>
+I, [2016-04-14T14:51:28.837206 #6792]  INFO -- EMS-centos-71:     +<entry key="feature_EMS Source_ems">true</entry>
+I, [2016-04-14T14:51:28.837206 #6792]  INFO -- EMS-centos-71:     +<entry key="feature_Hibernate (For Database Stores)_ems">false</entry>
+I, [2016-04-14T14:51:28.838183 #6792]  INFO -- EMS-centos-71:     +
+I, [2016-04-14T14:51:28.838183 #6792]  INFO -- EMS-centos-71:     +<!-- Product-specific properties can be set below using the same 'entry key=' format as above. -->
+I, [2016-04-14T14:51:28.838183 #6792]  INFO -- EMS-centos-71:     +<!-- ONLY applicable for Windows platforms: -->
+I, [2016-04-14T14:51:28.839161 #6792]  INFO -- EMS-centos-71:     +<!--  manualRB - values can be true or false -->
+I, [2016-04-14T14:51:28.839161 #6792]  INFO -- EMS-centos-71:     +<!--  autoRB - values can be true or false -->
+I, [2016-04-14T14:51:28.839161 #6792]  INFO -- EMS-centos-71:     +<!--  Only one can be true, the default will be manual. -->
+I, [2016-04-14T14:51:28.839161 #6792]  INFO -- EMS-centos-71:     +<entry key="manualRB">true</entry>
+I, [2016-04-14T14:51:28.840139 #6792]  INFO -- EMS-centos-71:     +<entry key="autoRB">false</entry>
+I, [2016-04-14T14:51:28.840139 #6792]  INFO -- EMS-centos-71:     +<entry key="setUID">false</entry>
+I, [2016-04-14T14:51:28.840139 #6792]  INFO -- EMS-centos-71:     +<!-- configFile - values can be the default value or a file that already exists -->
+I, [2016-04-14T14:51:28.840139 #6792]  INFO -- EMS-centos-71:     +<!-- If an invalid value is added, the default value will be used -->
+I, [2016-04-14T14:51:28.841118 #6792]  INFO -- EMS-centos-71:     +<entry key="configFile"></entry>
+I, [2016-04-14T14:51:29.118631 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:51:29.141402 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:51:29.141402 #6792]  INFO -- EMS-centos-71:     - restore selinux security context
+I, [2016-04-14T14:51:29.142381 #6792]  INFO -- EMS-centos-71: Recipe: ems-install::libinstall
+I, [2016-04-14T14:52:58.004118 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:52:58.005078 #6792]  INFO -- EMS-centos-71:     - install version 2.17-106.el7_2.4 of package glibc
+I, [2016-04-14T14:53:05.191466 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:53:05.191466 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.191466 #6792]  INFO -- EMS-centos-71:     ================================================================================
+I, [2016-04-14T14:53:05.191466 #6792]  INFO -- EMS-centos-71:     Error executing action `install` on resource 'yum_package[libstdc++.i686]'
+I, [2016-04-14T14:53:05.191466 #6792]  INFO -- EMS-centos-71:     ================================================================================
+I, [2016-04-14T14:53:05.192443 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.192443 #6792]  INFO -- EMS-centos-71:     Chef::Exceptions::Exec
+I, [2016-04-14T14:53:05.192443 #6792]  INFO -- EMS-centos-71:     ----------------------
+I, [2016-04-14T14:53:05.192443 #6792]  INFO -- EMS-centos-71:     yum -d0 -e0 -y install libstdc++-4.8.5-4.el7.i686 returned 1:
+I, [2016-04-14T14:53:05.192443 #6792]  INFO -- EMS-centos-71:     STDOUT: 
+I, [2016-04-14T14:53:05.192443 #6792]  INFO -- EMS-centos-71:     STDERR: Error:  Multilib version problems found. This often means that the root
+I, [2016-04-14T14:53:05.192443 #6792]  INFO -- EMS-centos-71:     cause is something else and multilib version checking is just
+I, [2016-04-14T14:53:05.193420 #6792]  INFO -- EMS-centos-71:     pointing out that there is a problem. Eg.:
+I, [2016-04-14T14:53:05.193420 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.193420 #6792]  INFO -- EMS-centos-71:       1. You have an upgrade for libstdc++ which is missing some
+I, [2016-04-14T14:53:05.193420 #6792]  INFO -- EMS-centos-71:          dependency that another package requires. Yum is trying to
+I, [2016-04-14T14:53:05.193420 #6792]  INFO -- EMS-centos-71:          solve this by installing an older version of libstdc++ of the
+I, [2016-04-14T14:53:05.193420 #6792]  INFO -- EMS-centos-71:          different architecture. If you exclude the bad architecture
+I, [2016-04-14T14:53:05.197331 #6792]  INFO -- EMS-centos-71:          yum will tell you what the root cause is (which package
+I, [2016-04-14T14:53:05.198308 #6792]  INFO -- EMS-centos-71:          requires what). You can try redoing the upgrade with
+I, [2016-04-14T14:53:05.198308 #6792]  INFO -- EMS-centos-71:          --exclude libstdc++.otherarch ... this should give you an error
+I, [2016-04-14T14:53:05.198308 #6792]  INFO -- EMS-centos-71:          message showing the root cause of the problem.
+I, [2016-04-14T14:53:05.198308 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.198308 #6792]  INFO -- EMS-centos-71:       2. You have multiple architectures of libstdc++ installed, but
+I, [2016-04-14T14:53:05.198308 #6792]  INFO -- EMS-centos-71:          yum can only see an upgrade for one of those architectures.
+I, [2016-04-14T14:53:05.199286 #6792]  INFO -- EMS-centos-71:          If you don't want/need both architectures anymore then you
+I, [2016-04-14T14:53:05.199286 #6792]  INFO -- EMS-centos-71:          can remove the one with the missing update and everything
+I, [2016-04-14T14:53:05.199286 #6792]  INFO -- EMS-centos-71:          will work.
+I, [2016-04-14T14:53:05.199286 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.200264 #6792]  INFO -- EMS-centos-71:       3. You have duplicate versions of libstdc++ installed already.
+I, [2016-04-14T14:53:05.200264 #6792]  INFO -- EMS-centos-71:          You can use "yum check" to get yum show these errors.
+I, [2016-04-14T14:53:05.200264 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.200264 #6792]  INFO -- EMS-centos-71:     ...you can also use --setopt=protected_multilib=false to remove
+I, [2016-04-14T14:53:05.200264 #6792]  INFO -- EMS-centos-71:     this checking, however this is almost never the correct thing to
+I, [2016-04-14T14:53:05.200264 #6792]  INFO -- EMS-centos-71:     do as something else is very likely to go wrong (often causing
+I, [2016-04-14T14:53:05.201241 #6792]  INFO -- EMS-centos-71:     much more problems).
+I, [2016-04-14T14:53:05.201241 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.201241 #6792]  INFO -- EMS-centos-71:     Protected multilib versions: libstdc++-4.8.5-4.el7.i686 != libstdc++-4.8.3-9.el7.x86_64
+I, [2016-04-14T14:53:05.201241 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.201241 #6792]  INFO -- EMS-centos-71:     Resource Declaration:
+I, [2016-04-14T14:53:05.201241 #6792]  INFO -- EMS-centos-71:     ---------------------
+I, [2016-04-14T14:53:05.201241 #6792]  INFO -- EMS-centos-71:     # In /tmp/kitchen/cache/cookbooks/ems-install/recipes/libinstall.rb
+I, [2016-04-14T14:53:05.202218 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.202218 #6792]  INFO -- EMS-centos-71:      20:     yum_package 'libstdc++.i686'
+I, [2016-04-14T14:53:05.202218 #6792]  INFO -- EMS-centos-71:      21:   else
+I, [2016-04-14T14:53:05.202218 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.202218 #6792]  INFO -- EMS-centos-71:     Compiled Resource:
+I, [2016-04-14T14:53:05.202218 #6792]  INFO -- EMS-centos-71:     ------------------
+I, [2016-04-14T14:53:05.202218 #6792]  INFO -- EMS-centos-71:     # Declared in /tmp/kitchen/cache/cookbooks/ems-install/recipes/libinstall.rb:20:in `from_file'
+I, [2016-04-14T14:53:05.202218 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.203197 #6792]  INFO -- EMS-centos-71:     yum_package("libstdc++.i686") do
+I, [2016-04-14T14:53:05.203197 #6792]  INFO -- EMS-centos-71:       package_name "libstdc++"
+I, [2016-04-14T14:53:05.203197 #6792]  INFO -- EMS-centos-71:       action [:install]
+I, [2016-04-14T14:53:05.203197 #6792]  INFO -- EMS-centos-71:       retries 0
+I, [2016-04-14T14:53:05.203197 #6792]  INFO -- EMS-centos-71:       retry_delay 2
+I, [2016-04-14T14:53:05.203197 #6792]  INFO -- EMS-centos-71:       default_guard_interpreter :default
+I, [2016-04-14T14:53:05.203197 #6792]  INFO -- EMS-centos-71:       declared_type :yum_package
+I, [2016-04-14T14:53:05.204173 #6792]  INFO -- EMS-centos-71:       cookbook_name "ems-install"
+I, [2016-04-14T14:53:05.204173 #6792]  INFO -- EMS-centos-71:       recipe_name "libinstall"
+I, [2016-04-14T14:53:05.204173 #6792]  INFO -- EMS-centos-71:       flush_cache {:before=>false, :after=>false}
+I, [2016-04-14T14:53:05.204173 #6792]  INFO -- EMS-centos-71:       arch "i686"
+I, [2016-04-14T14:53:05.204173 #6792]  INFO -- EMS-centos-71:     end
+I, [2016-04-14T14:53:05.204173 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.204173 #6792]  INFO -- EMS-centos-71:     Platform:
+I, [2016-04-14T14:53:05.205151 #6792]  INFO -- EMS-centos-71:     ---------
+I, [2016-04-14T14:53:05.205151 #6792]  INFO -- EMS-centos-71:     x86_64-linux
+I, [2016-04-14T14:53:05.205151 #6792]  INFO -- EMS-centos-71:     
+I, [2016-04-14T14:53:05.205151 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:53:05.205151 #6792]  INFO -- EMS-centos-71: Running handlers:
+I, [2016-04-14T14:53:05.206129 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:33:38+00:00] ERROR: Running exception handlers
+I, [2016-04-14T14:53:05.206129 #6792]  INFO -- EMS-centos-71: Running handlers complete
+I, [2016-04-14T14:53:05.206129 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:33:38+00:00] ERROR: Exception handlers complete
+I, [2016-04-14T14:53:05.206129 #6792]  INFO -- EMS-centos-71: Chef Client failed. 14 resources updated in 07 minutes 07 seconds
+I, [2016-04-14T14:53:05.206129 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:33:38+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2016-04-14T14:53:05.206129 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:33:38+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2016-04-14T14:53:05.206129 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:33:38+00:00] ERROR: yum_package[libstdc++.i686] (ems-install::libinstall line 20) had an error: Chef::Exceptions::Exec: yum -d0 -e0 -y install libstdc++-4.8.5-4.el7.i686 returned 1:
+I, [2016-04-14T14:53:05.206129 #6792]  INFO -- EMS-centos-71: STDOUT: 
+I, [2016-04-14T14:53:05.207106 #6792]  INFO -- EMS-centos-71: STDERR: Error:  Multilib version problems found. This often means that the root
+I, [2016-04-14T14:53:05.207106 #6792]  INFO -- EMS-centos-71: cause is something else and multilib version checking is just
+I, [2016-04-14T14:53:05.207106 #6792]  INFO -- EMS-centos-71: pointing out that there is a problem. Eg.:
+I, [2016-04-14T14:53:05.207106 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:53:05.207106 #6792]  INFO -- EMS-centos-71:   1. You have an upgrade for libstdc++ which is missing some
+I, [2016-04-14T14:53:05.207106 #6792]  INFO -- EMS-centos-71:      dependency that another package requires. Yum is trying to
+I, [2016-04-14T14:53:05.207106 #6792]  INFO -- EMS-centos-71:      solve this by installing an older version of libstdc++ of the
+I, [2016-04-14T14:53:05.208084 #6792]  INFO -- EMS-centos-71:      different architecture. If you exclude the bad architecture
+I, [2016-04-14T14:53:05.562697 #6792]  INFO -- EMS-centos-71: oot cause is (which package
+I, [2016-04-14T14:53:05.563672 #6792]  INFO -- EMS-centos-71:      requires what). You can try redoing the upgrade with
+I, [2016-04-14T14:53:05.563672 #6792]  INFO -- EMS-centos-71:      --exclude libstdc++.otherarch ... this should give you an error
+I, [2016-04-14T14:53:05.564652 #6792]  INFO -- EMS-centos-71:      message showing the root cause of the problem.
+I, [2016-04-14T14:53:05.564652 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:53:05.564652 #6792]  INFO -- EMS-centos-71:   2. You have multiple architectures of libstdc++ installed, but
+I, [2016-04-14T14:53:05.564652 #6792]  INFO -- EMS-centos-71:      yum can only see an upgrade for one of those architectures.
+I, [2016-04-14T14:53:05.564652 #6792]  INFO -- EMS-centos-71:      If you don't want/need both architectures anymore then you
+I, [2016-04-14T14:53:05.565629 #6792]  INFO -- EMS-centos-71:      can remove the one with the missing update and everything
+I, [2016-04-14T14:53:05.565629 #6792]  INFO -- EMS-centos-71:      will work.
+I, [2016-04-14T14:53:05.565629 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:53:05.566606 #6792]  INFO -- EMS-centos-71:   3. You have duplicate versions of libstdc++ installed already.
+I, [2016-04-14T14:53:05.567020 #6792]  INFO -- EMS-centos-71:      You can use "yum check" to get yum show these errors.
+I, [2016-04-14T14:53:05.567343 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:53:05.567650 #6792]  INFO -- EMS-centos-71: ...you can also use --setopt=protected_multilib=false to remove
+I, [2016-04-14T14:53:05.567906 #6792]  INFO -- EMS-centos-71: this checking, however this is almost never the correct thing to
+I, [2016-04-14T14:53:05.568253 #6792]  INFO -- EMS-centos-71: do as something else is very likely to go wrong (often causing
+I, [2016-04-14T14:53:05.568544 #6792]  INFO -- EMS-centos-71: much more problems).
+I, [2016-04-14T14:53:05.568833 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:53:05.569118 #6792]  INFO -- EMS-centos-71: Protected multilib versions: libstdc++-4.8.5-4.el7.i686 != libstdc++-4.8.3-9.el7.x86_64
+I, [2016-04-14T14:53:05.569407 #6792]  INFO -- EMS-centos-71: 
+I, [2016-04-14T14:53:06.279776 #6792]  INFO -- EMS-centos-71: [2016-04-14T19:33:39+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2016-04-14T14:53:06.607710 #6792] ERROR -- EMS-centos-71: Converge failed on instance <EMS-centos-71>.
+E, [2016-04-14T14:53:06.608687 #6792] ERROR -- EMS-centos-71: ------Exception-------
+E, [2016-04-14T14:53:06.608687 #6792] ERROR -- EMS-centos-71: Class: Kitchen::ActionFailed
+E, [2016-04-14T14:53:06.608687 #6792] ERROR -- EMS-centos-71: Message: SSH exited (1) for command: [sh -c '
+
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889
+']
+E, [2016-04-14T14:53:06.608687 #6792] ERROR -- EMS-centos-71: ---Nested Exception---
+E, [2016-04-14T14:53:06.608687 #6792] ERROR -- EMS-centos-71: Class: Kitchen::Transport::SshFailed
+E, [2016-04-14T14:53:06.609670 #6792] ERROR -- EMS-centos-71: Message: SSH exited (1) for command: [sh -c '
+
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889
+']
+E, [2016-04-14T14:53:06.609670 #6792] ERROR -- EMS-centos-71: ------Backtrace-------
+E, [2016-04-14T14:53:06.609670 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/provisioner/base.rb:74:in `rescue in call'
+E, [2016-04-14T14:53:06.609670 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/provisioner/base.rb:77:in `call'
+E, [2016-04-14T14:53:06.609670 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:366:in `block in converge_action'
+E, [2016-04-14T14:53:06.609670 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:488:in `call'
+E, [2016-04-14T14:53:06.610648 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:488:in `synchronize_or_call'
+E, [2016-04-14T14:53:06.610648 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:453:in `block in action'
+E, [2016-04-14T14:53:06.610648 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-04-14T14:53:06.611626 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:452:in `action'
+E, [2016-04-14T14:53:06.611626 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:362:in `converge_action'
+E, [2016-04-14T14:53:06.611626 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:341:in `block in transition_to'
+E, [2016-04-14T14:53:06.611626 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:340:in `each'
+E, [2016-04-14T14:53:06.612603 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:340:in `transition_to'
+E, [2016-04-14T14:53:06.612603 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-04-14T14:53:06.612603 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/command.rb:176:in `public_send'
+E, [2016-04-14T14:53:06.612603 #6792] ERROR -- EMS-centos-71: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2016-04-14T14:53:06.612603 #6792] ERROR -- EMS-centos-71: ----------------------

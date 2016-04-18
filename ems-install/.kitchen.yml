@@ -14,7 +14,7 @@ platforms:
   - name: centos-7.1
 
 suites:
-  - name: default
+  - name: EMS
     run_list:
       - recipe[ems-install::default]
     attributes:
